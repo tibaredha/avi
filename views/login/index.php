@@ -14,7 +14,7 @@ echo $sError;
 </div>
 <div class="sheader1r"><p id="llogin"><?php html::NAV();?></p></div>
 <div class="sheader2l">
-Gérer les certificats de décès
+Gérer Echantillon des poussins representative du lot (poids a jeun en grammes)
 </div>
 <div class="sheader2r">***</div>
 <div class="contentl formaut">
