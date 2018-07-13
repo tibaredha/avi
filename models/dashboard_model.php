@@ -5,320 +5,252 @@ class Dashboard_Model extends Model {
 		parent::__construct();
 		// Session::init();
 	}
-	//remise a zero par structure
-	public function reset($id) {       
-	    $this->db->deletem('deceshosp',"STRUCTURED != '$id'");
+	public function create($data) {
+
+			$this->db->insert('avi', array(		
+			'Date' =>$data['Date'],
+			'WILAYAD' =>$data['WILAYAD'],
+			'COMMUNED' =>$data['COMMUNED'],   
+			'avicli' =>$data['avicli'],   
+			'avicycl' =>$data['avicycl'],   
+			'avibtm' =>$data['avibtm'],   
+			'avisem' =>$data['avisem'],   
+			'avi0' =>$data['avi0'],   
+			'avi1' =>$data['avi1'],   
+			'avi2' =>$data['avi2'],   
+			'avi3' =>$data['avi3'],   
+			'avi4' =>$data['avi4'],   
+			'avi5' =>$data['avi5'],   
+			'avi6' =>$data['avi6'],   
+			'avi7' =>$data['avi7'],   
+			'avi8' =>$data['avi8'],   
+			'avi9' =>$data['avi9'],   
+			'avi10' =>$data['avi10'],  
+			'avi11' =>$data['avi11'],   
+			'avi12' =>$data['avi12'],   
+			'avi13' =>$data['avi13'],   
+			'avi14' =>$data['avi14'],   
+			'avi15' =>$data['avi15'],   
+			'avi16' =>$data['avi16'],   
+			'avi17' =>$data['avi17'],   
+			'avi18' =>$data['avi18'],   
+			'avi19' =>$data['avi19'],   
+			'avi20' =>$data['avi20'],  
+			'avi21' =>$data['avi21'],   
+			'avi22' =>$data['avi22'],   
+			'avi23' =>$data['avi23'],   
+			'avi24' =>$data['avi24'],   
+			'avi25' =>$data['avi25'],   
+			'avi26' =>$data['avi26'],   
+			'avi27' =>$data['avi27'],   
+			'avi28' =>$data['avi28'],   
+			'avi29' =>$data['avi29'],   
+			'avi30' =>$data['avi30'], 
+			'avi31' =>$data['avi31'],   
+			'avi32' =>$data['avi32'],   
+			'avi33' =>$data['avi33'],   
+			'avi34' =>$data['avi34'],   
+			'avi35' =>$data['avi15'],   
+			'avi36' =>$data['avi36'],   
+			'avi37' =>$data['avi37'],   
+			'avi38' =>$data['avi38'],   
+			'avi39' =>$data['avi39'],   
+			'avi40' =>$data['avi40'],  
+			'avi41' =>$data['avi41'],   
+			'avi42' =>$data['avi42'],   
+			'avi43' =>$data['avi43'],   
+			'avi44' =>$data['avi44'],   
+			'avi45' =>$data['avi45'],   
+			'avi46' =>$data['avi46'],   
+			'avi47' =>$data['avi47'],   
+			'avi48' =>$data['avi48'],   
+			'avi49' =>$data['avi49'],   
+			'avi50' =>$data['avi50'],
+			'avi51' =>$data['avi51'],   
+			'avi52' =>$data['avi52'],   
+			'avi53' =>$data['avi53'],   
+			'avi54' =>$data['avi54'],   
+			'avi55' =>$data['avi55'],   
+			'avi56' =>$data['avi56'],   
+			'avi57' =>$data['avi57'],   
+			'avi58' =>$data['avi58'],   
+			'avi59' =>$data['avi59'],   
+			'avi60' =>$data['avi60'],  
+			'avi61' =>$data['avi61'],   
+			'avi62' =>$data['avi62'],   
+			'avi63' =>$data['avi63'],   
+			'avi64' =>$data['avi64'],   
+			'avi65' =>$data['avi65'],   
+			'avi66' =>$data['avi66'],   
+			'avi67' =>$data['avi67'],   
+			'avi68' =>$data['avi68'],   
+			'avi69' =>$data['avi69'],   
+			'avi70' =>$data['avi70'], 
+			'avi71' =>$data['avi71'],   
+			'avi72' =>$data['avi72'],   
+			'avi73' =>$data['avi73'],   
+			'avi74' =>$data['avi74'],   
+			'avi75' =>$data['avi75'],   
+			'avi76' =>$data['avi76'],   
+			'avi77' =>$data['avi77'],   
+			'avi78' =>$data['avi78'],   
+			'avi79' =>$data['avi79'],   
+			'avi80' =>$data['avi80'], 
+			'avi81' =>$data['avi81'],   
+			'avi82' =>$data['avi82'],   
+			'avi83' =>$data['avi83'],   
+			'avi84' =>$data['avi84'],   
+			'avi85' =>$data['avi85'],   
+			'avi86' =>$data['avi86'],   
+			'avi87' =>$data['avi87'],   
+			'avi88' =>$data['avi88'],   
+			'avi89' =>$data['avi89'],   
+			'avi90' =>$data['avi90'], 
+			'avi91' =>$data['avi91'],   
+			'avi92' =>$data['avi92'],   
+			'avi93' =>$data['avi93'],   
+			'avi94' =>$data['avi94'],   
+			'avi95' =>$data['avi95'],   
+			'avi96' =>$data['avi96'],   
+			'avi97' =>$data['avi97'],   
+			'avi98' =>$data['avi98'],   
+			'avi99' =>$data['avi99']   
+			));		
+		  
+            //echo '<pre>';print_r ($data);echo '<pre>';
+           return $last_id = $this->db->lastInsertId();
+				
     }
-	 public function listemedecin($id) {
-        return $this->db->select('SELECT * FROM medecindeces WHERE structure = :id order by Nom  limit 0,3 ', array(':id' => $id));
-     } 
-	 
-	public function medecinSave($data) {
-	$this->db->insert('medecindeces', array(
-			'Nom'       => $data['Nom'],
-            'Prenom'    => $data['Prenom'],
-            'wilaya'    => $data['wilaya'],
-			'structure' => $data['structure']
 	
-	 ));
-        echo '<pre>';print_r ($data);echo '<pre>';
-		return $last_id = $this->db->lastInsertId();
-    }
-	public function deletemedecin($id) {       
-        $this->db->delete('medecindeces', "id = '$id'");
-    }
-	
-	function dateUS2FR($date)//2013-01-01
-    {
-	$J      = substr($date,8,2);
-    $M      = substr($date,5,2);
-    $A      = substr($date,0,4);
-	$dateUS2FR =  $J."-".$M."-".$A ;
-    return $dateUS2FR;//01-01-2013
-    }
-	function dateFR2US($date)//01/01/2013
-	{
-	$J      = substr($date,0,2);
-    $M      = substr($date,3,2);
-    $A      = substr($date,6,4);
-	$dateFR2US =  $A."-".$M."-".$J ;
-    return $dateFR2US;//2013-01-01
-	}
-	function CalculateTimestampFromCurrDatetime($DateTime = -1) 
-    {
-	if ($DateTime == -1 || $DateTime == '' || $DateTime == '0000-00-00 00:00:00' || $DateTime == '0000-00-00') 
-	{
-		$DateTime = date("Y-m-d H:i:s");
-	}
-	$NewDate['year']   = substr($DateTime,0,4);
-	$NewDate['month']  = substr($DateTime,5,2);
-	$NewDate['day']    = substr($DateTime,8,2);
-	$NewDate['hour']   = substr($DateTime,11,2);
-	$NewDate['minute'] = substr($DateTime,14,2);
-	$NewDate['second'] = substr($DateTime,17,2);
-	return mktime($NewDate['hour'], $NewDate['minute'], $NewDate['second'], $NewDate['month'], $NewDate['day'], $NewDate['year']);
-   }
-   // calculate date difference
-	function CalculateDateDifference($TimestampFirst, $TimestampSecond = -1)	
-	{
-		if ($TimestampSecond == -1) 
-		{
-			$TimestampSecond = CalculateTimestampFromCurrDatetime();
-		}
-
-		if ($TimestampSecond < $TimestampFirst) 
-		{
-			$TempTimestamp = $TimestampFirst;
-			$TimestampFirst = $TimestampSecond;
-			$TimestampSecond = $TempTimestamp;
-			
-			$NegativeDifference = true;
-		}
-		else 
-		{
-			$NegativeDifference = false;
-		}
-
-		list($Year1, $Month1, $Day1) = explode('-', date('Y-m-d', $TimestampFirst));
-		list($Year2, $Month2, $Day2) = explode('-', date('Y-m-d', $TimestampSecond));
-		$Time1 = (date('H',$TimestampFirst)*3600) + (date('i',$TimestampFirst)*60) + (date('s',$TimestampFirst));
-		$Time2 = (date('H',$TimestampSecond)*3600) + (date('i',$TimestampSecond)*60) + (date('s',$TimestampSecond));
-
-		$YearDiff = $Year2 - $Year1;
-		$MonthDiff = ($Year2 * 12 + $Month2) - ($Year1 * 12 + $Month1);
-
-		if($Month1 > $Month2)
-		{
-			$YearDiff -= 1;
-		}
-		elseif($Month1 == $Month2)
-		{
-			if($Day1 > $Day2) 
-			{
-				$YearDiff -= 1;
-			}
-			elseif($Day1 == $Day2) 
-			{
-				if($Time1 > $Time2) 
-				{
-					$YearDiff -= 1;
-				}
-			}
-		}
-
-		// handle over flow of month difference
-		if($Day1 > $Day2) 
-		{
-			$MonthDiff -= 1;
-		}
-		elseif($Day1 == $Day2) 
-		{
-			if($Time1 > $Time2) 
-			{
-				$MonthDiff -= 1;
-			}
-		}
-
-		$DateDifference = Array();
-		$TotalSeconds = $TimestampSecond - $TimestampFirst;
-
-		$WeekDiff = floor(($TotalSeconds / 604800));
-		$DayDiff = floor(($TotalSeconds / 86400));
-
-		if ($NegativeDifference == true) 
-		{
-			$DateDifference['years'] = ($YearDiff == 0) ? $YearDiff : -($YearDiff);
-			$DateDifference['months'] = ($MonthDiff == 0) ? $MonthDiff : -($MonthDiff);
-			$DateDifference['weeks'] = ($WeekDiff == 0) ? $WeekDiff : -($WeekDiff);
-			$DateDifference['days'] = ($DayDiff == 0) ? $DayDiff : -($DayDiff);
-		}
-		else 
-		{
-			$DateDifference['years'] = $YearDiff;
-			$DateDifference['months'] = $MonthDiff;
-			$DateDifference['weeks'] = $WeekDiff;
-			$DateDifference['days'] = $DayDiff;
-		}
-		
-		return $DateDifference;
-	}
-	//*********************************************************************************************************************//
 	public function userSearch($o, $q, $p, $l) {
 	$structure = Session::get("structure");
-    return $this->db->select("SELECT * FROM deceshosp where STRUCTURED=$structure and $o like '$q%' order by NOM limit $p,$l ");// 
+    return $this->db->select("SELECT * FROM avi where  $o like '$q%' order by id limit $p,$l ");// 
     }
     public function userSearch1($o, $q) {
         $structure = Session::get("structure");
-		return $this->db->select("SELECT * FROM deceshosp where STRUCTURED=$structure and $o like '$q%' order by NOM");//  
+		return $this->db->select("SELECT * FROM avi where $o like '$q%' order by id");//  
     }
 	 public function userSingleList($id) {
-        return $this->db->select('SELECT * FROM deceshosp WHERE id = :id', array(':id' => $id));
+        return $this->db->select('SELECT * FROM avi WHERE id = :id', array(':id' => $id));
      }
-	 public function createdeces($data) {
-		$Date1 = $this->dateFR2US($data['DATENS']) ;echo '</br>';
-		$Date2 = $this->dateFR2US($data['DINS']);echo '</br>';
-		$Timestamp1 = $this->CalculateTimestampFromCurrDatetime($Date1);echo '</br>';
-		$Timestamp2 = $this->CalculateTimestampFromCurrDatetime($Date2);echo '</br>';
-		$DateDiff = $this->CalculateDateDifference($Timestamp1, $Timestamp2);echo '</br>';
-	    //echo '<pre>';print_r ($DateDiff);echo '<pre>';
-		$Date11 = $this->dateFR2US($data['DATEHOSPI']);echo '</br>';
-		$Date22 = $this->dateFR2US($data['DINS']);echo '</br>';
-		$Timestamp11 = $this->CalculateTimestampFromCurrDatetime($Date11);echo '</br>';
-		$Timestamp22 = $this->CalculateTimestampFromCurrDatetime($Date22);echo '</br>';
-		$DateDiff1 = $this->CalculateDateDifference($Timestamp11, $Timestamp22);echo '</br>';
-		//echo '<pre>';print_r ($DateDiff1);echo '<pre>';
-		$this->db->insert('deceshosp', array(
-			'WILAYAD'    => $data['WILAYAD'],
-            'COMMUNED'   => $data['COMMUNED'],
-            'STRUCTURED' => $data['STRUCTURED'],
-			'DINS'   => $this->dateFR2US($data['DINS']),
-            'HINS'   => $data['HINS'],
-            'NOM'    => $data['NOM'],
-            'PRENOM' => $data['PRENOM'],
-            'FILSDE' => $data['FILSDE'],
-			'ETDE'   => $data['ETDE'],
-			'SEX'    => $data['SEXE'],
-			'DATENAISSANCE' => $this->dateFR2US($data['DATENS']),
-			'Days' => $DateDiff['days'],
-            'Weeks' => $DateDiff['weeks'],
-            'Months' => $DateDiff['months'],
-            'Years' => $DateDiff['years'],
-			'WILAYA'   => $data['WILAYAN'],
-            'COMMUNE'  => $data['COMMUNEN'],
-            'WILAYAR'  => $data['WILAYAR'],
-            'COMMUNER' => $data['COMMUNER'],
-            'ADRESSE'  => $data['ADRESSE'],
-			'CD'  => $data['CD'],
-			'LD'  => $data['LD'],
-			'AUTRES'  => $data['AUTRES'],
-			'OMLI'  => $data['OMLI'],
-			'MIEC'  => $data['MIEC'],
-			'EPFP'  => $data['EPFP'],
-			'CIM1'  => $data['CIM1'],
-			'CIM2'  => $data['CIM2'],
-			'CIM3'  => $data['CIM3'],
-			'CIM4'  => $data['CIM4'],
-			'CIM5'  => $data['CIM5'],
-			'NDLM'  => $data['NDLM'],
-			'NDLMAAP'  => $data['NDLMAAP'],
-			'GM'  => $data['GM'],
-			'MN'  => $data['MN'],
-			'AGEGEST'  => $data['AGEGEST'],
-			'POIDNSC'  => $data['POIDNSC'],
-			'AGEMERE'  => $data['AGEMERE'],
-			'DPNAT'  => $data['DPNAT'],
-			'EMDPNAT'  => $data['EMDPNAT'],
-			'DECEMAT'  => $data['DECEMAT'],
-			'GRS'  => $data['GRS'],
-			'POSTOPP'  => $data['POSTOPP'],
-		    'DATEHOSPI'  => $this->dateFR2US($data['DATEHOSPI']), 
-		    'HEURESHOSPI'  => $data['HEURESHOSPI'],
-			'SERVICEHOSPIT'  => $data['SERVICEHOSPIT'],
-		    'DUREEHOSPIT'  => $DateDiff1['days'],
-            'MEDECINHOSPIT'  => $data['MEDECINHOSPIT'],
-			'CODECIM0'  => $data['CODECIM0'],
-			'CODECIM'  => $data['CODECIM'],
-            'WRS'=> $data['WILAYA'],
-            'SRS'=> $data['STRUCTURE'],
-            'USER'=> $data['login'],
-			'NOMAR'    => $data['NOMAR'],
-            'PRENOMAR' => $data['PRENOMAR'],
-            'FILSDEAR' => $data['FILSDEAR'],
-			'ETDEAR'   => $data['ETDEAR'],
-			'NOMPRENOMAR' => $data['NOMPRENOMAR'],
-			'PROAR' => $data['PROAR'],
-			'ADAR'   => $data['ADAR'],
-			'Profession' => $data['Profession']
-			
-        ));
-        echo '<pre>';print_r ($data);echo '<pre>';
-		return $last_id = $this->db->lastInsertId();
-    }
+	 
+	public function deletebnm($id) {       
+        $this->db->delete('avi', "id = '$id'");
+    } 
+	 
 	public function editSave($data) {
-		$Date1 = $this->dateFR2US($data['DATENS']) ;echo '</br>';
-		$Date2 = $this->dateFR2US($data['DINS']) ;echo '</br>';
-		$Timestamp1 = $this->CalculateTimestampFromCurrDatetime($Date1);echo '</br>';
-		$Timestamp2 = $this->CalculateTimestampFromCurrDatetime($Date2);echo '</br>';
-		$DateDiff = $this->CalculateDateDifference($Timestamp1, $Timestamp2);echo '</br>';
-	    //echo '<pre>';print_r ($DateDiff);echo '<pre>';
-		$Date11 = $this->dateFR2US($data['DATEHOSPI']) ;echo '</br>';
-		$Date22 = $this->dateFR2US($data['DINS']);echo '</br>';
-		$Timestamp11 = $this->CalculateTimestampFromCurrDatetime($Date11);echo '</br>';
-		$Timestamp22 = $this->CalculateTimestampFromCurrDatetime($Date22);echo '</br>';
-		$DateDiff1 = $this->CalculateDateDifference($Timestamp11, $Timestamp22);echo '</br>';
-		//echo '<pre>';print_r ($DateDiff1);echo '<pre>';
-		 $postData = array(
-			'WILAYAD'    => $data['WILAYAD'],
-            'COMMUNED'   => $data['COMMUNED'],
-            'STRUCTURED' => $data['STRUCTURED'],
-			'DINS'   => $this->dateFR2US($data['DINS']),
-            'HINS'   => $data['HINS'],
-            'NOM'    => $data['NOM'],
-            'PRENOM' => $data['PRENOM'],
-            'FILSDE' => $data['FILSDE'],
-			'ETDE'   => $data['ETDE'],
-			'SEX'    => $data['SEXE'],
-			'DATENAISSANCE' => $this->dateFR2US($data['DATENS']),
-			'Days' => $DateDiff['days'],
-            'Weeks' => $DateDiff['weeks'],
-            'Months' => $DateDiff['months'],
-            'Years' => $DateDiff['years'],
-			'WILAYA'   => $data['WILAYAN'],
-            'COMMUNE'  => $data['COMMUNEN'],
-            'WILAYAR'  => $data['WILAYAR'],
-            'COMMUNER' => $data['COMMUNER'],
-            'ADRESSE'  => $data['ADRESSE'],
-			'CD'  => $data['CD'],
-			'LD'  => $data['LD'],
-			'AUTRES'  => $data['AUTRES'],
-			'OMLI'  => $data['OMLI'],
-			'MIEC'  => $data['MIEC'],
-			'EPFP'  => $data['EPFP'],
-			'CIM1'  => $data['CIM1'],
-			'CIM2'  => $data['CIM2'],
-			'CIM3'  => $data['CIM3'],
-			'CIM4'  => $data['CIM4'],
-			'CIM5'  => $data['CIM5'],
-			'NDLM'  => $data['NDLM'],
-			'NDLMAAP'  => $data['NDLMAAP'],
-			'GM'  => $data['GM'],
-			'MN'  => $data['MN'],
-			'AGEGEST'  => $data['AGEGEST'],
-			'POIDNSC'  => $data['POIDNSC'],
-			'AGEMERE'  => $data['AGEMERE'],
-			'DPNAT'  => $data['DPNAT'],
-			'EMDPNAT'  => $data['EMDPNAT'],
-			'DECEMAT'  => $data['DECEMAT'],
-			'GRS'  => $data['GRS'],
-			'POSTOPP'  => $data['POSTOPP'],
-		    'DATEHOSPI'  => $this->dateFR2US($data['DATEHOSPI']),
-		    'HEURESHOSPI'  => $data['HEURESHOSPI'],
-			'SERVICEHOSPIT'  => $data['SERVICEHOSPIT'],
-		    'DUREEHOSPIT'  => $DateDiff1['days'],
-            'MEDECINHOSPIT'  => $data['MEDECINHOSPIT'],
-			'CODECIM0'  => $data['CODECIM0'],
-			'CODECIM'  => $data['CODECIM'],
-            'WRS'=> $data['WILAYA'],
-            'SRS'=> $data['STRUCTURE'],
-            'USER'=> $data['login'],
-			'NOMAR'    => $data['NOMAR'],
-            'PRENOMAR' => $data['PRENOMAR'],
-            'FILSDEAR' => $data['FILSDEAR'],
-			'ETDEAR'   => $data['ETDEAR'],
-			'NOMPRENOMAR' => $data['NOMPRENOMAR'],
-			'PROAR' => $data['PROAR'],
-			'ADAR'   => $data['ADAR'],
-			'Profession' => $data['Profession']
+		$postData = array(
+            'Date' =>$data['Date'],
+			'WILAYAD' =>$data['WILAYAD'],
+			'COMMUNED' =>$data['COMMUNED'],   
+			'avicli' =>$data['avicli'],   
+			'avicycl' =>$data['avicycl'],   
+			'avibtm' =>$data['avibtm'],   
+			'avisem' =>$data['avisem'],   
+			'avi0' =>$data['avi0'],   
+			'avi1' =>$data['avi1'],   
+			'avi2' =>$data['avi2'],   
+			'avi3' =>$data['avi3'],   
+			'avi4' =>$data['avi4'],   
+			'avi5' =>$data['avi5'],   
+			'avi6' =>$data['avi6'],   
+			'avi7' =>$data['avi7'],   
+			'avi8' =>$data['avi8'],   
+			'avi9' =>$data['avi9'],   
+			'avi10' =>$data['avi10'],  
+			'avi11' =>$data['avi11'],   
+			'avi12' =>$data['avi12'],   
+			'avi13' =>$data['avi13'],   
+			'avi14' =>$data['avi14'],   
+			'avi15' =>$data['avi15'],   
+			'avi16' =>$data['avi16'],   
+			'avi17' =>$data['avi17'],   
+			'avi18' =>$data['avi18'],   
+			'avi19' =>$data['avi19'],   
+			'avi20' =>$data['avi20'],  
+			'avi21' =>$data['avi21'],   
+			'avi22' =>$data['avi22'],   
+			'avi23' =>$data['avi23'],   
+			'avi24' =>$data['avi24'],   
+			'avi25' =>$data['avi25'],   
+			'avi26' =>$data['avi26'],   
+			'avi27' =>$data['avi27'],   
+			'avi28' =>$data['avi28'],   
+			'avi29' =>$data['avi29'],   
+			'avi30' =>$data['avi30'], 
+			'avi31' =>$data['avi31'],   
+			'avi32' =>$data['avi32'],   
+			'avi33' =>$data['avi33'],   
+			'avi34' =>$data['avi34'],   
+			'avi35' =>$data['avi15'],   
+			'avi36' =>$data['avi36'],   
+			'avi37' =>$data['avi37'],   
+			'avi38' =>$data['avi38'],   
+			'avi39' =>$data['avi39'],   
+			'avi40' =>$data['avi40'],  
+			'avi41' =>$data['avi41'],   
+			'avi42' =>$data['avi42'],   
+			'avi43' =>$data['avi43'],   
+			'avi44' =>$data['avi44'],   
+			'avi45' =>$data['avi45'],   
+			'avi46' =>$data['avi46'],   
+			'avi47' =>$data['avi47'],   
+			'avi48' =>$data['avi48'],   
+			'avi49' =>$data['avi49'],   
+			'avi50' =>$data['avi50'],
+			'avi51' =>$data['avi51'],   
+			'avi52' =>$data['avi52'],   
+			'avi53' =>$data['avi53'],   
+			'avi54' =>$data['avi54'],   
+			'avi55' =>$data['avi55'],   
+			'avi56' =>$data['avi56'],   
+			'avi57' =>$data['avi57'],   
+			'avi58' =>$data['avi58'],   
+			'avi59' =>$data['avi59'],   
+			'avi60' =>$data['avi60'],  
+			'avi61' =>$data['avi61'],   
+			'avi62' =>$data['avi62'],   
+			'avi63' =>$data['avi63'],   
+			'avi64' =>$data['avi64'],   
+			'avi65' =>$data['avi65'],   
+			'avi66' =>$data['avi66'],   
+			'avi67' =>$data['avi67'],   
+			'avi68' =>$data['avi68'],   
+			'avi69' =>$data['avi69'],   
+			'avi70' =>$data['avi70'], 
+			'avi71' =>$data['avi71'],   
+			'avi72' =>$data['avi72'],   
+			'avi73' =>$data['avi73'],   
+			'avi74' =>$data['avi74'],   
+			'avi75' =>$data['avi75'],   
+			'avi76' =>$data['avi76'],   
+			'avi77' =>$data['avi77'],   
+			'avi78' =>$data['avi78'],   
+			'avi79' =>$data['avi79'],   
+			'avi80' =>$data['avi80'], 
+			'avi81' =>$data['avi81'],   
+			'avi82' =>$data['avi82'],   
+			'avi83' =>$data['avi83'],   
+			'avi84' =>$data['avi84'],   
+			'avi85' =>$data['avi85'],   
+			'avi86' =>$data['avi86'],   
+			'avi87' =>$data['avi87'],   
+			'avi88' =>$data['avi88'],   
+			'avi89' =>$data['avi89'],   
+			'avi90' =>$data['avi90'], 
+			'avi91' =>$data['avi91'],   
+			'avi92' =>$data['avi92'],   
+			'avi93' =>$data['avi93'],   
+			'avi94' =>$data['avi94'],   
+			'avi95' =>$data['avi95'],   
+			'avi96' =>$data['avi96'],   
+			'avi97' =>$data['avi97'],   
+			'avi98' =>$data['avi98'],   
+			'avi99' =>$data['avi99']     
         );
-       //echo '<pre>';print_r ($postData);echo '<pre>'; 
-        $this->db->update('deceshosp', $postData, "id =" . $data['id'] . "");
-		return $last_id = $data['id'];
-    }
-	
-	public function deletedeces($id) {       
-        $this->db->delete('deceshosp', "id = '$id'");
-    }
-
+        $this->db->update('avi', $postData, "id =" . $data['id'] . "");
+	    // echo '<pre>';print_r ($postData);echo '<pre>';
+    } 
 
 
 	

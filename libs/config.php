@@ -1,8 +1,8 @@
 <?php
 define('version', 'v2.0.1-beta1');
-define('logod', 'demographie.jpg?t='.time());
-define('logo', 'index.jpg?t='.time());
-define('logon', 'naissance.png?t='.time());
+define('logod', 'possin.jpg?t='.time());
+define('logo', 'possin.jpg?t='.time());
+define('logon', 'possin.png?t='.time());
 
 define('URL', 'http://'.$_SERVER['SERVER_NAME'].dirname($_SERVER['PHP_SELF']).'/');
 define('LIBS', 'libs/');

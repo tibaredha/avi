@@ -1,33 +1,125 @@
-<div class="sheader1l"><p id="lnouveau"><?php echo "Gérer les certificats de décès";?></p></div><div class="sheader1r"><p id="lnouveau"><?php html::NAV();?></p></div>
-<div class="sheader2l">Créer un nouveau certificat de deces</div><div class="sheader2r">
-ID Défunt( e ) :
-<label style="display: none;" id="show_codeP">
-<input type="text" name="code_patient" id="code_patient"  style="border: none; background-color: green; color: white; font-family:courier; text-align:center;  "   size="15" readonly="">
-</label>                                
-
-                                   
-
-
+<div class="sheader1r"><p id="llogin"><?php html::NAV();?></p></div>
+<div class="sheader2r">***********************</div>
+<div class="contentsig">
+<form  action="<?php echo URL."dashboard/create/";  ?>"  method="POST"> 
+<?php
+$data = array(
+"Date"     => date('Y-m-d') ,
+"WILAYA1"  => '17000' ,
+"WILAYA2"  => 'Djelfa',
+"COMMUNE1" => HTML::nbrtostring('structure','id',Session::get('structure'),'numcom') ,
+"COMMUNE2" => HTML::nbrtostring('structure','id',Session::get('structure'),'com'),
+"avicli"   => '0',
+"avicycl"  => '0',
+"avibtm"   => '0',
+"avisem"   => '',
+"avi0" => "0",
+"avi1" => "0",
+"avi2" => "0",
+"avi3" => "0",
+"avi4" => "0",
+"avi5" => "0",
+"avi6" => "0",
+"avi7" => "0",
+"avi8" => "0",
+"avi9" => "0",
+"avi10" => "0",
+"avi11" => "0",
+"avi12" => "0",
+"avi13" => "0",
+"avi14" => "0",
+"avi15" => "0",
+"avi16" => "0",
+"avi17" => "0",
+"avi18" => "0",
+"avi19" => "0",
+"avi20" => "0",
+"avi21" => "0",
+"avi22" => "0",
+"avi23" => "0",
+"avi24" => "0",
+"avi25" => "0",
+"avi26" => "0",
+"avi27" => "0",
+"avi28" => "0",
+"avi29" => "0",
+"avi30" => "0",
+"avi31" => "0",
+"avi32" => "0",
+"avi33" => "0",
+"avi34" => "0",
+"avi35" => "0",
+"avi36" => "0",
+"avi37" => "0",
+"avi38" => "0",
+"avi39" => "0",
+"avi40" => "0",
+"avi41" => "0",
+"avi42" => "0",
+"avi43" => "0",
+"avi44" => "0",
+"avi45" => "0",
+"avi46" => "0",
+"avi47" => "0",
+"avi48" => "0",
+"avi49" => "0",
+"avi50" => "0",
+"avi51" => "0",
+"avi52" => "0",
+"avi53" => "0",
+"avi54" => "0",
+"avi55" => "0",
+"avi56" => "0",
+"avi57" => "0",
+"avi58" => "0",
+"avi59" => "0",
+"avi60" => "0",
+"avi61" => "0",
+"avi62" => "0",
+"avi63" => "0",
+"avi64" => "0",
+"avi65" => "0",
+"avi66" => "0",
+"avi67" => "0",
+"avi68" => "0",
+"avi69" => "0",
+"avi70" => "0",
+"avi71" => "0",
+"avi72" => "0",
+"avi73" => "0",
+"avi74" => "0",
+"avi75" => "0",
+"avi76" => "0",
+"avi77" => "0",
+"avi78" => "0",
+"avi79" => "0",
+"avi80" => "0",
+"avi81" => "0",
+"avi82" => "0",
+"avi83" => "0",
+"avi84" => "0",
+"avi85" => "0",
+"avi86" => "0",
+"avi87" => "0",
+"avi88" => "0",
+"avi89" => "0",
+"avi90" => "0",
+"avi91" => "0",
+"avi92" => "0",
+"avi93" => "0",
+"avi94" => "0",
+"avi95" => "0",
+"avi96" => "0",
+"avi97" => "0",
+"avi98" => "0",
+"avi99" => "0"
+);
+HTML::tabsavi($data);
+?>
+</form> 			
 </div>
-<div class="listl">
-	<form  action="<?php echo URL."dashboard/create/";  ?>"  method="POST"> 
-		<div class="tabbed_area">  
-			<ul class="tabs">  
-				<li><a href="javascript:tabSwitch('tab_1', 'content_1');" id="tab_1" class="active">1er partie</a></li>  
-				<li><a href="javascript:tabSwitch('tab_2', 'content_2');" id="tab_2">2em partie</a></li> 
-				<li><a href="javascript:tabSwitch('tab_3', 'content_3');" id="tab_3">3em partie</a></li> 	
-				<li><a href="javascript:tabSwitch('tab_4', 'content_4');" id="tab_4">4em partie </a></li> 	
-			</ul>    	 
-			<?php
-			$data = array(
-			""       => '', 
-			""       => '' 
-			);
-			HTML::tabs($data);
-			?>				
-		</div> 
-	</form> 
-</div>	
-<div class="scontentl2"><?php echo "";echo $this->msg; echo "";?></div>		
-<div class="scontentl3"><?php html::rsc();?></div>
-<div class="scontentr1"><?php echo "";echo dsp; echo "";?></div>	
+<div class="contenth"><img id="image" src="<?php echo URL;?>public/images/demographie1.jpg" ></div>	
+<div class="content"><img id="image" src="<?php echo URL;?>public/images/djelfa.png" ></div>
+<div class="contentb"><img id="image" src="<?php echo URL;?>public/images/demographie1.jpg" ></div>
+<div class="contentr"><img id="image" src="<?php echo URL;?>public/images/possin.jpg"></div>	
+<div class="scontentr1"><?php echo "";echo dsp; echo "";?></div>		

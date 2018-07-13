@@ -1,384 +1,305 @@
-<div class="sheader1l"><p id="lnouveau"><?php echo "Gérer les certificats de décès";?></p></div><div class="sheader1r"><p id="lnouveau"><?php html::NAV();?></p></div>
-<div class="sheader2l">
-<P><?php echo "Modifier le certificat de décès de : ".$this->user[0]['NOM'];?> <?php echo $this->user[0]['PRENOM'];?><?php //echo $this->user[0]['id'];?></P>
-</div>
-<div class="sheader2r">
+<div class="sheader1r"><p id="llogin"><?php html::NAV();?></p></div>
+<div class="sheader2r">Bordereau Numerique Mensuel</div>
+<div class="contentsig">
+<form  action="<?php echo URL."dashboard/editSave/".$this->user[0]['id']; ?>"  method="POST"> 
 <?php
-$ctrl='dashboard';
-$mdl='search';
 $data = array(
-"c"   => $ctrl,
-"m"   => $mdl,
-"combo"   => array("id"=>'id',"Nom"=>'NOM',"prenom"=>'PRENOM',"Sexe"=>'SEX'),
-"submitvalue" => 'Search',
-"cb1" => $ctrl,"mb1" => 'nouveau',        "tb1" => 'nouveau',"vb1" => '', "icon1" => 'add.PNG',
-"cb2" => $ctrl,"mb2" => 'impr',            "tb2" => 'Print', "vb2" => '',  "icon2" => 'print.PNG',
-"cb3" => $ctrl,"mb3" => 'CGR',            "tb3" => 'graphe',"vb3" => '',  "icon3" => 'graph.PNG',
-"cb4" => $ctrl,"mb4" => '',               "tb4" => 'Search',"vb4" => '',  "icon4" => 'search.PNG');
-
-echo "<button id=\"Cleari\"  onclick=\"document.location='".URL.$data['cb1']."/".$data['mb1']."/';  \"   title=\"".$data['tb1']."\">&nbsp;<img src=\"".URL."public/images/".$data['icon1']."\" width='15' height='15' border='0' alt=''/>&nbsp;".$data['vb1']."&nbsp;</button> " ;
-echo "<button id=\"Cleari\"  onclick=\"document.location='".URL.$data['cb2']."/".$data['mb2']."/';  \"   title=\"".$data['tb2']."\">&nbsp;<img src=\"".URL."public/images/".$data['icon2']."\" width='15' height='15' border='0' alt=''/>&nbsp;".$data['vb2']."&nbsp;</button> " ;
+"Date"     => $this->user[0]['date'],
+"WILAYA1"  => $this->user[0]['WILAYAD'] ,
+"WILAYA2"  => View::nbrtostring('wil','IDWIL',$this->user[0]['WILAYAD'],'WILAYAS'),
+"COMMUNE1" => $this->user[0]['COMMUNED'] ,
+"COMMUNE2" => View::nbrtostring('com','IDCOM',$this->user[0]['COMMUNED'],'COMMUNE'),
+"avicli"   => $this->user[0]['avicli'],
+"avicycl"  => $this->user[0]['avicycl'],
+"avibtm"   => $this->user[0]['avibtm'],
+"avisem"   => $this->user[0]['avisem'],
+"avi0" => $this->user[0]['avi0'],
+"avi1" => $this->user[0]['avi1'],
+"avi2" => $this->user[0]['avi2'],
+"avi3" => $this->user[0]['avi3'],
+"avi4" => $this->user[0]['avi4'],
+"avi5" => $this->user[0]['avi5'],
+"avi6" => $this->user[0]['avi6'],
+"avi7" => $this->user[0]['avi7'],
+"avi8" => $this->user[0]['avi8'],
+"avi9" => $this->user[0]['avi9'],
+"avi10" => $this->user[0]['avi10'],
+"avi11" => $this->user[0]['avi11'],
+"avi12" => $this->user[0]['avi12'],
+"avi13" => $this->user[0]['avi13'],
+"avi14" => $this->user[0]['avi14'],
+"avi15" => $this->user[0]['avi15'],
+"avi16" => $this->user[0]['avi16'],
+"avi17" => $this->user[0]['avi17'],
+"avi18" => $this->user[0]['avi18'],
+"avi19" => $this->user[0]['avi19'],
+"avi20" => $this->user[0]['avi20'],
+"avi21" => $this->user[0]['avi21'],
+"avi22" => $this->user[0]['avi22'],
+"avi23" => $this->user[0]['avi23'],
+"avi24" => $this->user[0]['avi24'],
+"avi25" => $this->user[0]['avi25'],
+"avi26" => $this->user[0]['avi26'],
+"avi27" => $this->user[0]['avi27'],
+"avi28" => $this->user[0]['avi28'],
+"avi29" => $this->user[0]['avi29'],
+"avi30" => $this->user[0]['avi30'],
+"avi31" => $this->user[0]['avi31'],
+"avi32" => $this->user[0]['avi32'],
+"avi33" => $this->user[0]['avi33'],
+"avi34" => $this->user[0]['avi34'],
+"avi35" => $this->user[0]['avi35'],
+"avi36" => $this->user[0]['avi36'],
+"avi37" => $this->user[0]['avi37'],
+"avi38" => $this->user[0]['avi38'],
+"avi39" => $this->user[0]['avi39'],
+"avi40" => $this->user[0]['avi40'],
+"avi41" => $this->user[0]['avi41'],
+"avi42" => $this->user[0]['avi42'],
+"avi43" => $this->user[0]['avi43'],
+"avi44" => $this->user[0]['avi44'],
+"avi45" => $this->user[0]['avi45'],
+"avi46" => $this->user[0]['avi46'],
+"avi47" => $this->user[0]['avi47'],
+"avi48" => $this->user[0]['avi48'],
+"avi49" => $this->user[0]['avi49'],
+"avi50" => $this->user[0]['avi50'],
+"avi51" => $this->user[0]['avi51'],
+"avi52" => $this->user[0]['avi52'],
+"avi53" => $this->user[0]['avi53'],
+"avi54" => $this->user[0]['avi54'],
+"avi55" => $this->user[0]['avi55'],
+"avi56" => $this->user[0]['avi56'],
+"avi57" => $this->user[0]['avi57'],
+"avi58" => $this->user[0]['avi58'],
+"avi59" => $this->user[0]['avi59'],
+"avi60" => $this->user[0]['avi60'],
+"avi61" => $this->user[0]['avi61'],
+"avi62" => $this->user[0]['avi62'],
+"avi63" => $this->user[0]['avi63'],
+"avi64" => $this->user[0]['avi64'],
+"avi65" => $this->user[0]['avi65'],
+"avi66" => $this->user[0]['avi66'],
+"avi67" => $this->user[0]['avi67'],
+"avi68" => $this->user[0]['avi68'],
+"avi69" => $this->user[0]['avi69'],
+"avi70" => $this->user[0]['avi70'],
+"avi71" => $this->user[0]['avi71'],
+"avi72" => $this->user[0]['avi72'],
+"avi73" => $this->user[0]['avi73'],
+"avi74" => $this->user[0]['avi74'],
+"avi75" => $this->user[0]['avi75'],
+"avi76" => $this->user[0]['avi76'],
+"avi77" => $this->user[0]['avi77'],
+"avi78" => $this->user[0]['avi78'],
+"avi79" => $this->user[0]['avi79'],
+"avi80" => $this->user[0]['avi80'],
+"avi81" => $this->user[0]['avi81'],
+"avi82" => $this->user[0]['avi82'],
+"avi83" => $this->user[0]['avi83'],
+"avi84" => $this->user[0]['avi84'],
+"avi85" => $this->user[0]['avi85'],
+"avi86" => $this->user[0]['avi86'],
+"avi87" => $this->user[0]['avi87'],
+"avi88" => $this->user[0]['avi88'],
+"avi89" => $this->user[0]['avi89'],
+"avi90" => $this->user[0]['avi90'],
+"avi91" => $this->user[0]['avi91'],
+"avi92" => $this->user[0]['avi92'],
+"avi93" => $this->user[0]['avi93'],
+"avi94" => $this->user[0]['avi94'],
+"avi95" => $this->user[0]['avi95'],
+"avi96" => $this->user[0]['avi96'],
+"avi97" => $this->user[0]['avi97'],
+"avi98" => $this->user[0]['avi98'],
+"avi99" => $this->user[0]['avi99']
+);
+HTML::tabsavi($data);
 ?>
 
 
-</div>
-<div class="listl">
-	<form  action="<?php echo URL."dashboard/editSave/".$this->user[0]['id'];?>"  method="POST"> 
-		<div class="tabbed_area">  
-			<ul class="tabs">  
-				<li><a href="javascript:tabSwitch('tab_1', 'content_1');" id="tab_1" class="active">1er partie</a></li>  
-				<li><a href="javascript:tabSwitch('tab_2', 'content_2');" id="tab_2">2em partie</a></li> 
-				<li><a href="javascript:tabSwitch('tab_3', 'content_3');" id="tab_3">3em partie</a></li> 	
-				<li><a href="javascript:tabSwitch('tab_4', 'content_4');" id="tab_4">4em partie </a></li> 	
-			</ul>
-			<?php
-			echo '<div id="content_1" class="contenttabs1">  ';
-			$commune1=HTML::nbrtostring('structure','id',Session::get('structure'),'numcom');
-			$commune2=HTML::nbrtostring('structure','id',Session::get('structure'),'com');
-			// $data[''];
-			echo '<label id="lWILAYAD">Wilaya:</label>';     HTML::WILAYA('WILAYAD','WILAYAD','WILAYAD','wil','17000','Djelfa') ;
-			echo '<label id="lCOMMUNED">Commune:</label>';   HTML::COMMUNE('COMMUNED','COMMUNED','COMMUNED',$commune1,$commune2);
-			echo '<label id="lDINS">Date décès:</label>';    echo '<input id="DINS"   type="txt"  name="DINS"   value="'.HTML::dateUS2FR($this->user[0]['DINS']).'" />';
-															 echo '<input id="HINS"   type="txt"  name="HINS"   value="'.$this->user[0]['HINS'].'" />';
-			echo '<label  id="lNOM">Nom:</label>';           echo '<input id="NOM"    type="txt"  name="NOM"    value="'.$this->user[0]['NOM'].'" autofocus  onkeyup="javascript:this.value=this.value.toUpperCase();"/>';
-			echo '<label  id="lPRENOM">Prénom:</label> ';    echo '<input id="PRENOM" type="txt"  name="PRENOM" value="'.$this->user[0]['PRENOM'].'" onkeyup="javascript:this.value=this.value.toUpperCase();"/>';
-			echo '<label  id="lFILSDE">Père:</label>';       echo '<input id="FILSDE" type="txt"  name="FILSDE" value="'.$this->user[0]['FILSDE'].'" onkeyup="javascript:this.value=this.value.toUpperCase();"/>';
-			echo '<label  id="lETDE">Mère:</label>';         echo '<input id="ETDE"   type="txt"  name="ETDE"   value="'.$this->user[0]['ETDE'].'"   onkeyup="javascript:this.value=this.value.toUpperCase();"/>';
-			
-			echo '<label  id="lSEXE">Sexe:</label>';
-			echo '<select id="SEXE"  name="SEXE"  >  ';
-			     echo '<option value="'.$this->user[0]['SEX'].'">'.$this->user[0]['SEX'].'</option>';
-				 echo '<option value="M">Masculin</option>';
-				 echo '<option value="F">Feminin</option> ';
-			echo '</select>';
-			
-			echo '<label for="DATENS"  id="lDATENS">Né(e) le:</label>';   echo '<input id="DATENS" type="txt"  name="DATENS" value="'.HTML::dateUS2FR($this->user[0]['DATENAISSANCE']).'" />';
-			echo '<label for="WILAYAN" id="lWILAYAN">Wilaya:</label>';    HTML::WILAYA('WILAYAN','WILAYAN','WILAYAN','wil',$this->user[0]['WILAYA'],HTML::nbrtostring('wil','IDWIL',$this->user[0]['WILAYA'],'WILAYAS')) ;
-			echo '<label for="COMMUNEN"id="lCOMMUNEN">Commune:</label>';  HTML::COMMUNE('COMMUNEN','COMMUNEN','COMMUNEN',$this->user[0]['COMMUNE'],HTML::nbrtostring('com','IDCOM',$this->user[0]['COMMUNE'],'COMMUNE'));
-			echo '<label for="WILAYAR" id="lWILAYAR">Wilaya:</label>';    HTML::WILAYA('WILAYAR','WILAYAR','WILAYAR','wil',$this->user[0]['WILAYAR'],HTML::nbrtostring('wil','IDWIL',$this->user[0]['WILAYAR'],'WILAYAS')) ;
-			echo '<label for="COMMUNER"id="lCOMMUNER">Commune:</label> '; HTML::COMMUNE('COMMUNER','COMMUNER','COMMUNER',$this->user[0]['COMMUNER'],HTML::nbrtostring('com','IDCOM',$this->user[0]['COMMUNER'],'COMMUNE'));
-			echo '<label for="ADRESSE" id="lADRESSE">Adresse:</label>';   echo '<input id="ADRESSE" type="text" name="ADRESSE" value="'.$this->user[0]['ADRESSE'].'"/>';
 
-			echo '<label id="lLD7">Signalement médico-légal:</label>';
-			
-			if ($this->user[0]['OMLI']=='1') 
-			{
-			echo '<label id="lLD8">Obstacle médico-légal a l\'inhumation  :</label> ';                               echo '<input id="LD8" type="checkbox"  name="OMLI" value="OMLI" checked/> ';
-			}
-			else
-			{
-			echo '<label id="lLD8">Obstacle médico-légal a l\'inhumation  :</label> ';                               echo '<input id="LD8" type="checkbox"  name="OMLI" value="OMLI" /> ';
-			}
-			
-			if ($this->user[0]['MIEC']=='1') 
-			{
-			echo '<label id="lLD9">Mise immédiate en cercueil hermétique en raison du risque de contagion :</label>';echo '<input id="LD9" type="checkbox"  name="MIEC" value="MIEC" checked /> ';
-			}
-			else
-			{
-			echo '<label id="lLD9">Mise immédiate en cercueil hermétique en raison du risque de contagion :</label>';echo '<input id="LD9" type="checkbox"  name="MIEC" value="MIEC" /> ';
-			}
-			
-			if ($this->user[0]['EPFP']=='1') 
-			{
-			echo '<label id="lLD10">Existence d\'une prothèse fonctionnant au moyen d\'une pile :</label> ';         echo '<input id="LD10" type="checkbox" name="EPFP" value="EPFP" checked />';
-			}
-			else
-			{
-			echo '<label id="lLD10">Existence d\'une prothèse fonctionnant au moyen d\'une pile :</label> ';         echo '<input id="LD10" type="checkbox" name="EPFP" value="EPFP" />';
-			}
-			
-			echo '<label id="lLD0">lieu du décès:</label>';
-			echo '<label id="lLD1">Domicile:</label>'; 
-			echo '<label id="lLD2">Voie publique:</label>'; 
-			echo '<label id="lLD3">Autres :</label>'; 
-			echo '<label id="lLD4">Structure publique:</label>'; 
-			echo '<label id="lLD5">Structure privée:</label>'; 
-			
-			
-			switch($this->user[0]['LD'])  
-				{
-				   case 'DOM' :
-						{ 
-						echo '<input id="LD1" type="radio"  name="LD" value="DOM" checked/>';
-						echo '<input id="LD2" type="radio"  name="LD" value="VP"/>';
-						echo '<input id="LD3" type="radio"  name="LD" value="AAP"/><input id="LD6" type="txt"    name="AUTRES" value="'.$this->user[0]['AUTRES'].'" /> ';
-						echo '<input id="LD4" type="radio"  name="LD" value="SSP"/>';
-						echo '<input id="LD5" type="radio"  name="LD" value="SSPV"/>';
-						break;}
-				   case 'VP' :
-						{ 
-						echo '<input id="LD1" type="radio"  name="LD" value="DOM"/>';
-						echo '<input id="LD2" type="radio"  name="LD" value="VP" checked/>';
-						echo '<input id="LD3" type="radio"  name="LD" value="AAP"/><input id="LD6" type="txt"    name="AUTRES" value="'.$this->user[0]['AUTRES'].'"/> ';
-						echo '<input id="LD4" type="radio"  name="LD" value="SSP"/>';
-						echo '<input id="LD5" type="radio"  name="LD" value="SSPV"/>';
-						break;}
-				   case 'AAP' :
-						{ 
-						echo '<input id="LD1" type="radio"  name="LD" value="DOM" />';
-						echo '<input id="LD2" type="radio"  name="LD" value="VP" />';
-						echo '<input id="LD3" type="radio"  name="LD" value="AAP" checked/><input id="LD6" type="txt"    name="AUTRES" value="'.$this->user[0]['AUTRES'].'"   /> ';
-						echo '<input id="LD4" type="radio"  name="LD" value="SSP"  />';
-						echo '<input id="LD5" type="radio"  name="LD" value="SSPV" />';
-						break;}
-					 case 'SSP' :
-						{ 
-						echo '<input id="LD1" type="radio"  name="LD" value="DOM" />';
-						echo '<input id="LD2" type="radio"  name="LD" value="VP" />';
-						echo '<input id="LD3" type="radio"  name="LD" value="AAP" /><input id="LD6" type="txt"    name="AUTRES" value="'.$this->user[0]['AUTRES'].'" /> ';
-						echo '<input id="LD4" type="radio"  name="LD" value="SSP" checked />';
-						echo '<input id="LD5" type="radio"  name="LD" value="SSPV" />';
-						break;}
-					 case 'SSPV' :
-						{ 
-						echo '<input id="LD1" type="radio"  name="LD" value="DOM" />';
-						echo '<input id="LD2" type="radio"  name="LD" value="VP" />';
-						echo '<input id="LD3" type="radio"  name="LD" value="AAP" /><input id="LD6" type="txt"    name="AUTRES" value="'.$this->user[0]['AUTRES'].'" /> ';
-						echo '<input id="LD4" type="radio"  name="LD" value="SSP"  />';
-						echo '<input id="LD5" type="radio"  name="LD" value="SSPV" checked/>';
-						break;}			
-				}
-			echo '<label id="lProfession">Profession :</label>';                         HTML::Profession(44,44,'Profession','deces','Profession',Session::get('structure'),$this->user[0]['Profession'],HTML::nbrtostring('Profession','id',$this->user[0]['Profession'],'Profession')) ;
-			echo '<label for="DATEHOSPI"id="lDATEHOSPI">Date d\'hospitalisation:</label> '; echo '<input id="DATEHOSPI" type="txt" name="DATEHOSPI" value="'.HTML::dateUS2FR($this->user[0]['DATEHOSPI']).'" />';echo '<input id="HEURESHOSPI" type="txt"  name="HEURESHOSPI" value="'.$this->user[0]['HEURESHOSPI'].'"/>';
-			echo '<label for="SERVICEHOSPIT"id="lSERVICEHOSPIT"  >Service :</label>';    HTML::SER(44,44,'SERVICEHOSPIT','deces','servicedeces',$this->user[0]['SERVICEHOSPIT'],HTML::nbrtostring('servicedeces','id',$this->user[0]['SERVICEHOSPIT'],'service')) ;
-			echo '<label for="MEDECINHOSPIT"id="lMEDECINHOSPIT"  >';
-				  echo '<a title="Nouveau Medecin"  href="'.URL.'dashboard/createmedecin/'.Session::get('structure').'"> Medecin:</a>';
-				  echo'<img src="'.URL.'public/images/add.PNG" width="12" height="12" border="0" alt=""   />';
-			echo '</label>';
-			HTML::MED(44,44,'MEDECINHOSPIT','deces','medecindeces',Session::get('structure'),$this->user[0]['MEDECINHOSPIT'],$this->user[0]['MEDECINHOSPIT']) ;
-			echo '</div>';
-			
-			echo '<div id="content_2" class="contenttabs2">';
-			echo '<label id="lCIM0">Partie I : Maladie(s) ou affection(s) morbide (s) ayant directement provoqué le décés:</label>';
-			echo '<label id="lCIM1">&nbsp;Cause directe :&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a)</label><input title="La définition n\'inclut pas les symptômes ni les modes de décès"id="CIM1" type="txt" name="CIM1" value="'.$this->user[0]['CIM1'].'"  />';
-			echo '<label id="lCIM2">&nbsp;Due à ou consécutive à : b)</label><input title="La définition n\'inclut pas les symptômes ni les modes de décès"   id="CIM2" type="txt" name="CIM2" value="'.$this->user[0]['CIM2'].'"  />';
-			echo '<label id="lCIM3">&nbsp;Due à ou consécutive à : c)</label><input title="La définition n\'inclut pas les symptômes ni les modes de décès"   id="CIM3" type="txt" name="CIM3" value="'.$this->user[0]['CIM3'].'"  />';
-			echo '<label id="lCIM4">&nbsp;Due à ou consécutive à : d)</label><input title="La définition n\'inclut pas les symptômes ni les modes de décès"   id="CIM4" type="txt" name="CIM4" value="'.$this->user[0]['CIM4'].'"  />';
-			echo '<label id="lCIM00">Partie II : Autres états morbides ayant pu contribuer au décés, non mentionnés en partie 1:</label>';
-			echo '<label id="lCIM5"> Autres états :</label>            <input id="CIM5" type="txt" name="CIM5" value="'.$this->user[0]['CIM5'].'"  />';
-			HTML::cim1('CODECIM0','deces','chapitre',$this->user[0]['CODECIM0'],HTML::nbrtostring('chapitre','IDCHAP',$this->user[0]['CODECIM0'],'CHAP'));
-			HTML::cim2('CODECIM',$this->user[0]['CODECIM'],HTML::nbrtostring('cim','row_id',$this->user[0]['CODECIM'],'diag_nom')) ;
-			echo '<label id="lCIM7">  * la cause initiale = la dernière ligne</label>';
-			echo '<label id="lCIM01">Cause de décés:</label>';
-			echo '<label id="lCIM02">Cause naturelle:</label>'; 
-			echo '<label id="lCIM03">Cause viollente:</label>';
-			echo '<label id="lCIM04">Cause indeterminée:</label>';	
-				
-				
-				switch($this->user[0]['CD'])  
-				{
-				   case 'CN' :
-						{ 
-						echo'<input  title="Cause endogene(maladie,senescence)"id="CIM02" type="radio"  name="CD" value="CN"checked />';
-			            echo'<input  title="Cause exogene(accident,scuicide,homicide)"id="CIM03" type="radio"  name="CD" value="CV" />';
-			            echo'<input title="Indeterminée(homicide,scuicide,accident)"id="CIM04" type="radio"  name="CD" value="CI" />';
-						break;}
-				   case 'CV' :
-						{ 
-						echo'<input  title="Cause endogene(maladie,senescence)"id="CIM02" type="radio"  name="CD" value="CN" />';
-						echo'<input  title="Cause exogene(accident,scuicide,homicide)"id="CIM03" type="radio"  name="CD" value="CV" checked/>';
-						echo'<input title="Indeterminée(homicide,scuicide,accident)"id="CIM04" type="radio"  name="CD" value="CI" />';
-						break;}
-				   case 'CI' :
-						{ 
-						echo'<input  title="Cause endogene(maladie,senescence)"id="CIM02" type="radio"  name="CD" value="CN" />';
-						echo'<input  title="Cause exogene(accident,scuicide,homicide)"id="CIM03" type="radio"  name="CD" value="CV" />';
-						echo'<input title="Indeterminée(homicide,scuicide,accident)"id="CIM04" type="radio"  name="CD" value="CI" checked/>';
-						break;}		
-				}		
-				
-			echo '<label id="lNDM1">Nature de la mort:</label>';
-				echo '<label id="lNDM2">Naturelle:</label>';
-				echo '<label id="lNDM3">Accident:</label>';
-				echo '<label id="lNDM4">auto induite:</label>';
-				echo '<label id="lNDM5">agression:</label>';
-				echo '<label id="lNDM6">indéterminée:</label>';
-				echo '<label id="lNDM7">Autre (a préciser):</label>';
-				switch($this->user[0]['NDLM'])  
-				{
-				    case 'NAT' :
-						{  
-						echo'<input id="NDM2" type="radio"  name="NDLM" value="NAT" checked />';
-						echo'<input id="NDM3" type="radio"  name="NDLM" value="ACC" />';
-						echo'<input id="NDM4" type="radio"  name="NDLM" value="AID" />';
-						echo'<input id="NDM5" type="radio"  name="NDLM" value="AGR" />';
-						echo'<input id="NDM6" type="radio"  name="NDLM" value="IND" />';
-						echo'<input id="NDM7" type="radio"  name="NDLM" value="AAP" /><input id="NDLMAAP" type="txt" name="NDLMAAP" value="'.$this->user[0]['NDLMAAP'].'"/>';
-						break;}
-					 case 'ACC' :
-						{ 
-						echo'<input id="NDM2" type="radio"  name="NDLM" value="NAT" />';
-						echo'<input id="NDM3" type="radio"  name="NDLM" value="ACC" checked/>';
-						echo'<input id="NDM4" type="radio"  name="NDLM" value="AID" />';
-						echo'<input id="NDM5" type="radio"  name="NDLM" value="AGR" />';
-						echo'<input id="NDM6" type="radio"  name="NDLM" value="IND" />';
-						echo'<input id="NDM7" type="radio"  name="NDLM" value="AAP" /><input id="NDLMAAP" type="txt" name="NDLMAAP" value="'.$this->user[0]['NDLMAAP'].'"/>';
-						break;}
-					 case 'AID' :
-						{ 
-						echo'<input id="NDM2" type="radio"  name="NDLM" value="NAT" />';
-						echo'<input id="NDM3" type="radio"  name="NDLM" value="ACC" />';
-						echo'<input id="NDM4" type="radio"  name="NDLM" value="AID" checked/>';
-						echo'<input id="NDM5" type="radio"  name="NDLM" value="AGR" />';
-						echo'<input id="NDM6" type="radio"  name="NDLM" value="IND" />';
-						echo'<input id="NDM7" type="radio"  name="NDLM" value="AAP" /><input id="NDLMAAP" type="txt" name="NDLMAAP" value="'.$this->user[0]['NDLMAAP'].'"/>';
-						break;}
-					 case 'AGR' :
-						{
-						echo'<input id="NDM2" type="radio"  name="NDLM" value="NAT" />';
-						echo'<input id="NDM3" type="radio"  name="NDLM" value="ACC" />';
-						echo'<input id="NDM4" type="radio"  name="NDLM" value="AID" />';
-						echo'<input id="NDM5" type="radio"  name="NDLM" value="AGR" checked/>';
-						echo'<input id="NDM6" type="radio"  name="NDLM" value="IND" />';
-						echo'<input id="NDM7" type="radio"  name="NDLM" value="AAP" /><input id="NDLMAAP" type="txt" name="NDLMAAP" value="'.$this->user[0]['NDLMAAP'].'"/>';
-						break;}
-					 case 'IND' :
-						{  
-						echo'<input id="NDM2" type="radio"  name="NDLM" value="NAT" />';
-						echo'<input id="NDM3" type="radio"  name="NDLM" value="ACC" />';
-						echo'<input id="NDM4" type="radio"  name="NDLM" value="AID" />';
-						echo'<input id="NDM5" type="radio"  name="NDLM" value="AGR" />';
-						echo'<input id="NDM6" type="radio"  name="NDLM" value="IND" checked/>';
-						echo'<input id="NDM7" type="radio"  name="NDLM" value="AAP" /><input id="NDLMAAP" type="txt" name="NDLMAAP" value="'.$this->user[0]['NDLMAAP'].'"/>';
-						break;}
-					 case 'AAP' :
-						{  
-						echo'<input id="NDM2" type="radio"  name="NDLM" value="NAT" />';
-						echo'<input id="NDM3" type="radio"  name="NDLM" value="ACC" />';
-						echo'<input id="NDM4" type="radio"  name="NDLM" value="AID" />';
-						echo'<input id="NDM5" type="radio"  name="NDLM" value="AGR" />';
-						echo'<input id="NDM6" type="radio"  name="NDLM" value="IND" />';
-						echo'<input id="NDM7" type="radio"  name="NDLM" value="AAP" checked/><input id="NDLMAAP" type="txt" name="NDLMAAP" value="'.$this->user[0]['NDLMAAP'].'"/>';
-						break;}		
-				}			
-			echo '</div>';
-			echo '<div id="content_3" class="contenttabs3">';
-			echo '<label id="lDECEMAT0"  >Décés maternel:</label>';
-			
-				if ($this->user[0]['DECEMAT']=='1') 
-				{
-				echo '<label id="lDECEMAT"  >Décés maternel:</label>       <input id="DECEMAT"    type="checkbox"  name="DECEMAT" checked /> ';
-				}
-				else
-				{
-				echo '<label id="lDECEMAT"  >Décés maternel:</label>       <input id="DECEMAT"    type="checkbox"  name="DECEMAT"  /> ';
-				}
-			
-			echo '<label id="lDGRO">Durant la grossesse:</label>';
-			echo '<label id="lDACC">Durant l\'accouchement:</label>';
-			echo '<label id="lDAVO">Durant l\'avortement:</label>';
-			echo '<label id="lAGESTATION">Aprés la gestation "post partum" :</label>';
-			echo '<label id="lIDETER">Indéterminé:</label> ';
-			
-			
-			
-			switch($this->user[0]['GRS'])  
-				{
-				   case 'DGRO' :
-						{ 
-						echo'<input id="DGRO"       type="radio"     name="GRS"     value="DGRO" checked/>';
-						echo'<input id="DACC"       type="radio"     name="GRS"     value="DACC" />';
-						echo'<input id="DAVO"       type="radio"     name="GRS"     value="DAVO" />';
-						echo'<input id="AGESTATION" type="radio"     name="GRS"     value="AGESTATION" />';
-						echo'<input id="IDETER"     type="radio"     name="GRS"     value="IDETER"  />';
-						break;}
-				  case 'DACC' :
-						{ 
-						echo'<input id="DGRO"       type="radio"     name="GRS"     value="DGRO" />';
-						echo'<input id="DACC"       type="radio"     name="GRS"     value="DACC" checked/>';
-						echo'<input id="DAVO"       type="radio"     name="GRS"     value="DAVO" />';
-						echo'<input id="AGESTATION" type="radio"     name="GRS"     value="AGESTATION" />';
-						echo'<input id="IDETER"     type="radio"     name="GRS"     value="IDETER"  />';
-						break;}
-				  case 'DAVO' :
-						{
-						echo'<input id="DGRO"       type="radio"     name="GRS"     value="DGRO" />';
-						echo'<input id="DACC"       type="radio"     name="GRS"     value="DACC" />';
-						echo'<input id="DAVO"       type="radio"     name="GRS"     value="DAVO" checked/>';
-						echo'<input id="AGESTATION" type="radio"     name="GRS"     value="AGESTATION" />';
-						echo'<input id="IDETER"     type="radio"     name="GRS"     value="IDETER"  />';
-						break;}
-				  case 'AGESTATION' :
-						{ 
-						echo'<input id="DGRO"       type="radio"     name="GRS"     value="DGRO" />';
-						echo'<input id="DACC"       type="radio"     name="GRS"     value="DACC" />';
-						echo'<input id="DAVO"       type="radio"     name="GRS"     value="DAVO" />';
-						echo'<input id="AGESTATION" type="radio"     name="GRS"     value="AGESTATION" checked/>';
-						echo'<input id="IDETER"     type="radio"     name="GRS"     value="IDETER"  />'; 
-						break;}
-				  case 'IDETER' :
-						{ 
-						echo'<input id="DGRO"       type="radio"     name="GRS"     value="DGRO" />';
-						echo'<input id="DACC"       type="radio"     name="GRS"     value="DACC" />';
-						echo'<input id="DAVO"       type="radio"     name="GRS"     value="DAVO" />';
-						echo'<input id="AGESTATION" type="radio"     name="GRS"     value="AGESTATION" />';
-						echo'<input id="IDETER"     type="radio"     name="GRS"     value="IDETER" checked />';
-						break;}		
-				}
-			echo '<label id="MNP0">Mortinatalité, périnatalité:</label> ';
-			if ($this->user[0]['GM']=='1') 
-			{
-			echo '<label id="MNP1">Grossesse multiple:</label>          <input id="GM"         type="checkbox"  name="GM" checked /> ';
-			}
-			else
-			{
-			echo '<label id="MNP1">Grossesse multiple:</label>          <input id="GM"         type="checkbox"  name="GM"  /> ';
-			}
-			if ($this->user[0]['MN']=='1') 
-			{
-			echo '<label id="MNP2">Mort-né:</label>                     <input id="MN"         type="checkbox"  name="MN" checked /> ';
-			}
-			else
-			{
-			echo '<label id="MNP2">Mort-né:</label>                     <input id="MN"         type="checkbox"  name="MN"  /> ';
-			}
-			echo '<label id="MNP3">Age gestationnel:</label>            <input id="AGEGEST"    type="txt" name="AGEGEST"   value="'.$this->user[0]['AGEGEST'].'" />';
-			echo '<label id="MNP4">Poids a la naissance:</label>        <input id="POIDNSC"    type="txt" name="POIDNSC"   value="'.$this->user[0]['POIDNSC'].'" />';
-			echo '<label id="MNP5">Age de la mére:</label>              <input id="AGEMERE"    type="txt" name="AGEMERE"   value="'.$this->user[0]['AGEMERE'].'" />';
-			
-			if ($this->user[0]['DPNAT']=='1') 
-				{
-				echo '<label id="MNP6">Si décés périnatal préciser:</label> <input id="DPNAT"      type="checkbox"  name="DPNAT" checked /> ';
-			    echo '<input id="EMDPNAT" type="txt"  name="EMDPNAT" value="'.$this->user[0]['EMDPNAT'].'" />';
-				
-				}
-				else
-				{
-				echo '<label id="MNP6">Si décés périnatal préciser:</label> <input id="DPNAT"      type="checkbox"  name="DPNAT"  /> ';
-			    echo '<input id="EMDPNAT" type="txt"  name="EMDPNAT" value="'.$this->user[0]['EMDPNAT'].'" />';
-				
-				}
-			
-			echo '<label id="POSTOPP0">Intervention chirugicale:</label> ';
-			
-			if ($this->user[0]['POSTOPP']=='1') 
-				{
-				echo '<label id="POSTOPP1">4 semaines avant le décés:</label>          <input id="POSTOPP2"         type="checkbox"  name="POSTOPP" checked /> ';
-				}
-				else
-				{
-				echo '<label id="POSTOPP1">4 semaines avant le décés:</label>          <input id="POSTOPP2"         type="checkbox"  name="POSTOPP"  /> ';
-				}
-			echo '</div>';
-			echo '<div id="content_4" class="contenttabs4"> ';
-			echo '<label id="lNOMAR">: اللفـب</label>                <input id="NOMAR"       type="txt" name="NOMAR"       value="'.$this->user[0]['NOMAR'].'" />';
-			echo '<label id="lPRENOMAR">: الإسم</label>               <input id="PRENOMAR"    type="txt" name="PRENOMAR"    value="'.$this->user[0]['PRENOMAR'].'" />';
-			echo '<label id="lFILSDEAR">: الأب</label>                <input id="FILSDEAR"    type="txt" name="FILSDEAR"    value="'.$this->user[0]['FILSDEAR'].'" />';
-			echo '<label id="lETDEAR">: الأم</label>                  <input id="ETDEAR"      type="txt" name="ETDEAR"      value="'.$this->user[0]['ETDEAR'].'" />';
-			echo '<label id="lNOMPRENOMAR">: إسم و لقب الزوج</label> <input id="NOMPRENOMAR" type="txt" name="NOMPRENOMAR" value="'.$this->user[0]['NOMPRENOMAR'].'" />';
-			echo '<label id="lPROAR">: المهنة </label>               <input id="PROAR"       type="txt" name="PROAR"       value="'.$this->user[0]['PROAR'].'" />';
-			echo '<label id="lADAR">: عنوان الإقامة</label>           <input id="ADAR"        type="txt" name="ADAR"        value="'.$this->user[0]['ADAR'].'" />';
-			echo '<input type="hidden" name="WILAYA"     value="'.Session::get('wilaya').'"/>';
-			echo '<input type="hidden" name="STRUCTURE"  value="'.Session::get('structure').'"/>';
-			echo '<input type="hidden" name="STRUCTURED" value="'.Session::get('structure').'"/>';
-			echo '<input type="hidden" name="login"      value="'.Session::get('login').'"/>';
-			echo '<input id="submitnew" type="submit" />	'; 
-			echo '</div>';
-			?> 
-		</div> 
-	</form> 
-</div>	
-<div class="scontentl2"><?php echo "";echo $this->msg; echo "";?></div>		
-<div class="scontentl3"><?php html::rsc();?></div>
-<div class="scontentr1"><?php echo "";echo dsp; echo "";?></div>	
+
+<?php
+// $data = array(
+// "mois"     => $this->user[0]['mois'] ,
+// "annee"    => $this->user[0]['annee'] ,
+
+// "nm1" => $this->user[0]['nm1'],"nf1"  => $this->user[0]['nf1'],
+// "nm2" => $this->user[0]['nm2'],"nf2"  => $this->user[0]['nf2'],
+// "mnm1"=> $this->user[0]['mnm1'],"mnf1"=> $this->user[0]['mnf1'],
+// "m1"  => $this->user[0]['m1'],"m2"    => $this->user[0]['m2'],
+// "djm1"=> $this->user[0]['djm1'],"djf1"=> $this->user[0]['djf1'],
+
+// "dm1"=> $this->user[0]['dm1'],"df1"=> $this->user[0]['df1'],
+// "dm2"=> $this->user[0]['dm2'],"df2"=> $this->user[0]['df2'],
+// "dm3"=> $this->user[0]['dm3'],"df3"=> $this->user[0]['df3'],
+// "dm4"=> $this->user[0]['dm4'],"df4"=> $this->user[0]['df4'],
+// "dm5"=> $this->user[0]['dm5'],"df5"=> $this->user[0]['df5'],
+// "dm6"=> $this->user[0]['dm6'],"df6"=> $this->user[0]['df6'],
+// "dm7"=> $this->user[0]['dm7'],"df7"=> $this->user[0]['df7'],
+// "dm8"=> $this->user[0]['dm8'],"df8"=> $this->user[0]['df8'],
+// "dm9"=> $this->user[0]['dm9'],"df9"=> $this->user[0]['df9'],
+// "dm10"=> $this->user[0]['dm10'],"df10"=> $this->user[0]['df10'],
+// "dm11"=> $this->user[0]['dm11'],"df11"=> $this->user[0]['df11'],
+// "dm12"=> $this->user[0]['dm12'],"df12"=> $this->user[0]['df12'],
+// "dm13"=> $this->user[0]['dm13'],"df13"=> $this->user[0]['df13'],
+// "dm14"=> $this->user[0]['dm14'],"df14"=> $this->user[0]['df14'],
+// "dm15"=> $this->user[0]['dm15'],"df15"=> $this->user[0]['df15'],
+// "dm16"=> $this->user[0]['dm16'],"df16"=> $this->user[0]['df16'],
+// "dm17"=> $this->user[0]['dm17'],"df17"=> $this->user[0]['df17'],
+// "dm18"=> $this->user[0]['dm18'],"df18"=> $this->user[0]['df18'],
+// "dm19"=> $this->user[0]['dm19'],"df19"=> $this->user[0]['df19'],
+// "dm20"=> "","df20"=> ""
+// );
+// HTML::tabsbnm($data);
+?>
+</form> 			
+</div>
+<div class="contenth"><img id="image" src="<?php echo URL;?>public/images/demographie1.jpg" ></div>	
+<div class="content"><img id="image" src="<?php echo URL;?>public/images/djelfa.png" ></div>
+<div class="contentb"><img id="image" src="<?php echo URL;?>public/images/demographie1.jpg" ></div>
+<div class="contentr"><img id="image" src="<?php echo URL;?>public/images/<?php echo logod;?>"></div>	
+<div class="scontentr1"><?php echo "";echo dsp; echo "";?></div>
+
+
+
+<?php 
+// lang(Session::get('lang'));
+// ob_start();
+
+// $data = array(
+// "titre"     => 'Update Eleve Scolarise', 
+// "btn"       => 'scolaire', 
+// "id"        => $this->user[0]['id'], 
+// "butun"     => 'Update eleve', 
+// "photos"    => 'PYRAMIDE.jpg',
+// "action"    => 'scolaire/editSave/'.$this->user[0]['id'],
+// "DINS"      => date('Y-m-d'),
+// "HINS"      => date("H:i"),
+// "NOM"       => $this->user[0]['NOM'],
+// "PRENOM"    => $this->user[0]['PRENOM'],    
+// "FILSDE"    => $this->user[0]['FILSDE'], 
+// "ETDE"      => $this->user[0]['ETDE'], 
+// "SEXE"      => array($this->user[0]['SEXE'],"M", "F"),
+// "DATENS"    => $this->user[0]['DATENS'],
+// "WILAYAN1"  => $this->user[0]['WILAYAN'] ,
+// "WILAYAN2"  => View::nbrtostring('wil','IDWIL',$this->user[0]['WILAYAN'],'WILAYAS'),
+// "COMMUNEN1" => $this->user[0]['COMMUNEN'] ,
+// "COMMUNEN2" => View::nbrtostring('com','IDCOM',$this->user[0]['COMMUNEN'],'COMMUNE'),
+// "WILAYAR1"  => $this->user[0]['WILAYAR'] ,
+// "WILAYAR2"  => View::nbrtostring('wil','IDWIL',$this->user[0]['WILAYAR'],'WILAYAS'),
+// "COMMUNER1" => $this->user[0]['COMMUNER'],
+// "COMMUNER2" => View::nbrtostring('com','IDCOM',$this->user[0]['COMMUNER'],'COMMUNE'),
+// "ADRESSE1"  => $this->user[0]['ADRESSE'],
+// "ADRESSE2"  => $this->user[0]['ADRESSE'],
+// "TEL"       => $this->user[0]['TEL'],
+// "TELF"      => $this->user[0]['TELF'],
+// "EMAIL"     => $this->user[0]['EMAIL'],
+// "GRABO"     => $this->user[0]['GRABO'] ,"GRRH"  => $this->user[0]['GRRH'],
+// "NEC"       => $this->user[0]['NEC'],"DATEINS"=> $this->user[0]['DATEINS'],       
+// "WILAYASS1" => $this->user[0]['WILAYASS'] ,
+// "WILAYASS2" => View::nbrtostring('wil','IDWIL',$this->user[0]['WILAYASS'],'WILAYAS'),
+// "COMMUNESS1" => $this->user[0]['COMMUNESS'] ,
+// "COMMUNESS2" => View::nbrtostring('com','IDCOM',$this->user[0]['COMMUNESS'],'COMMUNE'),
+// "ETASS1"     => $this->user[0]['ETASS'] ,
+// "ETASS2"     => $this->user[0]['ETASS'] ,
+// "x"         => "30",
+// "y"         => "240"
+// );
+// View::datass($data);
+// verifsession();	
+// lang(Session::get('lang'));
+// ob_start();$url1 = explode('/',$_GET['url']);
+// View::fieldset("bnm0","<strong> Date-Wilaya-Commune</strong>"); 
+// View::fieldset("bnm1","<strong>1-Naisances Par Sexe Enregistrées Dans La Commune</strong>"); 
+// View::fieldset("bnm2","<strong>2-Mort Nées Enregistrés Dans La Commune Selon Le Sexe  </strong>"); 
+// View::fieldset("bnm3","<strong>3-Mariages Enregistrées Dans La Commune</strong>"); 
+// View::fieldset("bnm4","<strong>4-Deces Enregistrés Par Jugement Dans La Commune</strong>"); 
+// View::fieldset("bnm5","<strong>5-Deces Survenus Dans La Commune</strong>"); 
+// View::fieldset("bnm6","<strong>***</strong>"); 
+// $data = array(
+// "mois"     => $this->user[0]['mois'] ,
+// "annee"     => $this->user[0]['annee'] ,
+// "btn"       => 'Bordereau', 
+// "id"        => $this->user[0]['id'], 
+// "butun"     => 'Update Bordereau Numerique', 
+// "photos"    => 'public/images/photos/pda.jpg',
+// "action"    => 'Bordereau/editSave/'.$this->user[0]['id'],
+// "WILAYAN1"  => $this->user[0]['WILAYAN'] ,
+// "WILAYAN2"  => View::nbrtostring('wil','IDWIL',$this->user[0]['WILAYAN'],'WILAYAS'),
+// "COMMUNEN1" => $this->user[0]['COMMUNEN'] ,
+// "COMMUNEN2" => View::nbrtostring('com','IDCOM',$this->user[0]['COMMUNEN'],'COMMUNE'),
+// "nm1" => $this->user[0]['nm1'],"nf1" => $this->user[0]['nf1'],
+// "nm2" => $this->user[0]['nm2'],"nf2" => $this->user[0]['nf2'],
+// "mnm1"=> $this->user[0]['mnm1'],"mnf1"=> $this->user[0]['mnf1'],
+// "m1"=> $this->user[0]['m1'],"m2"=> $this->user[0]['m2'],
+// "djm1"=> $this->user[0]['djm1'],"djf1"=> $this->user[0]['djf1'],
+// "dm1"=> $this->user[0]['dm1'],"df1"=> $this->user[0]['df1'],
+// "dm2"=> $this->user[0]['dm2'],"df2"=> $this->user[0]['df2'],
+// "dm3"=> $this->user[0]['dm3'],"df3"=> $this->user[0]['df3'],
+// "dm4"=> $this->user[0]['dm4'],"df4"=> $this->user[0]['df4'],
+// "dm5"=> $this->user[0]['dm5'],"df5"=> $this->user[0]['df5'],
+// "dm6"=> $this->user[0]['dm6'],"df6"=> $this->user[0]['df6'],
+// "dm7"=> $this->user[0]['dm7'],"df7"=> $this->user[0]['df7'],
+// "dm8"=> $this->user[0]['dm8'],"df8"=> $this->user[0]['df8'],
+// "dm9"=> $this->user[0]['dm9'],"df9"=> $this->user[0]['df9'],
+// "dm10"=> $this->user[0]['dm10'],"df10"=> $this->user[0]['df10'],
+// "dm11"=> $this->user[0]['dm11'],"df11"=> $this->user[0]['df11'],
+// "dm12"=> $this->user[0]['dm12'],"df12"=> $this->user[0]['df12'],
+// "dm13"=> $this->user[0]['dm13'],"df13"=> $this->user[0]['df13'],
+// "dm14"=> $this->user[0]['dm14'],"df14"=> $this->user[0]['df14'],
+// "dm15"=> $this->user[0]['dm15'],"df15"=> $this->user[0]['df15'],
+// "dm16"=> $this->user[0]['dm16'],"df16"=> $this->user[0]['df16'],
+// "dm17"=> $this->user[0]['dm17'],"df17"=> $this->user[0]['df17'],
+// "dm18"=> $this->user[0]['dm18'],"df18"=> $this->user[0]['df18'],
+// "dm19"=> $this->user[0]['dm19'],"df19"=> $this->user[0]['df19']
+// );
+
+// view::button($data['btn'],'');
+// echo "<h2>Update Bordereau Numerique Mensuel </h2 ><hr /><br />";
+// $this->f0(URL.$data['action'],'post');
+// View::photosurl(1170,230,URL.$data['photos']);
+// $x=50;$y=10;
+// $this->label($x,$y+250,'Date');    $this->date($x+450,$y+240,'mois',0,$data['mois'],'date');  $this->date($x+580,$y+240,'annee',0,$data['annee'],'date');
+// $this->label($x,$y+280,'Wilaya');  $this->WILAYA($x+450,$y+270,'WILAYAN','country','mvc','wil',$data['WILAYAN1'],$data['WILAYAN2']);
+// $this->label($x,$y+310,'Commune'); $this->COMMUNE($x+450,$y+300,'COMMUNEN','COMMUNEN',$data['COMMUNEN1'],$data['COMMUNEN2']);
+// $this->label($x+465,$y+375,'Masculin');         $this->label($x+565,$y+375,'Feminin');   
+// $this->label($x,$y+400,'Naissances Survenues Au cours Du Mois');                 $this->date($x+450,$y+390,'nm1',0,$data['nm1'],'date'); $this->date($x+550,$y+390,'nf1',0,$data['nf1'],'date');
+// $this->label($x,$y+430,'Naissances Enregistrées Par Jugement');                  $this->date($x+450,$y+420,'nm2',0,$data['nm2'],'date'); $this->date($x+550,$y+420,'nf2',0,$data['nf2'],'date');
+// $this->label($x+465,$y+495,'Masculin');         $this->label($x+565,$y+495,'Feminin'); 
+// $this->label($x,$y+520,'Total Des Mort Nées Enregistrés Au Cours Du Mois ');   $this->date($x+450,$y+510,'mnm1',0,$data['mnm1'],'date');$this->date($x+550,$y+510,'mnf1',0,$data['mnf1'],'date');
+// $this->label($x,$y+580,'Mariages Enregistrés Au Cours Du Mois ');              $this->date($x+550,$y+570,'m1',0,$data['m1'],'date');
+// $this->label($x,$y+610,'Mariages Enregistrés Par Jugement Au Cours Du Mois '); $this->date($x+550,$y+600,'m2',0,$data['m2'],'date');
+// $this->label($x+465,$y+675,'Masculin');         $this->label($x+565,$y+675,'Feminin'); 
+// $this->label($x,$y+700,'Deces Enregistrés Par Jugement Au Cours Du Mois ');    $this->date($x+450,$y+690,'djm1',0,$data['djm1'],'date');$this->date($x+550,$y+690,'djf1',0,$data['djf1'],'date');
+// $this->label($x+865,$y+225,'Masculin');      $this->label($x+965,$y+225,'Feminin');   
+// $this->label($x+750,$y+250,'moins 1 ans');   $this->date($x+850,$y+240,'dm1',0,$data['dm1'],'date');$this->date($x+950,$y+240,'df1',0,$data['df1'],'date');
+// $this->label($x+750,$y+280,'01-04 ans');     $this->date($x+850,$y+270,'dm2',0,$data['dm2'],'date');$this->date($x+950,$y+270,'df2',0,$data['df2'],'date');
+// $this->label($x+750,$y+310,'05-09 ans');     $this->date($x+850,$y+300,'dm3',0,$data['dm3'],'date');$this->date($x+950,$y+300,'df3',0,$data['df3'],'date');
+// $this->label($x+750,$y+340,'10-14 ans');     $this->date($x+850,$y+330,'dm4',0,$data['dm4'],'date');$this->date($x+950,$y+330,'df4',0,$data['df4'],'date');
+// $this->label($x+750,$y+370,'15-19 ans');     $this->date($x+850,$y+360,'dm5',0,$data['dm5'],'date');$this->date($x+950,$y+360,'df5',0,$data['df5'],'date');
+// $this->label($x+750,$y+400,'20-24 ans');     $this->date($x+850,$y+390,'dm6',0,$data['dm6'],'date');$this->date($x+950,$y+390,'df6',0,$data['df6'],'date');
+// $this->label($x+750,$y+430,'25-29 ans');     $this->date($x+850,$y+420,'dm7',0,$data['dm7'],'date');$this->date($x+950,$y+420,'df7',0,$data['df7'],'date');
+// $this->label($x+750,$y+460,'30-34 ans');     $this->date($x+850,$y+450,'dm8',0,$data['dm8'],'date');$this->date($x+950,$y+450,'df8',0,$data['df8'],'date');
+// $this->label($x+750,$y+490,'35-39 ans');     $this->date($x+850,$y+480,'dm9',0,$data['dm9'],'date');$this->date($x+950,$y+480,'df9',0,$data['df9'],'date');
+// $this->label($x+750,$y+520,'40-44 ans');     $this->date($x+850,$y+510,'dm10',0,$data['dm10'],'date');$this->date($x+950,$y+510,'df10',0,$data['df10'],'date');
+// $this->label($x+750,$y+550,'45-49 ans');     $this->date($x+850,$y+540,'dm11',0,$data['dm11'],'date');$this->date($x+950,$y+540,'df11',0,$data['df11'],'date');
+// $this->label($x+750,$y+580,'50-54 ans');     $this->date($x+850,$y+570,'dm12',0,$data['dm12'],'date');$this->date($x+950,$y+570,'df12',0,$data['df12'],'date');
+// $this->label($x+750,$y+610,'55-59 ans');     $this->date($x+850,$y+600,'dm13',0,$data['dm13'],'date');$this->date($x+950,$y+600,'df13',0,$data['df13'],'date');
+// $this->label($x+750,$y+640,'60-64 ans');     $this->date($x+850,$y+630,'dm14',0,$data['dm14'],'date');$this->date($x+950,$y+630,'df14',0,$data['df14'],'date');
+// $this->label($x+750,$y+670,'65-69 ans');     $this->date($x+850,$y+660,'dm15',0,$data['dm15'],'date');$this->date($x+950,$y+660,'df15',0,$data['df15'],'date');
+// $this->label($x+750,$y+700,'70-74 ans');     $this->date($x+850,$y+690,'dm16',0,$data['dm16'],'date');$this->date($x+950,$y+690,'df16',0,$data['df16'],'date');
+// $this->label($x+750,$y+730,'75-79 ans');     $this->date($x+850,$y+720,'dm17',0,$data['dm17'],'date');$this->date($x+950,$y+720,'df17',0,$data['df17'],'date');
+// $this->label($x+750,$y+760,'80-84 ans');     $this->date($x+850,$y+750,'dm18',0,$data['dm18'],'date');$this->date($x+950,$y+750,'df18',0,$data['df18'],'date');
+// $this->label($x+750,$y+790,'85 et plus');    $this->date($x+850,$y+780,'dm19',0,$data['dm19'],'date');$this->date($x+950,$y+780,'df19',0,$data['df19'],'date');
+// $this->submit($x+230,$y+760,$data['butun']);
+// $this->f1();
+// ob_end_flush();
+// view::sautligne(28);
+
+
+
+
+// ob_end_flush(); 	
+?>

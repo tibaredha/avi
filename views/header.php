@@ -25,7 +25,7 @@ $temps = getmicrotime();
 ?>
 <div class="tiba" >
     <div class="headerl"></div>
-	<div class="headerc">Ministere de la santé de la population et de la réforme hospitalière</div>
+	<div class="headerc">Ministere De L'agriculture Et Du Developpement Rural</div>
 	<div class="headerr"></div>
 	<div class="sheaderl">
 	<?php 
@@ -51,13 +51,13 @@ $temps = getmicrotime();
 			}
 			if (Session::get('login') == sadmin)
 			{  
-				echo '<a href="'.URL.'dashboard/Evaluation/">Evaluation <img src="'.URL.'public/images/eva.png" width="16" height="16" border="0" alt=""/></a>';echo '&nbsp;';
-				echo '<a href="'.URL.'dashboard/DSP/">DSP <img src="'.URL.'public/images/eva.png" width="16" height="16" border="0" alt=""/></a>';echo '&nbsp;';
-				echo '<a href="'.URL.'dashboard/SIGA/">Sig <img src="'.URL.'public/images/sig.png" width="16" height="16" border="0" alt=""/></a>';echo '&nbsp;';
-				echo '<a href="'.URL.'dashboard/CIM/">CIM <img src="'.URL.'public/images/cim.jpg" width="16" height="16" border="0" alt=""/></a>';echo '&nbsp;';
-				echo '<a href="'.URL.'dashboard/cfg/">Cfg <img src="'.URL.'public/images/cfg.jpg" width="16" height="16" border="0" alt=""/></a>';echo '&nbsp;';
-				echo '<a href="'.URL.'bnm/">BNM <img src="'.URL.'public/images/demographie.jpg" width="16" height="16" border="0" alt=""/></a>';echo '&nbsp;';
-			    echo '<a href="'.URL.'avi/">AVI <img src="'.URL.'public/images/possin.jpg" width="16" height="16" border="0" alt=""/></a>';echo '&nbsp;';
+				//echo '<a href="'.URL.'dashboard/Evaluation/">Evaluation <img src="'.URL.'public/images/eva.png" width="16" height="16" border="0" alt=""/></a>';echo '&nbsp;';
+				//echo '<a href="'.URL.'dashboard/DSP/">DSP <img src="'.URL.'public/images/eva.png" width="16" height="16" border="0" alt=""/></a>';echo '&nbsp;';
+				//echo '<a href="'.URL.'dashboard/SIGA/">Sig <img src="'.URL.'public/images/sig.png" width="16" height="16" border="0" alt=""/></a>';echo '&nbsp;';
+				//echo '<a href="'.URL.'dashboard/CIM/">CIM <img src="'.URL.'public/images/cim.jpg" width="16" height="16" border="0" alt=""/></a>';echo '&nbsp;';
+				//echo '<a href="'.URL.'dashboard/cfg/">Cfg <img src="'.URL.'public/images/cfg.jpg" width="16" height="16" border="0" alt=""/></a>';echo '&nbsp;';
+				//echo '<a href="'.URL.'bnm/">BNM <img src="'.URL.'public/images/demographie.jpg" width="16" height="16" border="0" alt=""/></a>';echo '&nbsp;';
+			    //echo '<a href="'.URL.'avi/">AVI <img src="'.URL.'public/images/possin.jpg" width="16" height="16" border="0" alt=""/></a>';echo '&nbsp;';
 			
 			}
 		}

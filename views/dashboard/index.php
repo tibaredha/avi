@@ -1,4 +1,4 @@
-<div class="sheader1l"><p id="dashboard"><?php echo "Gérer les certificats de décès";?></p></div><div class="sheader1r"><p id="dashboard"><?php html::NAV();?></p></div>
+<div class="sheader1l"><p id="dashboard"><?php echo "Gérer Echantillon des poussins representative du lot  (poids a jeun en grammes)";?></p></div><div class="sheader1r"><p id="dashboard"><?php html::NAV();?></p></div>
 <div class="sheader2l">
 
 <?php
@@ -7,10 +7,10 @@ $mdl='search';
 $data = array(
 "c"   => $ctrl,
 "m"   => $mdl,
-"combo"   => array("id"=>'id',"Nom"=>'NOM',"prenom"=>'PRENOM',"Sexe"=>'SEX'),
+"combo"   => array("id"=>'id'),
 "submitvalue" => 'Search',
 "cb1" => $ctrl,"mb1" => 'nouveau',        "tb1" => 'nouveau',"vb1" => '', "icon1" => 'add.PNG',
-"cb2" => $ctrl,"mb2" => 'impr',            "tb2" => 'Print', "vb2" => '',  "icon2" => 'print.PNG',
+"cb2" => $ctrl,"mb2" => 'Evaluation',     "tb2" => 'Print', "vb2" => '',  "icon2" => 'print.PNG',
 "cb3" => $ctrl,"mb3" => 'CGR',            "tb3" => 'graphe',"vb3" => '',  "icon3" => 'graph.PNG',
 "cb4" => $ctrl,"mb4" => '',               "tb4" => 'Search',"vb4" => '',  "icon4" => 'search.PNG');
 html::form($data) ;
@@ -32,18 +32,15 @@ echo "<button id=\"Cleari\"  onclick=\"document.location='".URL.$data['cb2']."/"
 		echo '<div class="listl">';
 		echo'<table>';$colspan=14;
 			echo'<tr bgcolor="#00CED1">';
-			echo'<th class="crtl">Val</th>';
-			echo'<th id="nomprenom">Nom_Prénom_(père)</th>';
-			echo'<th class="crtl">Sexe</th>';
-			echo'<th class="crtldate">Date Naissance</th>';
-			echo'<th class="crtl">Age</th>';
-			echo'<th class="crtldate">Date deces</th>';
-			echo'<th class="crtl">Cdn</th>';
-			echo'<th class="crtl">DD</th>';
-			echo'<th class="crtl">DN</th>';
-			echo'<th class="crtl">Cdm</th>';
-			echo'<th class="crtl">Audit</th>';
-			echo'<th class="crtl">Cdpn</th>';
+			echo'<th class="crtl">id</th>';
+			echo'<th class="crtldate">Date</th>';
+			echo'<th class="crtldate">Wilaya</th>';
+			echo'<th class="crtl">Commune</th>';
+			echo'<th class="crtl">Client</th>';
+			echo'<th class="crtl">Cycle</th>';
+			echo'<th class="crtl">Batiment</th>';
+			echo'<th class="crtl">Semaine</th>';
+			echo'<th class="crtl">Eva</th>';
 			echo'<th class="crtl">Update</th>';
 			echo'<th class="crtl">Delete</th>';
 			echo'</tr>';
@@ -51,48 +48,16 @@ echo "<button id=\"Cleari\"  onclick=\"document.location='".URL.$data['cb2']."/"
 			{ 
 			$bgcolor_donate ='#EDF7FF';
 			echo "<tr bgcolor=\"".$bgcolor_donate."\"  onmouseover=\"this.style.backgroundColor='#9FF781';\"   onmouseout=\"this.style.backgroundColor='".$bgcolor_donate."';\"  >" ;
-			 echo "<td style=\"width:50px;\" align=\"center\" > ok </td>" ;
-			echo '<td align="left" ><b><a target="_blank" title="valider décès "  href="'.URL.$ctrl.'/view/'.$value['id'].'" >'.$value['NOM'].'_'.$value['PRENOM'].' ('.$value['FILSDE'].')'.'<b></a></td>';
-			echo '<td align="center"  >'.$value['SEX'].'</td>';
-			echo '<td align="center"style="width:100px;" >'.HTML::dateUS2FR($value['DATENAISSANCE']).'</td>';
-			if ($value['Years'] > 0 ) 
-			{
-			    echo "<td style=\"width:50px;\" align=\"center\" >".$value['Years']." A </td>" ;
-			} 
-			else 
-			{
-				if ($value['Days'] <= 30 ) 
-				{
-				echo "<td style=\"width:50px;\" align=\"center\" >".$value['Days']." J </td>" ;
-				} 
-				else
-				{
-				echo "<td style=\"width:50px;\" align=\"center\" >".$value['Months']." M </td>" ;
-				} 
-			}
-			echo '<td align="center"style="width:100px;" >'.HTML::dateUS2FR($value['DINS']).'</td>';
-			echo '<td align="center" style="width:10px;" bgcolor="#32CD32" ><a target="_blank" title="Certificat de décés normal"  href="'.URL.'fpdf/deces/deceshosp.php?uc='.$value['id'].'" ><img src="'.URL.'public/images/b_props.png"   width="16" height="16" border="0" alt=""   /></a></td>';
-			echo '<td align="center" style="width:10px;" bgcolor="#32CD32" ><a target="_blank" title="إعلان بوفاة "                 href="'.URL.'tcpdf/deces/declaration.php?uc='.$value['id'].'" ><img src="'.URL.'public/images/b_props.png"   width="16" height="16" border="0" alt=""   /></a></td>';
-			echo '<td align="center" style="width:10px;" bgcolor="#32CD32" ><a target="_blank" title="إعلان بولادة"                  href="'.URL.'tcpdf/deces/declarationn.php?uc='.$value['id'].'" ><img src="'.URL.'public/images/b_props.png"   width="16" height="16" border="0" alt=""   /></a></td>';
+			echo '<td align="center"  >'.$value['id'].'</td>';
+			echo '<td align="center"  >'.$value['date'].'</td>';
+			echo '<td align="center"  >'.$value['WILAYAD'].'</td>';
+			echo '<td align="center"  >'.$value['COMMUNED'].'</td>';
+			echo '<td align="center"  >'.$value['avicli'].'</td>';
+			echo '<td align="center"  >'.$value['avicycl'].'</td>';
+			echo '<td align="center"  >'.$value['avibtm'].'</td>';
+			echo '<td align="center"  >'.$value['avisem'].'</td>';
 			
-			if ($value['DECEMAT']=='1'  and  $value['Years'] >= '20') 
-			{
-			echo '<td align="center" style="width:10px;" bgcolor="#32CD32"  ><a target="_blank" title="Certificat de décés maternel"  href="'.URL.'fpdf/deces/certdecesmat.php?uc='.$value['id'].'" ><img src="'.URL.'public/images/b_props.png"   width="16" height="16" border="0" alt=""   /></a></td>';
-			echo '<td align="center" style="width:10px;" bgcolor="#32CD32" ><a target="_blank" title="Audit de décés maternel"  href="'.URL.$ctrl.'/decesmaternel/'.$value['id'].'" ><img src="'.URL.'public/images/b_props.png"   width="16" height="16" border="0" alt=""   /></a></td>';
-			} 
-			else 
-			{
-			echo '<td align="center" style="width:10px;" bgcolor="#FF0000"><a  title="Selection invalide "   ><img src="'.URL.'public/images/b_props.png"   width="16" height="16" border="0" alt=""   /></a></td>';
-			echo '<td align="center" style="width:10px;" bgcolor="#FF0000"><a  title="Selection invalide "   ><img src="'.URL.'public/images/b_props.png"   width="16" height="16" border="0" alt=""   /></a></td>';
-			} 
-			if ($value['Days'] >= '30') 
-			{
-			echo '<td align="center" style="width:10px;" bgcolor="#FF0000" ><a  title="Selection invalide "   ><img src="'.URL.'public/images/b_props.png"   width="16" height="16" border="0" alt=""   /></a></td>';
-			} 
-			else 
-			{
-			echo '<td align="center" style="width:10px;" bgcolor="#32CD32" ><a target="_blank" title="Certificat de décés périnatal"  href="'.URL.$ctrl.'/decesperinatal/'.$value['id'].'" ><img src="'.URL.'public/images/b_props.png"   width="16" height="16" border="0" alt=""   /></a></td>';
-			} 
+			echo '<td align="center" style="width:10px;" bgcolor="#32CD32" ><a target="_blank" title="eva"  href="'.URL.'fpdf/avi/avi.php?uc='.$value['id'].'" ><img src="'.URL.'public/images/b_props.png"   width="16" height="16" border="0" alt=""   /></a></td>';
 			echo '<td align="center" style="width:10px;" ><a target="_blank" title="editer"  href="'.URL.$ctrl.'/edit/'.$value['id'].'" ><img src="'.URL.'public/images/edit.png"   width="16" height="16" border="0" alt=""   /></a></td>';
 			echo '<td align="center" style="width:10px;" ><a class="delete" title="supprimer"  href="'.URL.$ctrl.'/delete/'.$value['id'].'" ><img src="'.URL.'public/images/delete.png"   width="16" height="16" border="0" alt=""   /></a></td>';
 			echo'</tr>';
@@ -128,10 +93,10 @@ echo "<button id=\"Cleari\"  onclick=\"document.location='".URL.$data['cb2']."/"
 		else 
 		{
 		echo '<div class="contentl">';
-		HTML::multigraphe(30,340,'Décés Par annee et sexe  Arret Au : ','deceshosp','DINS','SEX','M','F','='.Session::get('structure')) ;
+		//HTML::multigraphe(30,340,'Naissance Par annee et sexe  Arret Au : ','bordereau','DINS','SEX','M','F','='.Session::get('structure')) ;
 		echo "</div>";
 		echo'<div class="content"><img id="image" src="'.URL.'public/images/dashbord.jpg" ></div>';
-		echo'<div class="contentr"><img id="image" src="'.URL.'public/images/'.logo.'"></div>';
+		echo'<div class="contentr"><img id="image" src="'.URL.'public/images/'.logod.'"></div>';
 		}
 ?>
 
@@ -167,7 +132,7 @@ echo "<button id=\"Cleari\"  onclick=\"document.location='".URL.$data['cb2']."/"
 		// echo '<a href="'.URL.'x/x/x">x</a>';echo '&nbsp;';
 		// echo '<a href="'.URL.'x/x/0">x</a>';echo '&nbsp;';
 	// }
-	echo '<a href="'.URL.'dashboard/graphe/0">Année</a>';echo '&nbsp;'; 
+	echo '<a href="'.URL.'naissance/graphe/0">Année</a>';echo '&nbsp;'; 
 	// echo '<a href="'.URL.'dashboard/graphe/1">Mois</a>';echo '&nbsp;';
 	  
 	
@@ -205,7 +170,7 @@ echo "<button id=\"Cleari\"  onclick=\"document.location='".URL.$data['cb2']."/"
 	
 	// }
 	
-	echo '<a href="'.URL.'dashboard/graphe/1">Mois</a>';echo '&nbsp;';
+	echo '<a href="'.URL.'naissance/graphe/1">Mois</a>';echo '&nbsp;';
 ?>
 </div>
-<div class="scontentr1"><?php echo "";echo dsp; echo "";?></div>		
+<div class="scontentr1"><?php echo "";//echo dsp; echo "";?></div>		
