@@ -15,7 +15,7 @@ define('title', '??????');
 define('sujet', 'avi');
 define('admin', 'admin');
 define('sadmin', 'tibaredha');
-define('dsp', 'DSP-DJELFA');
+define('dsp', '*******');
 define('Copyright', '&copy;  Copyright '.date('Y').' Designed by  Dr R.TIBA *** Tel : 07.72.71.80.59 *** DSP Djelfa');
 define('HASH_GENERAL_KEY', 'MixitUp200');
 define('HASH_PASSWORD_KEY', 'catsFLYhigh2000miles');

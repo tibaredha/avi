@@ -132,7 +132,7 @@ echo "<button id=\"Cleari\"  onclick=\"document.location='".URL.$data['cb2']."/"
 		// echo '<a href="'.URL.'x/x/x">x</a>';echo '&nbsp;';
 		// echo '<a href="'.URL.'x/x/0">x</a>';echo '&nbsp;';
 	// }
-	echo '<a href="'.URL.'naissance/graphe/0">Année</a>';echo '&nbsp;'; 
+	echo '<a href="'.URL.'dashboard/nouveau/">Année</a>';echo '&nbsp;'; 
 	// echo '<a href="'.URL.'dashboard/graphe/1">Mois</a>';echo '&nbsp;';
 	  
 	
@@ -170,7 +170,7 @@ echo "<button id=\"Cleari\"  onclick=\"document.location='".URL.$data['cb2']."/"
 	
 	// }
 	
-	echo '<a href="'.URL.'naissance/graphe/1">Mois</a>';echo '&nbsp;';
+	echo '<a href="'.URL.'dashboard/nouveau/">Mois</a>';echo '&nbsp;';
 ?>
 </div>
 <div class="scontentr1"><?php echo "";//echo dsp; echo "";?></div>		
