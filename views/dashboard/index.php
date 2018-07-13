@@ -49,9 +49,9 @@ echo "<button id=\"Cleari\"  onclick=\"document.location='".URL.$data['cb2']."/"
 			$bgcolor_donate ='#EDF7FF';
 			echo "<tr bgcolor=\"".$bgcolor_donate."\"  onmouseover=\"this.style.backgroundColor='#9FF781';\"   onmouseout=\"this.style.backgroundColor='".$bgcolor_donate."';\"  >" ;
 			echo '<td align="center"  >'.$value['id'].'</td>';
-			echo '<td align="center"  >'.$value['date'].'</td>';
-			echo '<td align="center"  >'.$value['WILAYAD'].'</td>';
-			echo '<td align="center"  >'.$value['COMMUNED'].'</td>';
+			echo '<td align="center"  >'.$value['date'].'</td>';// 
+			echo '<td align="left"  >'.html::nbrtostring('wil','IDWIL',$value['WILAYAD'],'WILAYAS').'</td>';
+			echo '<td align="left"  >'.html::nbrtostring('com','IDCOM',$value['COMMUNED'],'COMMUNE').'</td>';
 			echo '<td align="center"  >'.$value['avicli'].'</td>';
 			echo '<td align="center"  >'.$value['avicycl'].'</td>';
 			echo '<td align="center"  >'.$value['avibtm'].'</td>';
@@ -93,7 +93,7 @@ echo "<button id=\"Cleari\"  onclick=\"document.location='".URL.$data['cb2']."/"
 		else 
 		{
 		echo '<div class="contentl">';
-		//HTML::multigraphe(30,340,'Naissance Par annee et sexe  Arret Au : ','bordereau','DINS','SEX','M','F','='.Session::get('structure')) ;
+		// HTML::multigraphe(30,340,'Naissance Par annee et sexe  Arret Au : ','avi','date','SEX','M','F','='.Session::get('structure')) ;
 		echo "</div>";
 		echo'<div class="content"><img id="image" src="'.URL.'public/images/dashbord.jpg" ></div>';
 		echo'<div class="contentr"><img id="image" src="'.URL.'public/images/'.logod.'"></div>';

@@ -358,11 +358,215 @@ function genererCodeP1(){
 	
 	var codePati= val0+val1+val2+val3+val4+val5+val6+val7+val8+val9+val10+val11+val12+val13+val14+val15+val16+val17+val18+val19+val20+val21+val22+val23+val24+val25+val26+val27+val28+val29+val30+val31+val32+val33+val34+val35+val36+val37+val38+val39+val40+val41+val42+val43+val44+val45+val46+val47+val48+val49+val50+val51+val52+val53+val54+val55+val56+val57+val58+val59+val60+val61+val62+val63+val64+val65+val66+val67+val68+val69+val70 +val71+val72+val73+val74+val75+val76+val77+val78+val79+val80+val81+val82+val83+val84+val85+val86+val87+val88+val89+val90+val91+val92+val93+val94+val95+val96+val97+val98+val99;
 	var codePati1= codePati/100;
+	var codePati2= 
+	Math.sqrt((Math.pow(val0-codePati1, 2)+Math.pow(val1-codePati1, 2)+Math.pow(val2-codePati1, 2)+Math.pow(val3-codePati1, 2)+Math.pow(val4-codePati1, 2)+Math.pow(val5-codePati1, 2)+Math.pow(val6-codePati1, 2)+Math.pow(val7-codePati1, 2)+Math.pow(val8-codePati1, 2)+Math.pow(val9-codePati1, 2)+
+	Math.pow(val10-codePati1, 2)+Math.pow(val11-codePati1, 2)+Math.pow(val12-codePati1, 2)+Math.pow(val13-codePati1, 2)+Math.pow(val14-codePati1, 2)+Math.pow(val15-codePati1, 2)+Math.pow(val16-codePati1, 2)+Math.pow(val17-codePati1, 2)+Math.pow(val18-codePati1, 2)+Math.pow(val19-codePati1, 2)+
+	Math.pow(val20-codePati1, 2)+Math.pow(val21-codePati1, 2)+Math.pow(val22-codePati1, 2)+Math.pow(val23-codePati1, 2)+Math.pow(val24-codePati1, 2)+Math.pow(val25-codePati1, 2)+Math.pow(val26-codePati1, 2)+Math.pow(val27-codePati1, 2)+Math.pow(val28-codePati1, 2)+Math.pow(val29-codePati1, 2)+
+	Math.pow(val30-codePati1, 2)+Math.pow(val31-codePati1, 2)+Math.pow(val32-codePati1, 2)+Math.pow(val33-codePati1, 2)+Math.pow(val34-codePati1, 2)+Math.pow(val35-codePati1, 2)+Math.pow(val36-codePati1, 2)+Math.pow(val37-codePati1, 2)+Math.pow(val38-codePati1, 2)+Math.pow(val39-codePati1, 2)+
+	Math.pow(val40-codePati1, 2)+Math.pow(val41-codePati1, 2)+Math.pow(val42-codePati1, 2)+Math.pow(val43-codePati1, 2)+Math.pow(val44-codePati1, 2)+Math.pow(val45-codePati1, 2)+Math.pow(val46-codePati1, 2)+Math.pow(val47-codePati1, 2)+Math.pow(val48-codePati1, 2)+Math.pow(val49-codePati1, 2)+
+	Math.pow(val50-codePati1, 2)+Math.pow(val51-codePati1, 2)+Math.pow(val52-codePati1, 2)+Math.pow(val53-codePati1, 2)+Math.pow(val54-codePati1, 2)+Math.pow(val55-codePati1, 2)+Math.pow(val56-codePati1, 2)+Math.pow(val57-codePati1, 2)+Math.pow(val58-codePati1, 2)+Math.pow(val59-codePati1, 2)+
+	Math.pow(val60-codePati1, 2)+Math.pow(val61-codePati1, 2)+Math.pow(val62-codePati1, 2)+Math.pow(val63-codePati1, 2)+Math.pow(val64-codePati1, 2)+Math.pow(val65-codePati1, 2)+Math.pow(val66-codePati1, 2)+Math.pow(val67-codePati1, 2)+Math.pow(val68-codePati1, 2)+Math.pow(val69-codePati1, 2)+
+	Math.pow(val70-codePati1, 2)+Math.pow(val71-codePati1, 2)+Math.pow(val72-codePati1, 2)+Math.pow(val73-codePati1, 2)+Math.pow(val74-codePati1, 2)+Math.pow(val75-codePati1, 2)+Math.pow(val76-codePati1, 2)+Math.pow(val77-codePati1, 2)+Math.pow(val78-codePati1, 2)+Math.pow(val79-codePati1, 2)+
+	Math.pow(val80-codePati1, 2)+Math.pow(val81-codePati1, 2)+Math.pow(val82-codePati1, 2)+Math.pow(val83-codePati1, 2)+Math.pow(val84-codePati1, 2)+Math.pow(val85-codePati1, 2)+Math.pow(val86-codePati1, 2)+Math.pow(val87-codePati1, 2)+Math.pow(val88-codePati1, 2)+Math.pow(val89-codePati1, 2)+
+	Math.pow(val90-codePati1, 2)+Math.pow(val91-codePati1, 2)+Math.pow(val92-codePati1, 2)+Math.pow(val93-codePati1, 2)+Math.pow(val94-codePati1, 2)+Math.pow(val95-codePati1, 2)+Math.pow(val96-codePati1, 2)+Math.pow(val97-codePati1, 2)+Math.pow(val98-codePati1, 2)+Math.pow(val99-codePati1, 2))/99)
+	;
 	
+	
+	
+	//Math.round((arrlen) / 4) x)
 	// document.getElementById("show_codeP").style.display="";
-	document.getElementById("code_patient").value = "Total : "+codePati; 
-	document.getElementById("code_patient1").value = "Moyenne : "+ codePati1; 
+	
+	
+	
+	
+	
+	var arr = [val0,val1,val2,val3,val4,val5,val6,val7,val8,val9, 
+	           val10,val11,val12,val13,val14,val15,val16,val17,val18,val19,val20,val21,val22,val23,val24,val25,val26,val27,val28,val29,
+	           val30,val31,val32,val33,val34,val35,val36,val37,val38,val39,val40,val41,val42,val43,val44,val45,val46,val47,val48,val49,
+	           val50,val51,val52,val53,val54,val55,val56,val57,val58,val59,val60,val61,val62,val63,val64,val65,val66,val67,val68,val69,
+	           val70,val71,val72,val73,val74,val75,val76,val77,val78,val79,val80,val81,val82,val83,val84,val85,val86,val87,val88,val89,
+	           val90,val91,val92,val93,val94,val95,val96,val97,val98,val99];
+	
+	
+	document.getElementById("code_patient").value  = "Moyenne :  "+this.mean(arr) ; 
+	document.getElementById("code_patient1").value = "mode :     "+this.mode(arr) ; 
+	document.getElementById("code_patient2").value = "median :   "+this.median(arr) ; 
+	document.getElementById("code_patient3").value = "variance : "+this.variance(arr, true);
+	document.getElementById("code_patient4").value = "ecartype : "+this.stdev(arr, true); 
+	document.getElementById("code_patient5").value = "coeffvar : "+this.coeffvar(arr); 
+	document.getElementById("code_patient6").value = "skewness : "+this.skewness(arr); 
+	document.getElementById("code_patient7").value = "kurtosis : "+this.kurtosis(arr); 
+	document.getElementById("code_patient8").value = "quartiles : "+this.quartiles(arr); 
+	
 	}
+
+// this.sum(arr); 	
+// var arr= [2,2,2];
+function ascNum(a, b) { return a - b; }
+var slice = [].slice;
+
+function percentile(arr, k) { //k=0...0.50.....1
+  var _arr = arr.slice().sort(this.ascNum);
+  var realIndex = k * (_arr.length - 1);
+  var index = parseInt(realIndex);
+  var frac = realIndex - index;
+
+  if (index + 1 < _arr.length) {
+    return _arr[index] * (1 - frac) + _arr[index + 1] * frac;
+  } else {
+    return _arr[index];
+  }
+}
+
+
+
+function range(arr) {
+  return this.max(arr) - this.min(arr);
+};
+
+
+
+function mode(arr) {
+  var arrLen = arr.length;
+  var _arr = arr.slice().sort(this.ascNum);
+  var count = 1;
+  var maxCount = 0;
+  var numMaxCount = 0;
+  var mode_arr = [];
+  var i;
+
+  for (var i = 0; i < arrLen; i++) {
+    if (_arr[i] === _arr[i + 1]) {
+      count++;
+    } else {
+      if (count > maxCount) {
+        mode_arr = [_arr[i]];
+        maxCount = count;
+        numMaxCount = 0;
+      }
+      // are there multiple max counts
+      else if (count === maxCount) {
+        mode_arr.push(_arr[i]);
+        numMaxCount++;
+      }
+      // resetting count for new value in array
+      count = 1;
+    }
+  }
+
+  return numMaxCount === 0 ? mode_arr[0] : mode_arr;
+};
+
+function quartiles(arr) {
+  var arrlen = arr.length;
+  var _arr = arr.slice().sort(this.ascNum);
+  return [
+    _arr[ Math.round((arrlen) / 4) - 1 ],
+    _arr[ Math.round((arrlen) / 2) - 1 ],
+    _arr[ Math.round((arrlen) * 3 / 4) - 1 ]
+  ];
+};
+
+function median(arr) {
+  var arrlen = arr.length;
+  var _arr = arr.slice().sort(this.ascNum);
+  // check if array is even or odd, then return the appropriate
+  return !(arrlen & 1)
+    ? (_arr[(arrlen / 2) - 1 ] + _arr[(arrlen / 2)]) / 2
+    : _arr[(arrlen / 2) | 0 ];
+};
+
+	
+function sum(arr) {
+  var sum = 0;
+  var i = arr.length;
+  while (--i >= 0)
+    sum += arr[i];
+  return sum;
+};
+// sum(arr);
+function sumsqrd(arr) {
+  var sum = 0;
+  var i = arr.length;
+  while (--i >= 0)
+    sum += arr[i] * arr[i];
+  return sum;
+};
+
+function min(arr) {
+  var low = arr[0];
+  var i = 0;
+  while (++i < arr.length)
+    if (arr[i] < low)
+      low = arr[i];
+  return low;
+};
+
+function max(arr) {
+  var high = arr[0];
+  var i = 0;
+  while (++i < arr.length)
+    if (arr[i] > high)
+      high = arr[i];
+  return high;
+};
+
+function mean(arr) {
+  return this.sum(arr) / arr.length;
+};
+
+function sumsqerr(arr) {
+  var mean = this.mean(arr);
+  var sum = 0;
+  var i = arr.length;
+  var tmp;
+  while (--i >= 0) {
+    tmp = arr[i] - mean;
+    sum += tmp * tmp;
+  }
+  return sum;
+};
+
+
+
+function variance(arr, flag) {
+  return this.sumsqerr(arr) / (arr.length - (flag ? 1 : 0));
+};
+
+function stdev(arr, flag) {
+  return Math.sqrt(this.variance(arr, flag));
+};
+
+
+
+
+function coeffvar(arr) {
+  return this.stdev(arr) / this.mean(arr)*100;
+};
+
+
+function stanMoment(arr, n) {
+  var mu = this.mean(arr);
+  var sigma = this.stdev(arr);
+  var len = arr.length;
+  var skewSum = 0;
+
+  for (var i = 0; i < len; i++)
+    skewSum += Math.pow((arr[i] - mu) / sigma, n);
+
+  return skewSum / arr.length;
+};
+
+// (pearson's) moment coefficient of skewness
+function skewness(arr) {
+  return this.stanMoment(arr, 3);
+};
+
+// (pearson's) (excess) kurtosis
+function kurtosis(arr) {
+  return this.stanMoment(arr, 4) - 3;
+};
+
 
 
 

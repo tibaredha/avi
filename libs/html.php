@@ -840,8 +840,18 @@ class HTML  {
 	echo '<label  id="avil0bn7">Semaine</label>'; echo '<input  id="avisem"  type="txt"  name="avisem"  value="'.$data['avisem'].'"/>';
 	
 	// echo '<label style="display: none;" id="show_codeP">';
-    echo '<input type="text" name="code_patient"  id="code_patient"    style="border: none; background-color: #FFC0CB; color: black; font-family:courier; text-align:center;  "   size="15" readonly="">';
-    echo '<input type="text" name="code_patient1" id="code_patient1"  style="border: none; background-color: #FFC0CB; color: black; font-family:courier; text-align:center;  "   size="15" readonly="">';
+    echo '<input type="text" name="code_patient"  id="code_patient"   style="border: none; background-color: #FFC0CB; color: black; font-family:courier; text-align:left;  "   size="15" readonly="">';
+    echo '<input type="text" name="code_patient1" id="code_patient1"  style="border: none; background-color: #FFC0CB; color: black; font-family:courier; text-align:left;  "   size="15" readonly="">';
+	echo '<input type="text" name="code_patient2" id="code_patient2"  style="border: none; background-color: #FFC0CB; color: black; font-family:courier; text-align:left;  "   size="15" readonly="">';
+	echo '<input type="text" name="code_patient3" id="code_patient3"  style="border: none; background-color: #FFC0CB; color: black; font-family:courier; text-align:left;  "   size="15" readonly="">';
+	echo '<input type="text" name="code_patient4" id="code_patient4"  style="border: none; background-color: #FFC0CB; color: black; font-family:courier; text-align:left;  "   size="15" readonly="">';
+	echo '<input type="text" name="code_patient5" id="code_patient5"  style="border: none; background-color: #FFC0CB; color: black; font-family:courier; text-align:left;  "   size="15" readonly="">';
+	echo '<input type="text" name="code_patient6" id="code_patient6"  style="border: none; background-color: #FFC0CB; color: black; font-family:courier; text-align:left;  "   size="15" readonly="">';
+	echo '<input type="text" name="code_patient7" id="code_patient7"  style="border: none; background-color: #FFC0CB; color: black; font-family:courier; text-align:left;  "   size="15" readonly="">';
+	echo '<input type="text" name="code_patient8" id="code_patient8"  style="border: none; background-color: #FFC0CB; color: black; font-family:courier; text-align:left;  "   size="15" readonly="">';
+	
+	
+	
 	// echo '</label>';
 	
 	

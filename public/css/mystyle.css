@@ -438,8 +438,15 @@ hr{height: 5px;width: 50%;background-color: red;}
 #avil0bn5{ position:absolute; top:275px;left:30px;  background-color: #FFC0CB;border-radius: 5px;text-align: left;font-size: 15px;height: 25px;width: 200px;display: inline;}
 #avil0bn6{ position:absolute; top:305px;left:30px;  background-color: #FFC0CB;border-radius: 5px;text-align: left;font-size: 15px;height: 25px;width: 200px;display: inline;}
 #avil0bn7{ position:absolute; top:335px;left:30px;  background-color: #FFC0CB;border-radius: 5px;text-align: left;font-size: 15px;height: 25px;width: 200px;display: inline;}
-#code_patient{ position:absolute; top:365px;left:30px;  background-color: #FFC0CB;border-radius: 5px;text-align: left;font-size: 15px;height: 25px;width: 200px;display: inline;}
-#code_patient1{ position:absolute; top:395px;left:30px;  background-color: #FFC0CB;border-radius: 5px;text-align: left;font-size: 15px;height: 25px;width: 200px;display: inline;}
+#code_patient{ position:absolute; top:365px;left:30px;  background-color: #FFC0CB;border-radius: 5px;text-align: left;font-size: 15px;height: 25px;width:  350px;display: inline;}
+#code_patient1{ position:absolute; top:395px;left:30px;  background-color: #FFC0CB;border-radius: 5px;text-align: left;font-size: 15px;height: 25px;width: 350px;display: inline;}
+#code_patient2{ position:absolute; top:425px;left:30px;  background-color: #FFC0CB;border-radius: 5px;text-align: left;font-size: 15px;height: 25px;width: 350px;display: inline;}
+#code_patient3{ position:absolute; top:455px;left:30px;  background-color: #FFC0CB;border-radius: 5px;text-align: left;font-size: 15px;height: 25px;width: 350px;display: inline;}
+#code_patient4{ position:absolute; top:485px;left:30px;  background-color: #FFC0CB;border-radius: 5px;text-align: left;font-size: 15px;height: 25px;width: 350px;display: inline;}
+#code_patient5{ position:absolute; top:515px;left:30px;  background-color: #FFC0CB;border-radius: 5px;text-align: left;font-size: 15px;height: 25px;width: 350px;display: inline;}
+#code_patient6{ position:absolute; top:545px;left:30px;  background-color: #FFC0CB;border-radius: 5px;text-align: left;font-size: 15px;height: 25px;width: 350px;display: inline;}
+#code_patient7{ position:absolute; top:575px;left:30px;  background-color: #FFC0CB;border-radius: 5px;text-align: left;font-size: 15px;height: 25px;width: 350px;display: inline;}
+#code_patient8{ position:absolute; top:605px;left:30px;  background-color: #FFC0CB;border-radius: 5px;text-align: left;font-size: 15px;height: 25px;width: 350px;display: inline;}
 
 
 

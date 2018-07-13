@@ -257,7 +257,7 @@ $pdf->SetXY(5,$pdf->GetY()+5);  $pdf->cell(20,5,'IC95 m ',1,0,'L',1,0);  $pdf->c
 
 
 $pdf->bar10($x=110,$y=120,$datab[0],$datab[1],$datab[2],$datab[3],$datab[4],$datab[5],$datab[6],$datab[7],$datab[8],$datab[9],$datar[0],$datar[1],$datar[2],$datar[3],$datar[4],$datar[5],$datar[6],$datar[7],$datar[8],$datar[9],$datarcc[0],$datarcc[1],$datarcc[2],$datarcc[3],$datarcc[4],$datarcc[5],$datarcc[6],$datarcc[7],$datarcc[8],$datarcc[9],$titre="CALCUL POIDS ET L'HOMOGENEITE");
-$pdf->boxplotgv($x=260,$y=125,'',$data);
+// $pdf->boxplotgv($x=260,$y=125,'',$data);
 
 // $pdf->SetFillColor(255, 0, 0);
 // $b=50;
