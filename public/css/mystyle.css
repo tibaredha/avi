@@ -1,0 +1,836 @@
+#bnav{background: yellow; color: white; text-align: center; border-radius: 15px; padding: 0px;margin: 0px 0px 0px 0px ;height: 32px;width: 20%; }
+#wdj{background: red; color: white;padding: 0px; margin: 0px 0px 0px 0px ; border-radius: 15px;}
+/*acceuil*/
+#lacceuil{background: yellow; color: black;padding: 0px; margin: 10px 10px 10px 10px ; }
+/*help*/
+#lhelp{background: yellow; color: black;padding: 0px; margin: 10px 10px 10px 10px ; }
+/*cfg*/
+#lcfg{background: yellow; color: black;padding: 0px; margin: 10px 10px 10px 10px ; }
+/*register*/
+#wilayar,#structurer,#loginr,#passwordr,#submitr{border: 3px solid #73AD21;border-radius: 15px;text-align: center; font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 170px;display: inline;}
+#wilayar,#structurer{background-color: #E0FFFF;}
+#loginr,#passwordr{ background-color: yellow;}
+#submitr{background: yellow;}
+#submitr:hover {background: red;color: #fff;}
+#errorregister{background: red; color: #fff;padding: 0px; margin: 10px 10px 10px 10px ; }
+#lregister{background: yellow; color: black;padding: 0px; margin: 10px 10px 10px 10px ; }
+/*login*/
+#loginl,#passwordl,#submitl{border: 3px solid #73AD21;border-radius: 15px;text-align: center; font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 170px;display: inline;}
+#wilayal,#structurel{background-color: #E0FFFF;}
+#loginl,#passwordl{ background-color: yellow;}
+#submitl{background: yellow;}
+#submitl:hover {background: red;color: #fff;}
+#errorlogin{background: red; color: #fff;padding: 0px; margin: 10px 10px 10px 10px ; }
+#llogin{background: yellow; color: black;padding: 0px; margin: 10px 10px 10px 10px ; }
+/*setup*/
+#lsetup{background: yellow; color: black;padding: 0px; margin: 10px 10px 10px 10px ; }
+#submits{border: 3px solid #73AD21;border-radius: 15px;text-align: center; font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 170px;display: inline;}
+#submits{background: yellow;}
+#submits:hover {background: red;color: #fff;}
+#Cancel {border: 3px solid #73AD21;border-radius: 15px;text-align: center; font-size: 19px; width: 170px; display: inline;}
+#Cancel{background: yellow;}
+#Cancel:hover {background: red;color: #fff;}
+.info{font-family: Verdana, Arial, Helvetica, sans-serif;  background-color: #FFE4E1; font-size:  14px;}
+table { width: 100%;border: 1px solid black;height: 90px;}
+th { background-color: #87CEFA;color: white;}
+th,td {height: 2px;border: 1px solid black;padding: 5px;font: 14px 'trebuchet ms', arial, sans-serif; }
+hr{height: 5px;width: 50%;background-color: red;}
+/*evaluation*/
+#dateus,#dateus1{background: yellow;border-radius: 15px;text-align: center;}
+#type1,#type2{border: 3px solid #73AD21;border-radius: 15px;text-align: center; font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 35px;width: 210px;display: inline;}
+#typea{border: 3px solid #73AD21;border-radius: 15px;text-align: center; font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 35px;width: 210px;display: inline;}
+
+
+/*search*/
+#search{background: green ; color: #fff; border: 3px solid #73AD21;border-radius: 15px;text-align: center; font-size: 15px;font-weight: bold;}
+#csearch{border: 3px solid #73AD21;border-radius: 15px;text-align: center; font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 170px;display: inline;}
+#csearch{background-color: #E0FFFF;}
+#submitsrh{border: 3px solid #73AD21;border-radius: 15px;text-align: center; font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 170px;display: inline;}
+#submitsrh{background: yellow;}
+#Cleari{ border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;text-align: center;font-size: 15px;font-weight: bold;height: 80%;width: 40%;}
+#Cleari:hover,#Clearm:hover{ background-color: red; color: white; text-decoration: underline; cursor: pointer;}
+/*list database*/
+#nomprenom{width: 40%;}
+.crtl{ width: 40px;text-align: center;}
+.crtldate{ width: 20px;text-align: center;}
+#bdn{ background-color: #87CEFA;color: white; text-align: center;}
+#btdn{background-color: #87CEFA;color: white; text-align: center;}
+#buttoni,#buttons{width: 15%;height: 35px;border-radius: 15px;background-color: red; color: white;font-weight: bold;text-align: center;}
+/*bouton footer*/
+.scontentl2 a,.scontentl3 a {color: #fff;background: green;padding: 10px;text-decoration: none;font-size: 15px;font-weight: bolder;border-radius: 5px;}
+.scontentl2 a:hover,.scontentl3 a:hover {background: red}
+/*evaluation*/
+#evaluation{background: yellow; color: black;padding: 0px; margin: 10px 10px 10px 10px ; }
+/*dashboard*/
+#dashboard{background: yellow; color: black;padding: 0px; margin: 10px 10px 10px 10px ; }
+/*nouveau*/
+#lnouveau{background: yellow; color: black;padding: 0px; margin: 10px 10px 10px 10px ; }
+
+:root{
+--label0:lightblue;
+--label1:#E0FFFF;--edit1:yellow;
+--label2:#FFDAB9;--edit2:lightblue;
+--label3:#ADFF2F;--edit3:lightblue;
+}
+/**/
+#lWILAYAD{ position:absolute; top:315px;left:50px;  border: 3px solid #73AD21;background-color: var(--label0);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 170px;display: inline;}
+.WILAYAD{ position:absolute; top:315px;left:180px; border: 3px solid #73AD21;background-color: var(--edit1);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 180px;display: inline;}
+#lCOMMUNED{ position:absolute; top:315px;left:380px; border: 3px solid #73AD21;background-color: var(--label0);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 170px;display: inline;}
+.COMMUNED{ position:absolute;  top:315px;left:500px; border: 3px solid #73AD21;background-color: var(--edit1);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 180px;display: inline;}
+#lDINS{ position:absolute; top:315px;left:710px; border: 3px solid #73AD21;background-color: var(--label0);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 170px;display: inline;}
+#DINS{ position:absolute; top:315px;left:830px; border: 3px solid #73AD21;background-color: var(--edit1);border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 100px;display: inline;}
+#lHINS{ position:absolute; top:315px;left:1040px; border: 3px solid #73AD21;background-color: var(--label0);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 170px;display: inline;}
+#HINS{ position:absolute; top:315px;left:940px; border: 3px solid #73AD21;background-color: var(--edit1);border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 75px;display: inline;}
+/**/
+#lNOM{ position:absolute; top:355px;left:50px; border: 3px solid #73AD21;background-color: var(--label1);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 170px;display: inline;}
+#NOM{ position:absolute; top:355px;left:180px; border: 3px solid #73AD21;background-color: var(--edit1);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 178px;display: inline;}
+#lPRENOM{ position:absolute; top:355px;left:380px; border: 3px solid #73AD21;background-color: var(--label1);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 170px;display: inline;}
+#PRENOM{ position:absolute; top:355px;left:500px; border: 3px solid #73AD21;background-color: var(--edit1);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 180px;display: inline;}
+#lFILSDE{ position:absolute; top:355px;left:710px; border: 3px solid #73AD21;background-color: var(--label1);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 85px;display: inline;}
+#FILSDE{ position:absolute; top:355px;left:750px; border: 3px solid #73AD21;background-color: var(--edit1);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 85px;display: inline;}
+#lETDE{ position:absolute; top:355px;left:885px; border: 3px solid #73AD21;background-color: var(--label1);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 85px;display: inline;}
+#ETDE{ position:absolute; top:355px;left:930px; border: 3px solid #73AD21;background-color: var(--edit1);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 85px;display: inline;}
+/**/
+#lSEXE{ position:absolute; top:395px;left:50px; border: 3px solid #73AD21;background-color: var(--label1);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 85px;display: inline;}
+#SEXE{ position:absolute; top:395px;left:90px; border: 3px solid #73AD21;background-color: var(--edit1);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 95px;display: inline;}
+#lDATENS{ position:absolute; top:395px;left:190px; border: 3px solid #73AD21;background-color: var(--label1);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 85px;display: inline;}
+#DATENS{ position:absolute; top:395px;left:255px; border: 3px solid #73AD21;background-color: var(--edit1);border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 100px;display: inline;}
+#lWILAYAN{ position:absolute; top:395px;left:380px; border: 3px solid #73AD21;background-color: var(--label1);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 170px;display: inline;}
+.WILAYAN{ position:absolute; top:395px;left:500px; border: 3px solid #73AD21;background-color: var(--edit1);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 180px;display: inline;}
+#lCOMMUNEN{ position:absolute; top:395px;left:710px; border: 3px solid #73AD21;background-color: var(--label1);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 190px;display: inline;}
+.COMMUNEN{ position:absolute; top:395px;left:835px; border: 3px solid #73AD21;background-color: var(--edit1);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 180px;display: inline;}
+
+#lWILAYAR{ position:absolute; top:435px;left:50px;  border: 3px solid #73AD21;background-color: var(--label1);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 170px;display: inline;}
+.WILAYAR{ position:absolute; top:435px;left:175px; border: 3px solid #73AD21;background-color: var(--edit1);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 180px;display: inline;}
+#lCOMMUNER{ position:absolute; top:435px;left:380px; border: 3px solid #73AD21;background-color: var(--label1);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 170px;display: inline;}
+.COMMUNER{ position:absolute; top:435px;left:500px; border: 3px solid #73AD21;background-color: var(--edit1);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 180px;display: inline;}
+#lADRESSE{ position:absolute; top:435px;left:710px; border: 3px solid #73AD21;background-color: var(--label1);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 190px;display: inline;}
+#ADRESSE{ position:absolute; top:435px;left:835px; border: 3px solid #73AD21;background-color: var(--edit1);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 180px;display: inline;}
+/**/
+#lLD7{ position:absolute; top:475px;left:50px; border: 3px solid #73AD21;background-color: var(--label2);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 965px;display: inline;}
+#lLD8{ position:absolute; top:515px;left:50px; border: 3px solid #73AD21;background-color: var(--label2);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 925px;display: inline;}
+#lLD9{ position:absolute; top:555px;left:50px; border: 3px solid #73AD21;background-color: var(--label2);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 925px;display: inline;}
+#lLD10{ position:absolute; top:595px;left:50px; border: 3px solid #73AD21;background-color:var(--label2);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 925px;display: inline;}
+#LD8{ position:absolute; top:515px;left:910px; border: 3px solid #73AD21;background-color: var(--edit2);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 170px;display: inline;}
+#LD9{ position:absolute; top:555px;left:910px; border: 3px solid #73AD21;background-color: var(--edit2);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 170px;display: inline;}
+#LD10{ position:absolute; top:595px;left:910px; border: 3px solid #73AD21;background-color: var(--edit2);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 170px;display: inline;}
+/**/
+#lLD0{ position:absolute; top:315px;left:1040px; border: 3px solid #73AD21;background-color: var(--label3);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 395px;display: inline;}
+#lLD1{ position:absolute; top:355px;left:1040px; border: 3px solid #73AD21;background-color: var(--label3);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 155px;display: inline;}
+#LD1{ position:absolute; top:355px;left:1130px; border: 3px solid #73AD21;background-color: var(--edit3);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 170px;display: inline;}
+#lLD2{ position:absolute; top:395px;left:1040px; border: 3px solid #73AD21;background-color: var(--label3);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 155px;display: inline;}
+#LD2{ position:absolute; top:395px;left:1130px; border: 3px solid #73AD21;background-color: var(--edit3);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 170px;display: inline;}
+#lLD3{ position:absolute; top:435px;left:1040px; border: 3px solid #73AD21;background-color: var(--label3);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 155px;display: inline;}
+#LD3{ position:absolute; top:435px;left:1130px; border: 3px solid #73AD21;background-color: var(--edit3);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 170px;display: inline;}
+#lLD4{ position:absolute; top:355px;left:1250px; border: 3px solid #73AD21;background-color: var(--label3);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 155px;display: inline;}
+#LD4{ position:absolute; top:355px;left:1340px; border: 3px solid #73AD21;background-color: var(--edit3);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 170px;display: inline;}
+#lLD5{ position:absolute; top:395px;left:1250px; border: 3px solid #73AD21;background-color: var(--label3);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 155px;display: inline;}
+#LD5{ position:absolute; top:395px;left:1340px; border: 3px solid #73AD21;background-color: var(--edit3);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 170px;display: inline;}
+#LD6{ position:absolute; top:435px;left:1248px; border: 3px solid #73AD21;background-color: var(--edit1);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 190px;display: inline;}
+/**/
+#lProfession{ position:absolute; top:475px;left:1040px; border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 195px;display: inline;}
+#Profession{ position:absolute; top:475px;left:1245px; border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width:190px;display: inline;}
+/**/
+#lDATEHOSPI{ position:absolute; top:515px;left:1040px; border: 3px solid #73AD21;background-color: var(--label0);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 195px;display: inline;}
+#DATEHOSPI{ position:absolute; top:515px;left:1245px; border: 3px solid #73AD21;background-color: var(--edit1);border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 100px;display: inline;}
+#lHEURESHOSPI{ position:absolute; top:515px;left:1040px; border: 3px solid #73AD21;background-color: var(--label0);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 195px;display: inline;}
+#HEURESHOSPI{ position:absolute; top:515px;left:1365px; border: 3px solid #73AD21;background-color: var(--edit1);border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 70px;display: inline;}
+#lSERVICEHOSPIT{ position:absolute; top:555px;left:1040px; border: 3px solid #73AD21;background-color: var(--label0);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 195px;display: inline;}
+.SERVICEHOSPIT{ position:absolute; top:555px;left:1245px; border: 3px solid #73AD21;background-color: var(--edit1);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 195px;display: inline;}
+#lMEDECINHOSPIT{ position:absolute; top:595px;left:1040px; border: 3px solid #73AD21;background-color: var(--label0);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 195px;display: inline;}
+#MEDECINHOSPIT{ position:absolute; top:595px;left:1245px; border: 3px solid #73AD21;background-color: var(--edit1);border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 195px;display: inline;}
+/**/
+#lCIM0{ position:absolute; top:315px;left:50px; border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 990px;display: inline;}
+#lCIM1{ position:absolute; top:355px;left:50px; border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#CIM1{ position:absolute; top:355px;left:300px; border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 740px;display: inline;}
+#lCIM2{ position:absolute; top:395px;left:50px; border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#CIM2{ position:absolute; top:395px;left:300px; border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 740px;display: inline;}
+#lCIM3{ position:absolute; top:435px;left:50px; border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#CIM3{ position:absolute; top:435px;left:300px; border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 740px;display: inline;}
+#lCIM4{ position:absolute; top:475px;left:50px; border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#CIM4{ position:absolute; top:475px;left:300px; border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#lCIM00{ color: white; position:absolute; top:515px;left:50px; border: 3px solid #73AD21;background-color: green;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 990px;display: inline;}
+#lCIM5{ color: white; position:absolute; top:555px;left:50px; border: 3px solid #73AD21;background-color: green;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#CIM5{ position:absolute; top:555px;left:300px; border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 740px;display: inline;}
+.cim1{ color: black; position:absolute; top:595px;left:50px; border: 3px solid #73AD21;background-color: SILVER;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 480px;display: inline;}
+.cim2{ color: black;position:absolute; top:595px;left:550px;border: 3px solid #73AD21;background-color: SILVER;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 490px;display: inline;}
+#lCIM7{ color: white; position:absolute; top:475px;left:550px; border: 3px solid #73AD21;background-color: red;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 490px;display: inline;}
+#lCIM01{ position:absolute; top:315px;left:1050px; border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 190px;display: inline;}
+#lCIM02{ position:absolute; top:355px;left:1050px; border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 190px;display: inline;}
+#CIM02{ position:absolute; top:355px;left:1130px; border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 190px;display: inline;}
+#lCIM03{ position:absolute; top:395px;left:1050px; border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 190px;display: inline;}
+#CIM03{ position:absolute; top:395px;left:1130px; border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 190px;display: inline;}
+#lCIM04{ position:absolute; top:435px;left:1050px; border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 190px;display: inline;}
+#CIM04{ position:absolute; top:435px;left:1130px; border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 190px;display: inline;}
+
+#lNDM1{ position:absolute; top:315px;left:1260px; border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 190px;display: inline;}
+#lNDM2{ position:absolute; top:355px;left:1260px; border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 190px;display: inline;}
+#NDM2{ position:absolute; top:355px;left:1340px; border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 190px;display: inline;}
+#lNDM3{ position:absolute; top:395px;left:1260px; border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 190px;display: inline;}
+#NDM3{ position:absolute; top:395px;left:1340px; border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 190px;display: inline;}
+#lNDM4{ position:absolute; top:435px;left:1260px; border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 190px;display: inline;}
+#NDM4{ position:absolute; top:435px;left:1340px; border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 190px;display: inline;}
+#lNDM5{ position:absolute; top:475px;left:1260px; border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 190px;display: inline;}
+#NDM5{ position:absolute; top:475px;left:1340px; border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 190px;display: inline;}
+#lNDM6{ position:absolute; top:515px;left:1260px; border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 190px;display: inline;}
+#NDM6{ position:absolute; top:515px;left:1340px; border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 190px;display: inline;}
+#lNDM7{ position:absolute; top:555px;left:1260px; border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 190px;display: inline;}
+#NDM7{ position:absolute; top:555px;left:1340px; border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 190px;display: inline;}
+#NDLMAAP{ position:absolute; top:595px;left:1260px; border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 190px;display: inline;}
+
+#lDECEMAT0{ position:absolute; top:315px;left:50px;  border: 3px solid #73AD21;background-color: #FFB6C1;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 270px;display: inline;}
+#lDECEMAT{ position:absolute; top:355px;left:50px;  border: 3px solid #73AD21;background-color: #FFB6C1;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 270px;display: inline;}
+#DECEMAT{ position:absolute; top:355px;left:220px;  border: 3px solid #73AD21;background-color: #E0FFFF;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 170px;display: inline;}
+#lDGRO{ position:absolute; top:395px;left:50px;  border: 3px solid #73AD21;background-color: #FFB6C1;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 270px;display: inline;}
+#DGRO{ position:absolute; top:395px;left:170px;  border: 3px solid #73AD21;background-color: #E0FFFF;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 270px;display: inline;}
+#lDACC{ position:absolute; top:435px;left:50px;  border: 3px solid #73AD21;background-color: #FFB6C1;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 270px;display: inline;}
+#DACC{ position:absolute; top:435px;left:170px;  border: 3px solid #73AD21;background-color: #E0FFFF;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 270px;display: inline;}
+#lDAVO{ position:absolute; top:475px;left:50px;  border: 3px solid #73AD21;background-color: #FFB6C1;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 270px;display: inline;}
+#DAVO{ position:absolute; top:475px;left:170px;  border: 3px solid #73AD21;background-color: #E0FFFF;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 270px;display: inline;}
+#lAGESTATION{ position:absolute; top:515px;left:50px;  border: 3px solid #73AD21;background-color: #FFB6C1;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 270px;display: inline;}
+#AGESTATION{ position:absolute; top:515px;left:170px;  border: 3px solid #73AD21;background-color: #E0FFFF;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 270px;display: inline;}
+#lIDETER{ position:absolute; top:555px;left:50px;  border: 3px solid #73AD21;background-color: #FFB6C1;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 270px;display: inline;}
+#IDETER{ position:absolute; top:555px;left:170px;  border: 3px solid #73AD21;background-color: #E0FFFF;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 270px;display: inline;}
+
+#MNP0{ position:absolute; top:315px;left:550px;  border: 3px solid #73AD21;background-color: #E0FFFF;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 420px;display: inline;}
+#MNP1{ position:absolute; top:355px;left:550px;  border: 3px solid #73AD21;background-color: #E0FFFF;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 420px;display: inline;}
+#GM{ position:absolute; top:355px;left:810px;  border: 3px solid #73AD21;background-color: #E0FFFF;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 270px;display: inline;}
+#MNP2{ position:absolute; top:395px;left:550px;  border: 3px solid #73AD21;background-color: #E0FFFF;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 420px;display: inline;}
+#MN{ position:absolute; top:395px;left:810px;  border: 3px solid #73AD21;background-color: #E0FFFF;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 270px;display: inline;}
+#MNP3{ position:absolute; top:435px;left:550px;  border: 3px solid #73AD21;background-color: #E0FFFF;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 420px;display: inline;}
+#AGEGEST{ position:absolute; top:435px;left:900px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 70px;display: inline;}
+#MNP4{ position:absolute; top:475px;left:550px;  border: 3px solid #73AD21;background-color: #E0FFFF;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 420px;display: inline;}
+#POIDNSC{ position:absolute; top:475px;left:900px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 70px;display: inline;}
+#MNP5{ position:absolute; top:515px;left:550px;  border: 3px solid #73AD21;background-color: #E0FFFF;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 420px;display: inline;}
+#AGEMERE{ position:absolute; top:515px;left:900px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 70px;display: inline;}
+#MNP6{ position:absolute; top:555px;left:550px;  border: 3px solid #73AD21;background-color: #E0FFFF;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 270px;display: inline;}
+#DPNAT{ position:absolute; top:555px;left:660px;  border: 3px solid #73AD21;background-color: #E0FFFF;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 270px;display: inline;}
+#EMDPNAT{ position:absolute; top:555px;left:830px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 140px;display: inline;}
+#POSTOPP0{ position:absolute; top:315px;left:1180px;  border: 3px solid #73AD21;background-color: #E0FFFF;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 270px;display: inline;}
+#POSTOPP1{ position:absolute; top:355px;left:1180px;  border: 3px solid #73AD21;background-color: #E0FFFF;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 270px;display: inline;}
+#POSTOPP2{ position:absolute; top:355px;left:1290px;  border: 3px solid #73AD21;background-color: #E0FFFF;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 270px;display: inline;}
+
+#lNOMAR{ position:absolute; top:315px;left:1265px; border: 3px solid #73AD21;background-color: #E0FFFF;border-radius: 15px;margin-top: 0px;text-align: right;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 170px;display: inline;}
+#NOMAR{ position:absolute; top:315px;left:1150px; border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: right;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 170px;display: inline;}
+#lPRENOMAR{ position:absolute; top:355px;left:1265px; border: 3px solid #73AD21;background-color: #E0FFFF;border-radius: 15px;margin-top: 0px;text-align: right;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 170px;display: inline;}
+#PRENOMAR{ position:absolute; top:355px;left:1150px; border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: right;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 170px;display: inline;}
+#lFILSDEAR{ position:absolute; top:395px;left:1265px; border: 3px solid #73AD21;background-color: #E0FFFF;border-radius: 15px;margin-top: 0px;text-align: right;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 170px;display: inline;}
+#FILSDEAR{ position:absolute; top:395px;left:1150px; border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: right;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 170px;display: inline;}
+#lETDEAR{ position:absolute; top:435px;left:1265px; border: 3px solid #73AD21;background-color: #E0FFFF;border-radius: 15px;margin-top: 0px;text-align: right;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 170px;display: inline;}
+#ETDEAR{ position:absolute; top:435px;left:1150px; border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: right;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 170px;display: inline;}
+#lNOMPRENOMAR{ position:absolute; top:475px;left:1265px; border: 3px solid #73AD21;background-color: #E0FFFF;border-radius: 15px;margin-top: 0px;text-align: right;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 170px;display: inline;}
+#NOMPRENOMAR{ position:absolute; top:475px;left:1150px; border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: right;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 170px;display: inline;}
+#lPROAR{ position:absolute; top:515px;left:1265px; border: 3px solid #73AD21;background-color: #E0FFFF;border-radius: 15px;margin-top: 0px;text-align: right;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 170px;display: inline;}
+#PROAR{ position:absolute; top:515px;left:1150px; border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: right;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 170px;display: inline;}
+#lADAR{ position:absolute; top:515px;left:1265px; border: 3px solid #73AD21;background-color: #E0FFFF;border-radius: 15px;margin-top: 0px;text-align: right;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 170px;display: inline;}
+#ADAR{ position:absolute; top:515px;left:1150px; border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: right;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 170px;display: inline;}
+#submitnewa{ display: inline;}
+#submitnewa{ position:absolute; top:555px;left:1150px; border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: right;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 170px;display: inline;}
+#submitnew{position:absolute; top:555px;left:1150px;text-align: center ;margin-top: 0px;border-radius: 15px; background: yellow;border: 3px solid #73AD21;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 52px;width: 285px;}
+#submitnew:hover {background: red;color: #fff;}
+
+/*deces maternel*/
+#lM1{ position:absolute; top:315px;left:50px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#M1{ position:absolute; top:315px;left:280px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+#lM2{ position:absolute; top:355px;left:50px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#M2{ position:absolute; top:355px;left:280px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+#lM3{ position:absolute; top:395px;left:50px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#M3{ position:absolute; top:395px;left:280px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+#lM4{ position:absolute; top:435px;left:50px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#M4{ position:absolute; top:435px;left:280px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+#lM5{ position:absolute; top:475px;left:50px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#M5{ position:absolute; top:475px;left:280px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+#lM6{ position:absolute; top:515px;left:50px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#M6{ position:absolute; top:515px;left:280px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+#lM7{ position:absolute; top:555px;left:50px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#M7{ position:absolute; top:555px;left:280px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+#lM8{ position:absolute; top:595px;left:50px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#M8{ position:absolute; top:595px;left:280px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+#lM9{ position:absolute; top:315px;left:530px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#M9{ position:absolute; top:315px;left:760px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+#lM10{ position:absolute; top:355px;left:530px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#M10{ position:absolute; top:355px;left:760px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+#lM11{ position:absolute; top:395px;left:530px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#M11{ position:absolute; top:395px;left:760px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+#lM12{ position:absolute; top:435px;left:530px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#M12{ position:absolute; top:435px;left:760px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+#lM13{ position:absolute; top:475px;left:530px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#M13{ position:absolute; top:475px;left:760px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+#lM14{ position:absolute; top:515px;left:530px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#M14{ position:absolute; top:515px;left:760px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+#lM15{ position:absolute; top:555px;left:530px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#M15{ position:absolute; top:555px;left:760px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+#lM16{ position:absolute; top:595px;left:530px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#M16{ position:absolute; top:595px;left:760px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+#lM17{ position:absolute; top:315px;left:1020px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#M17{ position:absolute; top:315px;left:1250px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+#lM18{ position:absolute; top:355px;left:1020px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#M18{ position:absolute; top:355px;left:1250px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+#lM19{ position:absolute; top:395px;left:1020px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#M19{ position:absolute; top:395px;left:1250px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+#lM20{ position:absolute; top:435px;left:1020px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#M20{ position:absolute; top:435px;left:1250px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+
+/*perinatal*/
+#lp1{ position:absolute; top:315px;left:50px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#p1{ position:absolute; top:315px;left:500px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+#lp2{ position:absolute; top:355px;left:50px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#p2{ position:absolute; top:355px;left:500px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+#lp3{ position:absolute; top:395px;left:50px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#p3{ position:absolute; top:395px;left:500px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+#lp4{ position:absolute; top:435px;left:50px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#p4{ position:absolute; top:435px;left:500px; border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+#lp5{ position:absolute; top:475px;left:50px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#p5{ position:absolute; top:475px;left:500px; border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+#lp6{ position:absolute; top:515px;left:50px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#p6{ position:absolute; top:515px;left:500px; border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+#lp7{ position:absolute; top:555px;left:50px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#p7{ position:absolute; top:555px;left:500px; border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+
+
+#lp8{ position:absolute; top:315px;left:50px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#p8{ position:absolute; top:315px;left:500px; border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+#lp9{ position:absolute; top:355px;left:50px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#p9{ position:absolute; top:355px;left:500px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+#lp10{ position:absolute; top:395px;left:50px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#p10{ position:absolute; top:395px;left:500px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+#lp11{ position:absolute; top:435px;left:50px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#p11{ position:absolute; top:435px;left:500px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+#lp12{ position:absolute; top:475px;left:50px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#p12{ position:absolute; top:475px;left:500px; border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+#lp13{ position:absolute; top:515px;left:50px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#p13{ position:absolute; top:515px;left:500px; border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+#lp14{ position:absolute; top:555px;left:50px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#p14{ position:absolute; top:555px;left:500px; border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+
+
+#lp15{ position:absolute; top:315px;left:50px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#p15{ position:absolute; top:315px;left:500px; border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+#lp16{ position:absolute; top:355px;left:50px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#p16{ position:absolute; top:355px;left:500px; border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+#lp17{ position:absolute; top:395px;left:50px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#p17{ position:absolute; top:395px;left:500px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+#lp18{ position:absolute; top:435px;left:50px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#p18{ position:absolute; top:435px;left:500px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+#lp19{ position:absolute; top:475px;left:50px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#p19{ position:absolute; top:475px;left:500px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+#lp20{ position:absolute; top:515px;left:50px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#p20{ position:absolute; top:515px;left:500px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+#lp21{ position:absolute; top:555px;left:50px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#p21{ position:absolute; top:555px;left:500px; border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+
+#lp22{ position:absolute; top:315px;left:50px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#p22{ position:absolute; top:315px;left:500px; border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+#lp23{ position:absolute; top:355px;left:50px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#p23{ position:absolute; top:355px;left:500px; border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+#lp24{ position:absolute; top:395px;left:50px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#p24{ position:absolute; top:395px;left:500px; border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+#lp25{ position:absolute; top:435px;left:50px;  border: 3px solid #73AD21;background-color: lightblue;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 230px;display: inline;}
+#p25{ position:absolute; top:435px;left:500px; border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: left;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 32px;width: 220px;display: inline;}
+
+
+/*demographie*/
+#d1{ position:absolute; top:155px;left:435px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#d2{ position:absolute; top:155px;left:505px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#l0bn1{ position:absolute; top:155px;left:30px;  background-color: #FFC0CB;border-radius: 5px;text-align: left;font-size: 15px;height: 25px;width: 400px;display: inline;}
+#l0bn2{ position:absolute; top:185px;left:30px;  background-color: #FFC0CB;border-radius: 5px;text-align: left;font-size: 15px;height: 25px;width: 400px;display: inline;}
+#b0n2c{ position:absolute; top:185px;left:435px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 140px;display: inline;}
+#l0bn3{ position:absolute; top:215px;left:30px;  background-color: #FFC0CB;border-radius: 5px;text-align: left;font-size: 15px;height: 25px;width: 400px;display: inline;}
+#b0n3c{ position:absolute; top:215px;left:435px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 140px;display: inline;}
+#l0bn4{ position:absolute; top:245px;left:30px;  background-color: var(--label0);border-radius: 5px;text-align: left;font-size: 15px;height: 25px;width: 545px;display: inline;}
+#l0bn5{ position:absolute; top:275px;left:290px;  background-color: var(--label0);border-radius: 5px;text-align: center;font-size: 15px;height: 25px;width: 140px;display: inline;}
+#l0bn6{ position:absolute; top:275px;left:435px;  background-color: var(--label0);border-radius: 5px;text-align: center;font-size: 15px;height: 25px;width: 140px;display: inline;}
+#l0bn7{ position:absolute; top:305px;left:30px;  background-color: var(--label0);border-radius: 5px;text-align: left;font-size: 15px;height: 25px;width: 250px;display: inline;}
+#l0bn8{ position:absolute; top:335px;left:30px;  background-color: var(--label0);border-radius: 5px;text-align: left;font-size: 15px;height: 25px;width: 250px;display: inline;}
+#b0n5{ position:absolute; top:305px;left:435px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 140px;display: inline;}
+#b0n5c{ position:absolute; top:305px;left:290px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 140px;display: inline;}
+#b0n6{ position:absolute; top:335px;left:435px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 140px;display: inline;}
+#b0n6c{ position:absolute; top:335px;left:290px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 140px;display: inline;}
+#l0bn9{ position:absolute; top:365px;left:30px;  background-color: #DAA520;border-radius: 5px;text-align: left;font-size: 15px;height: 25px;width: 545px;display: inline;}
+#l0bn10{ position:absolute; top:395px;left:30px;  background-color: #DAA520;border-radius: 5px;text-align: left;font-size: 15px;height: 25px;width: 250px;display: inline;}
+#b0n10{ position:absolute; top:395px;left:435px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 140px;display: inline;}
+#b0n10c{ position:absolute; top:395px;left:290px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 140px;display: inline;}
+#l0bn11{ position:absolute; top:425px;left:30px;  background-color: #32CD32;border-radius: 5px;text-align: left;font-size: 15px;height: 25px;width: 545px;display: inline;}
+#l0bn12{ position:absolute; top:455px;left:30px;  background-color: #32CD32;border-radius: 5px;text-align: left;font-size: 15px;height: 25px;width: 400px;display: inline;}
+#l0bn13{ position:absolute; top:485px;left:30px;  background-color: #32CD32;border-radius: 5px;text-align: left;font-size: 15px;height: 25px;width: 400px;display: inline;}
+#b0n12{ position:absolute; top:455px;left:435px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 140px;display: inline;}
+#b0n13{ position:absolute; top:485px;left:435px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 140px;display: inline;}
+#l0bn14{ position:absolute; top:515px;left:30px;  background-color: #F5F5F5;border-radius: 5px;text-align: left;font-size: 15px;height: 25px;width: 545px;display: inline;}
+#l0bn15{ position:absolute; top:545px;left:290px;  background-color: #F5F5F5;border-radius: 5px;text-align: center;font-size: 15px;height: 25px;width: 140px;display: inline;}
+#l0bn16{ position:absolute; top:545px;left:435px;  background-color: #F5F5F5;border-radius: 5px;text-align: center;font-size: 15px;height: 25px;width: 140px;display: inline;}
+#l0bn17{ position:absolute; top:575px;left:30px;  background-color: #F5F5F5;border-radius: 5px;text-align: left;font-size: 15px;height: 25px;width: 250px;display: inline;}
+#b0n15{ position:absolute; top:575px;left:435px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 140px;display: inline;}
+#b0n15c{ position:absolute; top:575px;left:290px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 140px;display: inline;}
+
+#lbn0{ position:absolute; top:155px;left:580px;  background-color: var(--label0);border-radius: 5px;text-align: center;font-size: 15px;height: 25px;width: 100px;display: inline;}
+#lbn1{ position:absolute; top:185px;left:580px;  background-color: var(--label0);border-radius: 5px;text-align: center;font-size: 15px;height: 25px;width: 100px;display: inline;}
+#lbn2{ position:absolute; top:215px;left:580px;  background-color: var(--label0);border-radius: 5px;text-align: center;font-size: 15px;height: 25px;width: 100px;display: inline;}
+#lbn3{ position:absolute; top:245px;left:580px;  background-color: var(--label0);border-radius: 5px;text-align: center;font-size: 15px;height: 25px;width: 100px;display: inline;}
+#lbn4{ position:absolute; top:275px;left:580px;  background-color: var(--label0);border-radius: 5px;text-align: center;font-size: 15px;height: 25px;width: 100px;display: inline;}
+#lbn5{ position:absolute; top:305px;left:580px;  background-color: var(--label0);border-radius: 5px;text-align: center;font-size: 15px;height: 25px;width: 100px;display: inline;}
+#lbn6{ position:absolute; top:335px;left:580px;  background-color: var(--label0);border-radius: 5px;text-align: center;font-size: 15px;height: 25px;width: 100px;display: inline;}
+#lbn7{ position:absolute; top:365px;left:580px;  background-color: var(--label0);border-radius: 5px;text-align: center;font-size: 15px;height: 25px;width: 100px;display: inline;}
+#lbn8{ position:absolute; top:395px;left:580px;  background-color: var(--label0);border-radius: 5px;text-align: center;font-size: 15px;height: 25px;width: 100px;display: inline;}
+#lbn9{ position:absolute; top:425px;left:580px;  background-color: var(--label0);border-radius: 5px;text-align: center;font-size: 15px;height: 25px;width: 100px;display: inline;}
+#lbn10{ position:absolute; top:455px;left:580px;  background-color: var(--label0);border-radius: 5px;text-align: center;font-size: 15px;height: 25px;width: 100px;display: inline;}
+#lbn11{ position:absolute; top:485px;left:580px;  background-color: var(--label0);border-radius: 5px;text-align: center;font-size: 15px;height: 25px;width: 100px;display: inline;}
+#lbn12{ position:absolute; top:515px;left:580px;  background-color: var(--label0);border-radius: 5px;text-align: center;font-size: 15px;height: 25px;width: 100px;display: inline;}
+#lbn13{ position:absolute; top:545px;left:580px;  background-color: var(--label0);border-radius: 5px;text-align: center;font-size: 15px;height: 25px;width: 100px;display: inline;}
+#lbn14{ position:absolute; top:575px;left:580px;  background-color: var(--label0);border-radius: 5px;text-align: center;font-size: 15px;height: 25px;width: 100px;display: inline;}
+#lbn15{ position:absolute; top:605px;left:580px;  background-color: var(--label0);border-radius: 5px;text-align: center;font-size: 15px;height: 25px;width: 100px;display: inline;}
+#lbn16{ position:absolute; top:635px;left:580px;  background-color: var(--label0);border-radius: 5px;text-align: center;font-size: 15px;height: 25px;width: 100px;display: inline;}
+#lbn17{ position:absolute; top:665px;left:580px;  background-color: var(--label0);border-radius: 5px;text-align: center;font-size: 15px;height: 25px;width: 100px;display: inline;}
+#lbn18{ position:absolute; top:695px;left:580px;  background-color: var(--label0);border-radius: 5px;text-align: center;font-size: 15px;height: 25px;width: 100px;display: inline;}
+#lbn19{ position:absolute; top:725px;left:580px;  background-color: var(--label0);border-radius: 5px;text-align: center;font-size: 15px;height: 25px;width: 100px;display: inline;}
+
+
+#bn0c{ position:absolute; top:155px;left:700px;   background-color: var(--label0);border-radius: 5px;text-align: center;font-size: 15px;height: 25px;width: 70px;display: inline;}
+#bn1c{ position:absolute; top:185px;left:700px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#bn2c{ position:absolute; top:215px;left:700px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#bn3c{ position:absolute; top:245px;left:700px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#bn4c{ position:absolute; top:275px;left:700px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#bn5c{ position:absolute; top:305px;left:700px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#bn6c{ position:absolute; top:335px;left:700px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#bn7c{ position:absolute; top:365px;left:700px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#bn8c{ position:absolute; top:395px;left:700px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#bn9c{ position:absolute; top:425px;left:700px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#bn10c{ position:absolute; top:455px;left:700px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#bn11c{ position:absolute; top:485px;left:700px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#bn12c{ position:absolute; top:515px;left:700px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#bn13c{ position:absolute; top:545px;left:700px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#bn14c{ position:absolute; top:575px;left:700px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#bn15c{ position:absolute; top:605px;left:700px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#bn16c{ position:absolute; top:635px;left:700px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#bn17c{ position:absolute; top:665px;left:700px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#bn18c{ position:absolute; top:695px;left:700px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#bn19c{ position:absolute; top:725px;left:700px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+
+#bn0{ position:absolute; top:155px;left:780px;   background-color: var(--label0);border-radius: 5px;text-align: center;font-size: 15px;height: 25px;width: 70px;display: inline;}
+#bn1{ position:absolute; top:185px;left:780px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#bn2{ position:absolute; top:215px;left:780px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#bn3{ position:absolute; top:245px;left:780px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#bn4{ position:absolute; top:275px;left:780px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#bn5{ position:absolute; top:305px;left:780px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#bn6{ position:absolute; top:335px;left:780px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#bn7{ position:absolute; top:365px;left:780px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#bn8{ position:absolute; top:395px;left:780px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#bn9{ position:absolute; top:425px;left:780px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#bn10{ position:absolute; top:455px;left:780px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#bn11{ position:absolute; top:485px;left:780px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#bn12{ position:absolute; top:515px;left:780px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#bn13{ position:absolute; top:545px;left:780px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#bn14{ position:absolute; top:575px;left:780px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#bn15{ position:absolute; top:605px;left:780px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#bn16{ position:absolute; top:635px;left:780px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#bn17{ position:absolute; top:665px;left:780px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#bn18{ position:absolute; top:695px;left:780px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#bn19{ position:absolute; top:725px;left:780px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#submitdemo{position:absolute; top:655px;left:150px;text-align: center ;margin-top: 0px;border-radius: 15px; background: yellow;border: 3px solid #73AD21;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 52px;width: 285px;}
+#submitdemo:hover {background: red;color: #fff;}
+
+
+/*avi*/
+
+#avil0bn1{ position:absolute; top:155px;left:30px;  background-color: #FFC0CB;border-radius: 5px;text-align: left;font-size: 15px;height: 25px;width: 200px;display: inline;}
+#avil0bn2{ position:absolute; top:185px;left:30px;  background-color: #FFC0CB;border-radius: 5px;text-align: left;font-size: 15px;height: 25px;width: 200px;display: inline;}
+#avil0bn3{ position:absolute; top:215px;left:30px;  background-color: #FFC0CB;border-radius: 5px;text-align: left;font-size: 15px;height: 25px;width: 200px;display: inline;}
+#avil0bn4{ position:absolute; top:245px;left:30px;  background-color: #FFC0CB;border-radius: 5px;text-align: left;font-size: 15px;height: 25px;width: 200px;display: inline;}
+#avil0bn5{ position:absolute; top:275px;left:30px;  background-color: #FFC0CB;border-radius: 5px;text-align: left;font-size: 15px;height: 25px;width: 200px;display: inline;}
+#avil0bn6{ position:absolute; top:305px;left:30px;  background-color: #FFC0CB;border-radius: 5px;text-align: left;font-size: 15px;height: 25px;width: 200px;display: inline;}
+#avil0bn7{ position:absolute; top:335px;left:30px;  background-color: #FFC0CB;border-radius: 5px;text-align: left;font-size: 15px;height: 25px;width: 200px;display: inline;}
+#code_patient{ position:absolute; top:365px;left:30px;  background-color: #FFC0CB;border-radius: 5px;text-align: left;font-size: 15px;height: 25px;width: 200px;display: inline;}
+#code_patient1{ position:absolute; top:395px;left:30px;  background-color: #FFC0CB;border-radius: 5px;text-align: left;font-size: 15px;height: 25px;width: 200px;display: inline;}
+
+
+
+
+#avid1{ position:absolute; top:155px;left:235px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 140px;display: inline;}
+
+
+#avib0n2c{ position:absolute; top:185px;left:235px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 140px;display: inline;}
+#avib0n3c{ position:absolute; top:215px;left:235px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 140px;display: inline;}
+
+#avicli{ position:absolute; top:245px;left:235px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 140px;display: inline;}
+#avicycl{ position:absolute; top:275px;left:235px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 140px;display: inline;}
+#avibtm{ position:absolute; top:305px;left:235px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 140px;display: inline;}
+#avisem{ position:absolute; top:335px;left:235px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 140px;display: inline;}
+
+
+
+
+
+
+#avibn0{ position:absolute; top:155px;left:460px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn1{ position:absolute; top:185px;left:460px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn2{ position:absolute; top:215px;left:460px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn3{ position:absolute; top:245px;left:460px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn4{ position:absolute; top:275px;left:460px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn5{ position:absolute; top:305px;left:460px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn6{ position:absolute; top:335px;left:460px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn7{ position:absolute; top:365px;left:460px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn8{ position:absolute; top:395px;left:460px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn9{ position:absolute; top:425px;left:460px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn10{ position:absolute; top:455px;left:460px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn11{ position:absolute; top:485px;left:460px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn12{ position:absolute; top:515px;left:460px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn13{ position:absolute; top:545px;left:460px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn14{ position:absolute; top:575px;left:460px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn15{ position:absolute; top:605px;left:460px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn16{ position:absolute; top:635px;left:460px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn17{ position:absolute; top:665px;left:460px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn18{ position:absolute; top:695px;left:460px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn19{ position:absolute; top:725px;left:460px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn20{ position:absolute; top:725px;left:460px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+
+#avibn20{ position:absolute; top:155px;left:540px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn21{ position:absolute; top:185px;left:540px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn22{ position:absolute; top:215px;left:540px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn23{ position:absolute; top:245px;left:540px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn24{ position:absolute; top:275px;left:540px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn25{ position:absolute; top:305px;left:540px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn26{ position:absolute; top:335px;left:540px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn27{ position:absolute; top:365px;left:540px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn28{ position:absolute; top:395px;left:540px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn29{ position:absolute; top:425px;left:540px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn30{ position:absolute; top:455px;left:540px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn31{ position:absolute; top:485px;left:540px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn32{ position:absolute; top:515px;left:540px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn33{ position:absolute; top:545px;left:540px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn34{ position:absolute; top:575px;left:540px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn35{ position:absolute; top:605px;left:540px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn36{ position:absolute; top:635px;left:540px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn37{ position:absolute; top:665px;left:540px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn38{ position:absolute; top:695px;left:540px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn39{ position:absolute; top:725px;left:540px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+
+
+#avibn40{ position:absolute; top:155px;left:620px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn41{ position:absolute; top:185px;left:620px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn42{ position:absolute; top:215px;left:620px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn43{ position:absolute; top:245px;left:620px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn44{ position:absolute; top:275px;left:620px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn45{ position:absolute; top:305px;left:620px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn46{ position:absolute; top:335px;left:620px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn47{ position:absolute; top:365px;left:620px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn48{ position:absolute; top:395px;left:620px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn49{ position:absolute; top:425px;left:620px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn50{ position:absolute; top:455px;left:620px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn51{ position:absolute; top:485px;left:620px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn52{ position:absolute; top:515px;left:620px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn53{ position:absolute; top:545px;left:620px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn54{ position:absolute; top:575px;left:620px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn55{ position:absolute; top:605px;left:620px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn56{ position:absolute; top:635px;left:620px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn57{ position:absolute; top:665px;left:620px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn58{ position:absolute; top:695px;left:620px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn59{ position:absolute; top:725px;left:620px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+
+#avibn60{ position:absolute; top:155px;left:700px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn61{ position:absolute; top:185px;left:700px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn62{ position:absolute; top:215px;left:700px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn63{ position:absolute; top:245px;left:700px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn64{ position:absolute; top:275px;left:700px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn65{ position:absolute; top:305px;left:700px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn66{ position:absolute; top:335px;left:700px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn67{ position:absolute; top:365px;left:700px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn68{ position:absolute; top:395px;left:700px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn69{ position:absolute; top:425px;left:700px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn70{ position:absolute; top:455px;left:700px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn71{ position:absolute; top:485px;left:700px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn72{ position:absolute; top:515px;left:700px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn73{ position:absolute; top:545px;left:700px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn74{ position:absolute; top:575px;left:700px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn75{ position:absolute; top:605px;left:700px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn76{ position:absolute; top:635px;left:700px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn77{ position:absolute; top:665px;left:700px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn78{ position:absolute; top:695px;left:700px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn79{ position:absolute; top:725px;left:700px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+
+#avibn80{ position:absolute; top:155px;left:780px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn81{ position:absolute; top:185px;left:780px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn82{ position:absolute; top:215px;left:780px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn83{ position:absolute; top:245px;left:780px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn84{ position:absolute; top:275px;left:780px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn85{ position:absolute; top:305px;left:780px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn86{ position:absolute; top:335px;left:780px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn87{ position:absolute; top:365px;left:780px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn88{ position:absolute; top:395px;left:780px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn89{ position:absolute; top:425px;left:780px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn90{ position:absolute; top:455px;left:780px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn91{ position:absolute; top:485px;left:780px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn92{ position:absolute; top:515px;left:780px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn93{ position:absolute; top:545px;left:780px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn94{ position:absolute; top:575px;left:780px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn95{ position:absolute; top:605px;left:780px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn96{ position:absolute; top:635px;left:780px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn97{ position:absolute; top:665px;left:780px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn98{ position:absolute; top:695px;left:780px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+#avibn99{ position:absolute; top:725px;left:780px;  border: 3px solid #73AD21;background-color: yellow;border-radius: 15px;margin-top: 0px;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 25px;width: 70px;display: inline;}
+
+#submitavi{position:absolute; top:655px;left:70px;text-align: center ;margin-top: 0px;border-radius: 15px; background: yellow;border: 3px solid #73AD21;font-size: 15px;font-weight: bold;margin-bottom: 20px;height: 52px;width: 285px;}
+#submitavi:hover {background: red;color: #fff;}
+
+
+
+
+
+
+
+
+/*login register#AEE4FF;*/
+.formaut{
+background:#FFFFE0;
+}
+.form-style-10{
+	max-width:450px;
+	padding:10px;
+	margin: 35px auto;
+	background: #AEE4FF;
+	border-radius: 10px;
+	-webkit-border-radius:10px;
+	-moz-border-radius: 10px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+	-moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+	-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+}
+.form-style-10 .inner-wrap{
+	padding: 0px;
+	background: #F8F8F8;text-align: center;
+	border-radius: 6px;
+	margin: auto;
+}
+.form-style-10 h1{
+	background: #2A88AD;
+	padding: 20px 30px 15px 30px;
+	margin: -30px -30px 30px -30px;
+	border-radius: 10px 10px 0 0;
+	-webkit-border-radius: 10px 10px 0 0;
+	-moz-border-radius: 10px 10px 0 0;
+	color: #fff;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
+	font: normal 30px 'Bitter', serif;
+	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	border: 1px solid #257C9E;
+}
+.form-style-10 h1 > span{
+	display: block;
+	margin-top: 2px;
+	font: 13px Arial, Helvetica, sans-serif;
+}
+.form-style-10 label{
+	display: block;
+	font: 13px Arial, Helvetica, sans-serif;
+	color: #888;
+	margin-bottom: 15px;
+}
+.form-style-10 input[type="text"],
+.form-style-10 input[type="date"],
+.form-style-10 input[type="datetime"],
+.form-style-10 input[type="email"],
+.form-style-10 input[type="number"],
+.form-style-10 input[type="search"],
+.form-style-10 input[type="time"],
+.form-style-10 input[type="url"],
+.form-style-10 input[type="password"],
+.form-style-10 textarea,
+.form-style-10 select {
+	display: block;
+	background-color: yellow;font-size: 19px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	padding: 0px;
+	border-radius: 6px;
+	-webkit-border-radius:6px;
+	-moz-border-radius:6px;
+	border: 2px solid #fff;
+	box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
+	-moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
+	-webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
+}
+
+.form-style-10 .section{
+	font: normal 20px 'Bitter', serif;
+	color: #2A88AD;
+	margin-bottom: 5px;
+}
+.form-style-10 .section span {
+	background: #2A88AD;
+	padding: 5px 10px 5px 10px;
+	position: absolute;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border: 4px solid #fff;
+	font-size: 14px;
+	margin-left: -33px;
+	color: #fff;
+	margin-top: -6px;
+}
+.form-style-10 input[type="button"], 
+.form-style-10 input[type="submit"]{
+	background: #2A88AD;
+	padding: 8px 20px 8px 20px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	color: #fff;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
+	font: normal 30px 'Bitter', serif;
+	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	border: 1px solid #257C9E;
+	font-size: 15px;
+}
+.form-style-10 input[type="button"]:hover, 
+.form-style-10 input[type="submit"]:hover{
+	background: #2A6881;
+	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+}
+.form-style-10 .privacy-policy{
+	float: right;
+	width: 250px;
+	font: 13px Arial, Helvetica, sans-serif;
+	color: #4D4D4D;
+	margin-top: 10px;
+	text-align: right;
+}
+
+/*login register fin*/
+
+/* popup --------------------------*/
+
+#popup_upload {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0 ,0, 0.7);
+	z-index: 99;
+	text-align: center;
+	display: none;
+	overflow: auto;
+}
+
+
+.form_upload {
+	width: 400px;
+	height: 240px;
+	border: 1px solid #999999;
+	border-radius: 10px;
+	background: #ffffff;
+	color: #666666;
+	margin: auto;
+	margin-top: 160px;
+	padding: 10px;
+	text-align: left;
+	position: relative;
+}
+.form_upload h2 {
+	border-bottom: 1px solid #999999;
+	padding: 0 0 5px 0;
+	margin: 0 0 20px 0;
+}
+.file_input {
+	width: 97%;
+	background: #eaeaea;
+	border: 1px solid #999999;
+	border-radius: 5px;
+	color: #333333;
+	padding: 1%;
+	margin: 0 0 20px 0;
+}
+#upload_btn {
+	background: #cccccc;
+	color: #333333;
+	border: 1px solid #999999;
+	border-radius: 10px;
+	float: right;
+	line-height: 20px;
+	font-size: 14px;
+	font-weight: bold;
+	font-family: arial;
+	display: block;
+	padding: 5px;
+	cursor: pointer;
+}
+#upload_btn:hover {
+	background: #eaeaea;
+}
+.close {
+    position: absolute;
+    display: block;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 16px;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background: #F0F0F0;
+    text-align: center;
+    font-weight: bold;
+}
+.close:hover {
+    background: #cccccc;
+}
+
+
+.import {
+	display: inline-block;
+	background: url('../images/import.png') no-repeat left;
+	background-size: auto 100%;
+	line-height: 20px;
+	padding-left: 25px;
+	color: #666666;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+	margin-right: 20px;
+	cursor: pointer;
+}
+.export {
+	display: inline-block;
+	background: url('../images/export.png') no-repeat left;
+	background-size: auto 100%;
+	line-height: 20px;
+	padding-left: 25px;
+	color: #666666;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+}
+.import:hover, .export:hover {
+	text-decoration: underline;
+	color: #333333;
+}
+.field_container {
+	padding: 10px;
+	margin: 0 0 10px 0;
+	border: 1px solid #cccccc;
+	border-radius: 10px;
+}
+.field_container legend {
+	padding: 0 5px 0 5px;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+/* popup ---fin-----------------------*/
+
+
+
+
+
+
+
+
+
