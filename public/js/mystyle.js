@@ -56,7 +56,7 @@ function close_popup(id) {
 // show_popup : show the popup fin 
 
 
-
+var ROOT ="avi";
 
 $(function() {    
     $('.delete').click(function(e) {
@@ -75,7 +75,7 @@ $(document).ready(function()
 			$.ajax
 			({
 				type: "POST",                           // Le type de ma requete
-				url: "/framework/public/js/ajaxwc.PHP", // L'url vers laquelle la requete sera envoyee
+				url: "/"+ROOT+"/public/js/ajaxwc.PHP", // L'url vers laquelle la requete sera envoyee
 				data: dataString,                       // Les donnees que l'on souhaite envoyer au serveur au format varaible ,JSON
 				cache: false,
 				success: function(html)                 // La reponse du serveur est contenu dans data  text xml json JSON (JavaScript Object Notation) 
@@ -96,7 +96,7 @@ $(document).ready(function()
 			$.ajax
 			({
 				type: "POST",                           // Le type de ma requete
-				url: "/framework/public/js/ajaxwc.PHP", // L'url vers laquelle la requete sera envoyee
+				url: "/"+ROOT+"/public/js/ajaxwc.PHP", // L'url vers laquelle la requete sera envoyee
 				data: dataString,                       // Les donnees que l'on souhaite envoyer au serveur au format varaible ,JSON
 				cache: false,
 				success: function(html)                 // La reponse du serveur est contenu dans data  text xml json JSON (JavaScript Object Notation) 
@@ -117,7 +117,7 @@ $(document).ready(function()
 			$.ajax
 			({
 				type: "POST",                           // Le type de ma requete
-				url: "/framework/public/js/ajaxwc.PHP", // L'url vers laquelle la requete sera envoyee
+				url: "/"+ROOT+"/public/js/ajaxwc.PHP", // L'url vers laquelle la requete sera envoyee
 				data: dataString,                       // Les donnees que l'on souhaite envoyer au serveur au format varaible ,JSON
 				cache: false,
 				success: function(html)                 // La reponse du serveur est contenu dans data  text xml json JSON (JavaScript Object Notation) 
@@ -138,7 +138,7 @@ $(document).ready(function()
 			$.ajax
 			({
 				type: "POST",                           // Le type de ma requete
-				url: "/framework/public/js/ajaxws.PHP", // L'url vers laquelle la requete sera envoyee
+				url: "/"+ROOT+"/public/js/ajaxws.PHP", // L'url vers laquelle la requete sera envoyee
 				data: dataString,                       // Les donnees que l'on souhaite envoyer au serveur au format varaible ,JSON
 				cache: false,
 				success: function(html)              // La reponse du serveur est contenu dans data  text xml json JSON (JavaScript Object Notation) 
@@ -152,29 +152,7 @@ $(document).ready(function()
 
 $(document).ready(function() {	
 });
-//jvs pour chapitre categorie de la cim10
-$(document).ready(function()
-{
-		$(".cim1").change(function()
-		{
-			var id=$(this).val();
-			var dataString = 'id='+ id;
 
-			$.ajax
-			({
-				type: "POST",                        // Le type de ma requete
-				url: "/deces/public/js/ajaxcim.php",                // L'url vers laquelle la requete sera envoyee
-				data: dataString,                    // Les donnees que l'on souhaite envoyer au serveur au format varaible ,JSON
-				cache: false,
-				success: function(html)              // La reponse du serveur est contenu dans data  text xml json JSON (JavaScript Object Notation) 
-						{
-						$(".cim2").html(html);   // On peut faire ce qu'on veut avec ici
-						} 
-					
-			});
-
-		});
-});
 
 /*Activates the Tabs*/
 function tabSwitch(new_tab, new_content) {    

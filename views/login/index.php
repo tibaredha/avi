@@ -23,8 +23,8 @@ Gérer Echantillon des poussins representative du lot (poids a jeun en grammes)
 <?php 
 echo "<p>";
 echo "<select  name=\"demgraphie\">";
-echo '<option value="1">Deces</option>';
-echo '<option value="2">Naissance</option>';
+echo '<option value="1">AVI</option>';
+echo '<option value="2">AVI</option>';
 echo "</select>";
 echo "</p> ";
 ?>

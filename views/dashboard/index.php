@@ -94,6 +94,7 @@ echo "<button id=\"Cleari\"  onclick=\"document.location='".URL.$data['cb2']."/"
 		{
 		echo '<div class="contentl">';
 		// HTML::multigraphe(30,340,'Naissance Par annee et sexe  Arret Au : ','avi','date','SEX','M','F','='.Session::get('structure')) ;
+		HTML::graphemois(30,340,'Echantillons des poussins par mois Arret Au : ','','avi','date','',date('Y'),'','='.Session::get('structure')); 
 		echo "</div>";
 		echo'<div class="content"><img id="image" src="'.URL.'public/images/dashbord.jpg" ></div>';
 		echo'<div class="contentr"><img id="image" src="'.URL.'public/images/'.logod.'"></div>';

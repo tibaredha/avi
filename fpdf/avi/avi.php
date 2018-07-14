@@ -103,9 +103,11 @@ $query = "SELECT * from avi where id = $id ";
 $query1 = mysql_query($query);   
 $rs = mysql_fetch_assoc($query1);
 mysql_free_result($query1);
+
+
+
 $pdf->setxy(5,$pdf->gety()+10);$pdf->cell(25,5,'Date',1,0,'L',1,0);  $pdf->cell(25,5,$rs['date'],1,0,'C',0);  $pdf->cell(25,5,'Wilaya',1,0,'L',1,0);$pdf->cell(25,5,$rs['WILAYAD'],1,0,'C',0);$pdf->cell(25,5,'Commune',1,0,'L',1,0);$pdf->cell(25,5,$rs['COMMUNED'],1,0,'C',0);
 $pdf->setxy(5,$pdf->gety()+5); $pdf->cell(25,5,'Client',1,0,'L',1,0);$pdf->cell(25,5,$rs['avicli'],1,0,'C',0);$pdf->cell(25,5,'Cycle',1,0,'L',1,0);$pdf->cell(25,5,$rs['avicycl'],1,0,'C',0); $pdf->cell(25,5,'Batiment',1,0,'L',1,0);  $pdf->cell(25,5,$rs['avibtm'],1,0,'C',0);$pdf->cell(25,5,'Semaine',1,0,'L',1,0);$pdf->cell(25,5,$rs['avisem'],1,0,'C',0);
-
 $pdf->setxy(5,$pdf->gety()+10); $pdf->cell(25,5,$rs['avi0'],1,0,'C',0);$pdf->cell(25,5,$rs['avi20'],1,0,'C',0);$pdf->cell(25,5,$rs['avi40'],1,0,'C',0);$pdf->cell(25,5,$rs['avi60'],1,0,'C',0);$pdf->cell(25,5,$rs['avi80'],1,0,'C',0);
 $pdf->setxy(5,$pdf->gety()+5); $pdf->cell(25,5,$rs['avi1'],1,0,'C',0);$pdf->cell(25,5,$rs['avi21'],1,0,'C',0);$pdf->cell(25,5,$rs['avi41'],1,0,'C',0);$pdf->cell(25,5,$rs['avi61'],1,0,'C',0);$pdf->cell(25,5,$rs['avi81'],1,0,'C',0);
 $pdf->setxy(5,$pdf->gety()+5); $pdf->cell(25,5,$rs['avi2'],1,0,'C',0);$pdf->cell(25,5,$rs['avi22'],1,0,'C',0);$pdf->cell(25,5,$rs['avi42'],1,0,'C',0);$pdf->cell(25,5,$rs['avi62'],1,0,'C',0);$pdf->cell(25,5,$rs['avi82'],1,0,'C',0);
@@ -165,22 +167,25 @@ $pdf->setxy(150,$pdf->gety()+5); $pdf->cell(25,5,$data[19],1,0,'C',0);$pdf->cell
 
 
 $contd=count ($data);
-$pdf->setxy(5,$pdf->gety()+10); $pdf->cell(25,5,'count : ',1,0,'l',1,0); $pdf->cell(25,5,$contd,1,0,'C',0);  $pdf->cell(25,5,'sum: ',1,0,'l',1,0); $pdf->cell(25,5,array_sum ($data),1,0,'C',0);$pdf->cell(25,5,'min : ',1,0,'l',1,0); $pdf->cell(25,5,$data[0],1,0,'C',0);  $pdf->cell(25,5,'max : ',1,0,'l',1,0); $pdf->cell(25,5,$data[$contd - 1],1,0,'C',0); 
-$pdf->setxy(5,$pdf->gety()+5);  $pdf->cell(25,5,'Moyenne The ',1,0,'L',1,0); $pdf->cell(25,5,$tablec[$rs['avisem']],1,0,'C',0,0);  $pdf->cell(25,5,'Z= ',1,0,'L',1,0); $pdf->cell(25,5,round((round($pdf->mean($data,$type="arithmetic"),2)-$tablec[$rs['avisem']])/(round($pdf->sd($data),2)/10),2),1,0,'C',0,0); 
+$pdf->setxy(5,$pdf->gety()+10); $pdf->cell(25,5,'count : ',1,0,'l',1,0); $pdf->cell(25,5,$contd,1,0,'C',0);  $pdf->cell(25,5,'sum: ',1,0,'l',1,0); $pdf->cell(25,5,array_sum ($data),1,0,'C',0);
+$pdf->setxy(5,$pdf->gety()+5); $pdf->cell(25,5,'min : ',1,0,'l',1,0); $pdf->cell(25,5,$data[0],1,0,'C',0);  $pdf->cell(25,5,'max : ',1,0,'l',1,0); $pdf->cell(25,5,$data[$contd - 1],1,0,'C',0); $pdf->cell(25,5,'etendu : ',1,0,'l',1,0); $pdf->cell(25,5,$data[$contd - 1]-$data[0],1,0,'C',0);
+
+
+
+
 $m=round($pdf->mean($data,$type="arithmetic"));$m10=($m*10)/100;
-$pdf->setxy(5,$pdf->gety()+5);  $pdf->cell(25,5,'moyenne - 10%',1,0,'l',1,0);$pdf->cell(25,5,round($pdf->mean($data,$type="arithmetic")-$m10,2),1,0,'C',0);   $pdf->cell(25,5,'moyenne : ',1,0,'l',1,0); $pdf->cell(25,5,round($pdf->mean($data,$type="arithmetic"),2),1,0,'C',0,0);  $pdf->cell(25,5,'moyenne + 10%',1,0,'l',1,0);                    $pdf->cell(25,5,round($pdf->mean($data,$type="arithmetic")+$m10,2),1,0,'C',0,0);  
-$pdf->setxy(5,$pdf->gety()+5);  $pdf->cell(25,5,'IC95 - ',1,0,'l',1,0);      $pdf->cell(25,5,round($pdf->mean($data,$type="arithmetic")-(1.96*round($pdf->sd($data),2))/10,2),1,0,'C',0); $pdf->cell(25,5,'moyenne : ',1,0,'l',1,0); $pdf->cell(25,5,round($pdf->mean($data,$type="arithmetic"),2),1,0,'C',0,0);$pdf->cell(25,5,'IC95 +',1,0,'l',1,0); $pdf->cell(25,5,round($pdf->mean($data,$type="arithmetic")+(1.96*round($pdf->sd($data),2))/10,2),1,0,'C',0,0);  
+$pdf->setxy(5,$pdf->gety()+5); $pdf->cell(25,5,'moyenne : ',1,0,'l',1,0); $pdf->cell(25,5,round($pdf->mean($data,$type="arithmetic"),2),1,0,'C',0,0);  $pdf->cell(25,5,'moyenne - 10%',1,0,'l',1,0);$pdf->cell(25,5,round($pdf->mean($data,$type="arithmetic")-$m10,2),1,0,'C',0);$pdf->cell(25,5,'moyenne + 10%',1,0,'l',1,0);                    $pdf->cell(25,5,round($pdf->mean($data,$type="arithmetic")+$m10,2),1,0,'C',0,0);  
 
 $pdf->setxy(5,$pdf->gety()+5);  $pdf->cell(25,5,'q1 : ',1,0,'l',1,0);        $pdf->cell(25,5,$data[round($contd / 4)],1,0,'C',0,0);                           $pdf->cell(25,5,'median : ',1,0,'l',1,0);  $pdf->cell(25,5,$pdf->median($data),1,0,'C',0,0);                            $pdf->cell(25,5,'q3 : ',1,0,'l',1,0);        $pdf->cell(25,5,$data[round($contd * 3 / 4)],1,0,'C',0);    
 $pdf->SetXY(5,$pdf->GetY()+5);  $pdf->cell(25,5,'var (n-1)',1,0,'L',1,0);    $pdf->cell(25,5,round($pdf->variance($data),2),1,0,'C',0,0);                     $pdf->cell(25,5,'std (n-1)',1,0,'L',1,0);  $pdf->cell(25,5,round($pdf->sd($data),2),1,0,'C',0,0);
-$pdf->SetXY(5,$pdf->GetY()+5);  $pdf->cell(25,5,'skew',1,0,'L',1,0);           $pdf->cell(25,5,round($pdf->skew($data),2),1,0,'C',0,0);$pdf->cell(25,5,'kurt',1,0,'L',1,0);           $pdf->cell(25,5,round($pdf->kurt($data),2),1,0,'C',0,0);
+$pdf->SetXY(5,$pdf->GetY()+5);  $pdf->cell(25,5,'skew',1,0,'L',1,0);         $pdf->cell(25,5,round($pdf->skew($data),2),1,0,'C',0,0);$pdf->cell(25,5,'kurt',1,0,'L',1,0);           $pdf->cell(25,5,round($pdf->kurt($data),2),1,0,'C',0,0);
 
 
 
 $pdf->SetXY(5,$pdf->GetY()+5);  $pdf->cell(25,5,'cv',1,0,'L',1,0);           $pdf->cell(25,5,round($pdf->cv($data),2),1,0,'C',0,0);
                            
 
-  
+
 		
 
 $sup = round($pdf->mean($data,$type="arithmetic")+$m10,2);
@@ -206,10 +211,12 @@ $continf=count ($filteredArrayinf);
 
 // $pdf->SetXY(5,$pdf->GetY()+10);    $pdf->cell(20,5,$continf,1,0,'C',1,0);
 // $pdf->SetXY(5,$pdf->GetY()+10);    $pdf->cell(20,5,$contsup,1,0,'C',1,0);$pdf->SetXY(5,$pdf->GetY()+10);
-$pdf->SetXY(5,$pdf->GetY()+5);$pdf->cell(25,5,'Homgeneite',1,0,'L',1,0); $pdf->cell(25,5,(100-($contsup+$continf)).'%',1,0,'C',0,0);
+$pdf->cell(25,5,'Homgeneite',1,0,'L',1,0); $pdf->cell(25,5,(100-($contsup+$continf)).'%',1,0,'C',0,0);
 
 
 
+$pdf->setxy(5,$pdf->gety()+5);  $pdf->cell(25,5,'Moyenne The ',1,0,'L',1,0); $pdf->cell(25,5,$tablec[$rs['avisem']],1,0,'C',0,0);  $pdf->cell(25,5,'Z= ',1,0,'L',1,0); $pdf->cell(25,5,round((round($pdf->mean($data,$type="arithmetic"),2)-$tablec[$rs['avisem']])/(round($pdf->sd($data),2)/10),2),1,0,'C',0,0); 
+$pdf->setxy(5,$pdf->gety()+5);  $pdf->cell(25,5,'IC95 M - ',1,0,'l',1,0);      $pdf->cell(25,5,round($pdf->mean($data,$type="arithmetic")-(1.96*round($pdf->sd($data),2))/10,2),1,0,'C',0); $pdf->cell(25,5,'moyenne : ',1,0,'l',1,0); $pdf->cell(25,5,round($pdf->mean($data,$type="arithmetic"),2),1,0,'C',0,0);$pdf->cell(25,5,'IC95 M +',1,0,'l',1,0); $pdf->cell(25,5,round($pdf->mean($data,$type="arithmetic")+(1.96*round($pdf->sd($data),2))/10,2),1,0,'C',0,0);  
 
 
 
@@ -257,7 +264,7 @@ $pdf->SetXY(5,$pdf->GetY()+5);  $pdf->cell(20,5,'IC95 m ',1,0,'L',1,0);  $pdf->c
 
 
 $pdf->bar10($x=110,$y=120,$datab[0],$datab[1],$datab[2],$datab[3],$datab[4],$datab[5],$datab[6],$datab[7],$datab[8],$datab[9],$datar[0],$datar[1],$datar[2],$datar[3],$datar[4],$datar[5],$datar[6],$datar[7],$datar[8],$datar[9],$datarcc[0],$datarcc[1],$datarcc[2],$datarcc[3],$datarcc[4],$datarcc[5],$datarcc[6],$datarcc[7],$datarcc[8],$datarcc[9],$titre="CALCUL POIDS ET L'HOMOGENEITE");
-// $pdf->boxplotgv($x=260,$y=125,'',$data);
+$pdf->boxplotgv($x=260,$y=125,'',$data);
 
 // $pdf->SetFillColor(255, 0, 0);
 // $b=50;

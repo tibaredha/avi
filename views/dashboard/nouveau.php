@@ -119,7 +119,7 @@ HTML::tabsavi($data);
 </form> 			
 </div>
 <div class="contenth"><img id="image" src="<?php echo URL;?>public/images/demographie1.jpg" ></div>	
-<div class="content"><img id="image" src="<?php echo URL;?>public/images/djelfa.png" ></div>
+<div class="content"><img  id="image" src="<?php echo URL;?>public/images/djelfa.png" ></div>
 <div class="contentb"><img id="image" src="<?php echo URL;?>public/images/demographie1.jpg" ></div>
 <div class="contentr"><img id="image" src="<?php echo URL;?>public/images/possin.jpg"></div>	
 <div class="scontentr1"><?php echo "";echo dsp; echo "";?></div>		
