@@ -13,6 +13,7 @@ $data = array(
 "avicycl"  => '0',
 "avibtm"   => '0',
 "avisem"   => '0',
+"Mortalite"   => '0',
 "avi0" => "0",
 "avi1" => "0",
 "avi2" => "0",

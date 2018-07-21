@@ -2858,9 +2858,65 @@ class cavi extends FPDI
 	}
 	
 	
+	function bar($x,$y,$w,$aa,$aa1,$aa2,$titre)
+    {
+	$total=array_sum($aa);
+	if($total>0){$total=$total;}else{$total=1;}
+	$this->SetFont('Times', 'BIU', 11);
+	$this->SetXY($x-20,$y-108);$this->Cell(0, 5,$titre ,0, 2, 'L');
+	$this->RoundedRect($x-20,$y-108, 200, 130, 2, $style = '');
+	$this->SetFont('Times', 'B',08);
+	$this->SetFillColor(120,255,120);
+	$this->SetXY($x-20,$y+12); 
+	for ($i = 0; $i <= count($aa)-1; $i++) 
+	{
+	$xx=round(($aa[$i]*100)/$total,2);
+	$this->cell($w,-$xx*2,$xx,1,0,'C',1,0); 
+	}      
+	$this->SetXY($x-20,$y+12);    
+	for ($i = 0; $i <= count($aa1)-1; $i++) 
+	{
+	$this->cell($w,5,$aa1[$i],1,0,'C',0,0);
+	}
+	$this->SetFillColor(230);
+	$this->SetXY($x-20,$y+12+5);    
+	for ($i = 0; $i <= count($aa2)-1; $i++) 
+	{
+	$this->cell($w,5,$aa2[$i],1,0,'C',1,0);
+	}
+	$this->SetTextColor(0,0,0);//text noire
+	$this->SetFont('Times', 'B', 11);
+	}
 	
-	
-	
+	function barni($x,$y,$w,$aa,$aa1,$aa2,$titre)
+    {
+	$total=array_sum($aa);
+	if($total>0){$total=$total;}else{$total=1;}
+	$this->SetFont('Times', 'BIU', 11);
+	$this->SetXY($x-20,$y-108);$this->Cell(0, 5,$titre ,0, 2, 'L');
+	$this->RoundedRect($x-20,$y-108, 200, 130, 2, $style = '');
+	$this->SetFont('Times', 'B',08);
+	$this->SetFillColor(120,255,120);
+	$this->SetXY($x-20,$y+12); 
+	for ($i = 0; $i <= count($aa)-1; $i++) 
+	{
+	$xx=round(($aa[$i]*100)/$total,2);
+	$this->cell($w,-$xx*2,$aa[$i],1,0,'C',1,0); 
+	}      
+	$this->SetXY($x-20,$y+12);    
+	for ($i = 0; $i <= count($aa1)-1; $i++) 
+	{
+	$this->cell($w,5,$aa1[$i],1,0,'C',0,0);
+	}
+	$this->SetFillColor(230);
+	$this->SetXY($x-20,$y+12+5);    
+	for ($i = 0; $i <= count($aa2)-1; $i++) 
+	{
+	$this->cell($w,5,$aa2[$i],1,0,'C',1,0);
+	}
+	$this->SetTextColor(0,0,0);//text noire
+	$this->SetFont('Times', 'B', 11);
+	}
 	
 	
 	

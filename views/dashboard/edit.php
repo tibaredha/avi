@@ -13,6 +13,7 @@ $data = array(
 "avicycl"  => $this->user[0]['avicycl'],
 "avibtm"   => $this->user[0]['avibtm'],
 "avisem"   => $this->user[0]['avisem'],
+"Mortalite" =>$this->user[0]['Mortalite'],
 "avi0" => $this->user[0]['avi0'],
 "avi1" => $this->user[0]['avi1'],
 "avi2" => $this->user[0]['avi2'],

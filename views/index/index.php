@@ -2,8 +2,8 @@
 <div class="sheader2l">Gérer Echantillon des poussins representative du lot (poids a jeun en grammes)</div>
 <div class="sheader2r"></div>
 <div class="contentl">
-<marquee behavior="slide" direction="up" scrollamount="2">
-<!--
+<!--<marquee behavior="slide" direction="up" scrollamount="2">
+
 <p><font color="#FF0000">*</font>&nbsp;&nbsp;&nbsp;les informations rapportées par les certificats de deces permettent l'elaboration </p>
 <p><font color="#FF0000">*</font>&nbsp;&nbsp;&nbsp;des statistiques exhaustives des causes médicales de deces en algerie</p>
 <p><font color="#FF0000">*</font>&nbsp;&nbsp;&nbsp;dont l'utilisation a pour  but  d'orienter et évaluer les actions et les recherches </p>
@@ -13,8 +13,8 @@
 <p><font color="#FF0000">*</font>&nbsp;&nbsp;&nbsp;electronique des deces est imperatif</p>
 <p><font color="#FF0000">*</font>&nbsp;&nbsp;&nbsp;&nbsp;deverait permettre d'ameliorer considerablement le circuit du certificat de décès </p>
 	<span class="import" onclick="show_popup('popup_upload')">Import CSV to MySQL</span>
---></marquee>
- <div id="popup_upload">
+</marquee>-->
+ <!--<div id="popup_upload">
         <div class="form_upload">
             <span class="close" onclick="close_popup('popup_upload')">x</span>
             <h2>Upload CSV file</h2>
@@ -23,13 +23,17 @@
                 <input type="submit" value="Upload file" id="upload_btn">
             </form>
         </div>
-    </div>
+    </div>-->
 	
 <?php 
 // html::mysqliconnect();
 // echo "";
 // echo dsp; 
 // echo "";
+// HTML::normaldist(30,340,'normal distribution : ','','avi','date','',date('Y'),'','='.Session::get('structure'));
+HTML::normaldist1(30,340,'Distribution poids a jeun en grammes 01-64 semaines : ','','avi','date','',date('Y'),'','='.Session::get('structure'));
+
+
 ?>	
 	
 

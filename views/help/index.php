@@ -5,6 +5,28 @@
 <ul>
   <li><?php echo '<a href="'.URL.'fpdf/doc/p1.pdf">Guide reproducteurs</a>';echo '&nbsp;';?></li>
   <li><?php echo '<a href="'.URL.'fpdf/doc/p2.PDF">Big fast 37</a>';echo '&nbsp;';?></li>
+  <li><?php echo '<a href="'.URL.'fpdf/doc/cobb.pdf">le guide d elevage</a>';echo '&nbsp;';?></li>
+  <li><?php echo '<a href="'.URL.'fpdf/doc/cobb1.pdf">Grams</a>';echo '&nbsp;';?></li>
+  <li><?php echo '<a href="'.URL.'fpdf/doc/cobb2.pdf">Pounds</a>';echo '&nbsp;';?></li>
+  <li><?php echo '<a href="'.URL.'fpdf/doc/cobb3.pdf">Breeder Management Supplement</a>';echo '&nbsp;';?></li>
+  <li><?php echo '<a href="'.URL.'fpdf/doc/cobb4.pdf">Male Management Supplement</a>';echo '&nbsp;';?></li>
+  <li><?php echo '<a href="'.URL.'fpdf/doc/cobb5.pdf">Pounds</a>';echo '&nbsp;';?></li>
+  <li><?php echo '<a href="'.URL.'fpdf/doc/cobb6.pdf">Broiler Performance & Nutrition Supplement</a>';echo '&nbsp;';?></li>
+  <li><?php echo '<a href="'.URL.'fpdf/doc/cobb7.pdf">cobb.pdf</a>';echo '&nbsp;';?></li>
+  <li><?php echo '<a href="'.URL.'fpdf/doc/cobb8.pdf">cobb.pdf</a>';echo '&nbsp;';?></li>
+  <li><?php echo '<a href="'.URL.'fpdf/doc/cobb9.pdf">cobb.pdf</a>';echo '&nbsp;';?></li>
+  <li><?php echo '<a href="'.URL.'fpdf/doc/cobb10.pdf">cobb.pdf</a>';echo '&nbsp;';?></li>
+  <li><?php echo '<a href="'.URL.'fpdf/doc/cobb11.pdf">cobb.pdf</a>';echo '&nbsp;';?></li>
+  <li><?php echo '<a href="'.URL.'fpdf/doc/cobb12.pdf">cobb.pdf</a>';echo '&nbsp;';?></li>
+  <li><?php echo '<a href="'.URL.'fpdf/doc/cobb13.pdf">cobb.pdf</a>';echo '&nbsp;';?></li>
+  <li><?php echo '<a href="'.URL.'fpdf/doc/cobb14.pdf">cobb.pdf</a>';echo '&nbsp;';?></li>
+  <li><?php echo '<a href="'.URL.'fpdf/doc/cobb15.pdf">cobb.pdf</a>';echo '&nbsp;';?></li>
+  <li><?php echo '<a href="'.URL.'fpdf/doc/cobb16.pdf">cobb.pdf</a>';echo '&nbsp;';?></li>
+  <li><?php echo '<a href="'.URL.'fpdf/doc/cobb17.pdf">cobb.pdf</a>';echo '&nbsp;';?></li>
+  <li><?php echo '<a href="'.URL.'fpdf/doc/cobb18.pdf">cobb.pdf</a>';echo '&nbsp;';?></li>
+  <li><?php echo '<a href="'.URL.'fpdf/doc/cobb19.pdf">cobb.pdf</a>';echo '&nbsp;';?></li>
+  <li><?php echo '<a href="'.URL.'fpdf/doc/cobb10.pdf">cobb.pdf</a>';echo '&nbsp;';?></li>
+  <li><?php echo '<a href="'.URL.'fpdf/doc/cobb21.pdf">cobb.pdf</a>';echo '&nbsp;';?></li>
   
 </ul>
 </div>	

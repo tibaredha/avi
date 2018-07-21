@@ -54,6 +54,9 @@ class Dashboard extends Controller {
 	$data['avicycl']   = $_POST['avicycl'];
 	$data['avibtm']    = $_POST['avibtm'];
 	$data['avisem']    = $_POST['avisem'];
+	$data['code_patient'] = $_POST['code_patient'];
+	
+	$data['Mortalite'] = $_POST['Mortalite'];
 	$data['avi0']       = $_POST['avi0'];
 	$data['avi1']       = $_POST['avi1'];
 	$data['avi2']       = $_POST['avi2'];
@@ -158,8 +161,8 @@ class Dashboard extends Controller {
 	$data['STRUCTURE']   = $_POST['STRUCTURE'];
 	$data['STRUCTURED']  = $_POST['STRUCTURED'];
 	$data['login']       = $_POST['login'];
-	$last_id=$this->model->create($data);
 	// echo '<pre>';print_r ($data);echo '<pre>';
+	$last_id=$this->model->create($data);
 	header('location: ' . URL .$this->controleur.'/search/0/10?o=id&q='.$last_id);
 	}
 
@@ -195,6 +198,8 @@ class Dashboard extends Controller {
 	$data['avicycl']   = $_POST['avicycl'];
 	$data['avibtm']    = $_POST['avibtm'];
 	$data['avisem']    = $_POST['avisem'];
+	$data['code_patient'] = $_POST['code_patient'];
+	$data['Mortalite'] = $_POST['Mortalite'];
 	$data['avi0']       = $_POST['avi0'];
 	$data['avi1']       = $_POST['avi1'];
 	$data['avi2']       = $_POST['avi2'];

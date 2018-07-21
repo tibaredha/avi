@@ -13,7 +13,7 @@ $pdf->SetXY(05,10); $pdf->cell(285,5,"Echantillon des poussins representative du
 //croissance par semaine 
 $tablec = array(
  1 => 150,
- 2 => 130,
+ 2 => 300,
  3 => 460,
  4 => 600,
  5 => 700,
@@ -178,7 +178,7 @@ $pdf->setxy(5,$pdf->gety()+5); $pdf->cell(25,5,'moyenne : ',1,0,'l',1,0); $pdf->
 
 $pdf->setxy(5,$pdf->gety()+5);  $pdf->cell(25,5,'q1 : ',1,0,'l',1,0);        $pdf->cell(25,5,$data[round($contd / 4)],1,0,'C',0,0);                           $pdf->cell(25,5,'median : ',1,0,'l',1,0);  $pdf->cell(25,5,$pdf->median($data),1,0,'C',0,0);                            $pdf->cell(25,5,'q3 : ',1,0,'l',1,0);        $pdf->cell(25,5,$data[round($contd * 3 / 4)],1,0,'C',0);    
 $pdf->SetXY(5,$pdf->GetY()+5);  $pdf->cell(25,5,'var (n-1)',1,0,'L',1,0);    $pdf->cell(25,5,round($pdf->variance($data),2),1,0,'C',0,0);                     $pdf->cell(25,5,'std (n-1)',1,0,'L',1,0);  $pdf->cell(25,5,round($pdf->sd($data),2),1,0,'C',0,0);
-$pdf->SetXY(5,$pdf->GetY()+5);  $pdf->cell(25,5,'skew',1,0,'L',1,0);         $pdf->cell(25,5,round($pdf->skew($data),2),1,0,'C',0,0);$pdf->cell(25,5,'kurt',1,0,'L',1,0);           $pdf->cell(25,5,round($pdf->kurt($data),2),1,0,'C',0,0);
+$pdf->SetXY(5,$pdf->GetY()+5);  $pdf->cell(25,5,'skew',1,0,'L',1,0);         $pdf->cell(25,5,round($pdf->skew($data),2),1,0,'C',0,0);$pdf->cell(25,5,$pdf->isSkew($data),1,0,'C',0,0);                          $pdf->cell(25,5,'kurt',1,0,'L',1,0);                $pdf->cell(25,5,round($pdf->kurt($data),2),1,0,'C',0,0);$pdf->cell(25,5,$pdf->iskurt($data),1,0,'C',0,0);
 
 
 
@@ -262,8 +262,7 @@ $pdf->SetXY(5,$pdf->GetY()+5);  $pdf->cell(20,5,'Ecartype ',1,0,'L',1,0);$pdf->c
 $pdf->SetXY(5,$pdf->GetY()+5);  $pdf->cell(20,5,'IC95 m ',1,0,'L',1,0);  $pdf->cell(20,5,'',1,0,'C',0,0);
 
 
-
-$pdf->bar10($x=110,$y=120,$datab[0],$datab[1],$datab[2],$datab[3],$datab[4],$datab[5],$datab[6],$datab[7],$datab[8],$datab[9],$datar[0],$datar[1],$datar[2],$datar[3],$datar[4],$datar[5],$datar[6],$datar[7],$datar[8],$datar[9],$datarcc[0],$datarcc[1],$datarcc[2],$datarcc[3],$datarcc[4],$datarcc[5],$datarcc[6],$datarcc[7],$datarcc[8],$datarcc[9],$titre="CALCUL POIDS ET L'HOMOGENEITE");
+$pdf->bar($x=110,$y=120,$w=15,$datab,$datar,$datarcc,$titre="Repartition du poids ");
 $pdf->boxplotgv($x=260,$y=125,'',$data);
 
 // $pdf->SetFillColor(255, 0, 0);
@@ -279,9 +278,38 @@ $pdf->boxplotgv($x=260,$y=125,'',$data);
 //199
 
 
+$pdf->AddPage('L','A4');$pdf->SetDisplayMode('fullpage','single'); $pdf->SetFont('Arial','B',9);
+
+
+
+$avibtm=2;
+
+$query = "SELECT * from avi where avibtm = $avibtm   order by avisem asc "; //;
+$pdf->SetXY(05,55); 
+$resultat=mysql_query($query);
+$totalmbr1=mysql_num_rows($resultat);
+$aa= array();
+while($row=mysql_fetch_object($resultat))
+{
+$aa[]=$row->code_patient;
+$aa1[]=$row->avisem;
+$aa2[]=$row->code_patient;
+}
+
+
+// $a1=array("red","green");
+// $a2=array("blue","yellow");
+// print_r(array_merge($a1,$a2));
+// $tiba=array();
+// $tiba=array_merge($aa1,$aa2);
 
 
 
 
+
+
+
+
+$pdf->barni($x=110,$y=120,$w=15,$aa,$aa1,$aa2,$titre="Evolution de la moyenne du poids par semaines ");
 $pdf->Output();
 ?>

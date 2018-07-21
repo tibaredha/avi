@@ -366,15 +366,15 @@ function genererCodeP1(){
 	           val90,val91,val92,val93,val94,val95,val96,val97,val98,val99];
 	
 	
-	document.getElementById("code_patient").value  = "Moyenne :  "+this.mean(arr) ; 
-	document.getElementById("code_patient1").value = "mode :     "+this.mode(arr) ; 
-	document.getElementById("code_patient2").value = "median :   "+this.median(arr) ; 
-	document.getElementById("code_patient3").value = "variance : "+this.variance(arr, true);
-	document.getElementById("code_patient4").value = "ecartype : "+this.stdev(arr, true); 
-	document.getElementById("code_patient5").value = "coeffvar : "+this.coeffvar(arr); 
-	document.getElementById("code_patient6").value = "skewness : "+this.skewness(arr); 
-	document.getElementById("code_patient7").value = "kurtosis : "+this.kurtosis(arr); 
-	document.getElementById("code_patient8").value = "quartiles : "+this.quartiles(arr); 
+	document.getElementById("code_patient").value  = this.mean(arr) ; 
+	document.getElementById("code_patient1").value = this.mode(arr) ; 
+	document.getElementById("code_patient2").value = this.median(arr) ; 
+	document.getElementById("code_patient3").value = this.variance(arr, true);
+	document.getElementById("code_patient4").value = this.stdev(arr, true); 
+	document.getElementById("code_patient5").value = this.coeffvar(arr); 
+	document.getElementById("code_patient6").value = this.skewness(arr); 
+	document.getElementById("code_patient7").value = this.kurtosis(arr); 
+	document.getElementById("code_patient8").value = this.quartiles(arr); 
 	
 	}
 

@@ -183,6 +183,8 @@
 
 
 jQuery(function($){
+	   
+	   $("#avid1").mask("9999-99-99",{placeholder:"0000-00-00"});
 	   $("#date").mask("99/99/9999",{placeholder:"00/00/0000"});
 	   $("#dateus").mask("99-99-9999",{placeholder:"00/00/0000"});
 	   $("#dateus1").mask("99-99-9999",{placeholder:"00/00/0000"});

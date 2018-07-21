@@ -503,6 +503,136 @@ class HTML  {
 	echo '<img id ="image"  src="'.URL.$fichier.'" style="border: 2px solid green;"/>';
 	}
 	
+	function norm ($x, $mean, $sd)
+    {
+        $y = (1 / $sd*sqrt(2 * pi())) * exp(-0.5 * pow(($x-$mean)/$sd, 2));
+        return $y;
+    }
+
+	
+	function normaldist($x,$y,$TITRE,$SRS,$TBL,$COLONE1,$COLONE2,$ANNEE,$IND,$STR) 
+	{
+	include "./chart/libchart/classes/libchart.php";
+	$chart = new LineChart();
+	$fichier='./chart/demo/generated/demo1.png';
+	$dataSet = new XYDataSet();
+	for ($i = -3; $i <= 3; $i+= 0.01) {
+	$dataSet->addPoint(new Point("", $this->norm ($i,0,1)));
+	}
+	$chart->setDataSet($dataSet);
+	$DATE=date("d-m-Y");
+	$chart->setTitle($TITRE.$DATE);
+	$chart->render($fichier);	
+	echo '<img id ="image"  src="'.URL.$fichier.'" style="border: 2px solid green;"/>';
+	}
+	
+	
+	function vnormaldist($x,$y,$TITRE,$SRS,$TBL,$COLONE1,$COLONE2,$ANNEE,$IND,$STR) 
+	{
+	include "./chart/libchart/classes/libchart.php";
+	$chart = new VerticalBarChart();
+	$fichier='./chart/demo/generated/demo1.png';
+	$dataSet = new XYDataSet();
+	for ($i = -3; $i <= 3; $i+= 0.01) {
+	$dataSet->addPoint(new Point("", $this->norm ($i,0,1)));
+	}
+	$chart->setDataSet($dataSet);
+	$DATE=date("d-m-Y");
+	$chart->setTitle($TITRE.$DATE);
+	$chart->render($fichier);	
+	echo '<img id ="image"  src="'.URL.$fichier.'" style="border: 2px solid green;"/>';
+	}
+	
+	
+	function normaldist1($x,$y,$TITRE,$SRS,$TBL,$COLONE1,$COLONE2,$ANNEE,$IND,$STR) 
+	{
+	include "./chart/libchart/classes/libchart.php";
+	$chart = new LineChart();
+	$fichier='./chart/demo/generated/demo1.png';
+	$dataSet = new XYDataSet();
+	$dataSet->addPoint(new Point("1",150 )); 
+	$dataSet->addPoint(new Point("",300 ));
+	$dataSet->addPoint(new Point("",460 ));
+	$dataSet->addPoint(new Point("",600 ));
+	$dataSet->addPoint(new Point("",700 ));
+	$dataSet->addPoint(new Point("",790));
+	$dataSet->addPoint(new Point("",880 ));
+	$dataSet->addPoint(new Point("",970 )); 
+	$dataSet->addPoint(new Point("",1060 ));
+	$dataSet->addPoint(new Point("10",1150 ));
+	$dataSet->addPoint(new Point("",1240 ));
+	$dataSet->addPoint(new Point("",1340 ));
+	$dataSet->addPoint(new Point("",1450 ));
+	$dataSet->addPoint(new Point("",1560 ));
+	$dataSet->addPoint(new Point("",1680 ));
+	$dataSet->addPoint(new Point("",1800 ));
+	$dataSet->addPoint(new Point("",1930 ));
+	$dataSet->addPoint(new Point("",2060 ));
+	$dataSet->addPoint(new Point("",2190 ));
+	$dataSet->addPoint(new Point("20",2330 ));
+	$dataSet->addPoint(new Point("",2508 ));
+	$dataSet->addPoint(new Point("",2686 ));
+	$dataSet->addPoint(new Point("",2864 ));
+	$dataSet->addPoint(new Point("",3042 ));
+	$dataSet->addPoint(new Point("",3220 ));
+	$dataSet->addPoint(new Point("",3355 ));
+	$dataSet->addPoint(new Point("",3470 ));
+	$dataSet->addPoint(new Point("",3575 ));
+	$dataSet->addPoint(new Point("",3633 ));
+	$dataSet->addPoint(new Point("30",3690 ));
+	$dataSet->addPoint(new Point("",3713 ));
+	$dataSet->addPoint(new Point("",3735 ));
+	$dataSet->addPoint(new Point("",3745 ));
+	$dataSet->addPoint(new Point("",3755 ));
+	$dataSet->addPoint(new Point("",3765 ));
+	$dataSet->addPoint(new Point("",3775 ));
+	$dataSet->addPoint(new Point("",3785 ));
+	$dataSet->addPoint(new Point("",3795 ));
+	$dataSet->addPoint(new Point("",3805 ));
+	$dataSet->addPoint(new Point("40",3815 ));
+	$dataSet->addPoint(new Point("",3825 ));
+	$dataSet->addPoint(new Point("",3835 ));
+	$dataSet->addPoint(new Point("",3845 ));
+	$dataSet->addPoint(new Point("",3855 ));
+	$dataSet->addPoint(new Point("",3865 ));
+	$dataSet->addPoint(new Point("",3875 ));
+	$dataSet->addPoint(new Point("",3885 ));
+	$dataSet->addPoint(new Point("",3895 ));
+	$dataSet->addPoint(new Point("",3905 ));
+	$dataSet->addPoint(new Point("50",3915 ));
+	$dataSet->addPoint(new Point("",3925 ));
+	$dataSet->addPoint(new Point("",3935 ));
+	$dataSet->addPoint(new Point("",3945 ));
+	$dataSet->addPoint(new Point("",3955 ));
+	$dataSet->addPoint(new Point("",3965 ));
+	$dataSet->addPoint(new Point("",3975 ));
+	$dataSet->addPoint(new Point("",3985 ));
+	$dataSet->addPoint(new Point("",3995 ));
+	$dataSet->addPoint(new Point("",4005 ));
+	$dataSet->addPoint(new Point("60",4015 ));
+	$dataSet->addPoint(new Point("",4025 ));
+	$dataSet->addPoint(new Point("",4035 ));
+	$dataSet->addPoint(new Point("",4045 ));
+	$dataSet->addPoint(new Point("",4055 ));
+	$chart->setDataSet($dataSet);
+	$DATE=date("d-m-Y");
+	$chart->setTitle($TITRE.$DATE);
+	$chart->render($fichier);	
+	echo '<img id ="image"  src="'.URL.$fichier.'" style="border: 2px solid green;"/>';
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	function valeurmultigraphe($TBL,$COLONE1,$DATEJOUR1,$DATEJOUR2,$COLONE2,$VALEUR2,$structure) 
 	{
 	$this->mysqlconnect();
@@ -838,17 +968,18 @@ class HTML  {
 	echo '<label  id="avil0bn5">Cycle</label>';   echo '<input  id="avicycl" type="txt"  name="avicycl" value="'.$data['avicycl'].'"/>';
 	echo '<label  id="avil0bn6">Batiment</label>';echo '<input  id="avibtm"  type="txt"  name="avibtm"  value="'.$data['avibtm'].'"/>';
 	echo '<label  id="avil0bn7">Semaine</label>'; echo '<input  id="avisem"  type="txt"  name="avisem"  value="'.$data['avisem'].'"/>';
+	echo '<label  id="Mortalitel">Mortalite</label>'; echo '<input  id="Mortalitei"  type="txt"  name="Mortalite"  value="'.$data['Mortalite'].'"/>';
 	
 	// echo '<label style="display: none;" id="show_codeP">';
-    echo '<input type="text" name="code_patient"  id="code_patient"   style="border: none; background-color: #FFC0CB; color: black; font-family:courier; text-align:left;  "   size="15" readonly="">';
-    echo '<input type="text" name="code_patient1" id="code_patient1"  style="border: none; background-color: #FFC0CB; color: black; font-family:courier; text-align:left;  "   size="15" readonly="">';
-	echo '<input type="text" name="code_patient2" id="code_patient2"  style="border: none; background-color: #FFC0CB; color: black; font-family:courier; text-align:left;  "   size="15" readonly="">';
-	echo '<input type="text" name="code_patient3" id="code_patient3"  style="border: none; background-color: #FFC0CB; color: black; font-family:courier; text-align:left;  "   size="15" readonly="">';
-	echo '<input type="text" name="code_patient4" id="code_patient4"  style="border: none; background-color: #FFC0CB; color: black; font-family:courier; text-align:left;  "   size="15" readonly="">';
-	echo '<input type="text" name="code_patient5" id="code_patient5"  style="border: none; background-color: #FFC0CB; color: black; font-family:courier; text-align:left;  "   size="15" readonly="">';
-	echo '<input type="text" name="code_patient6" id="code_patient6"  style="border: none; background-color: #FFC0CB; color: black; font-family:courier; text-align:left;  "   size="15" readonly="">';
-	echo '<input type="text" name="code_patient7" id="code_patient7"  style="border: none; background-color: #FFC0CB; color: black; font-family:courier; text-align:left;  "   size="15" readonly="">';
-	echo '<input type="text" name="code_patient8" id="code_patient8"  style="border: none; background-color: #FFC0CB; color: black; font-family:courier; text-align:left;  "   size="15" readonly="">';
+    echo '<label  id="lcode_patient">Moyenne</label>';  echo '<input type="text" name="code_patient"  id="code_patient"   style="border: none; background-color: #FFC0CB; color: black; font-family:courier; text-align:left;  "   size="15" readonly="">';
+    echo '<label  id="lcode_patient1">mode</label>';    echo '<input type="text" name="code_patient1" id="code_patient1"  style="border: none; background-color: #FFC0CB; color: black; font-family:courier; text-align:left;  "   size="15" readonly="">';
+	echo '<label  id="lcode_patient2">median</label>';  echo '<input type="text" name="code_patient2" id="code_patient2"  style="border: none; background-color: #FFC0CB; color: black; font-family:courier; text-align:left;  "   size="15" readonly="">';
+	echo '<label  id="lcode_patient3">variance</label>';echo '<input type="text" name="code_patient3" id="code_patient3"  style="border: none; background-color: #FFC0CB; color: black; font-family:courier; text-align:left;  "   size="15" readonly="">';
+	echo '<label  id="lcode_patient4">ecartype</label>';echo '<input type="text" name="code_patient4" id="code_patient4"  style="border: none; background-color: #FFC0CB; color: black; font-family:courier; text-align:left;  "   size="15" readonly="">';
+	echo '<label  id="lcode_patient5">coeffvar</label>';echo '<input type="text" name="code_patient5" id="code_patient5"  style="border: none; background-color: #FFC0CB; color: black; font-family:courier; text-align:left;  "   size="15" readonly="">';
+	echo '<label  id="lcode_patient6">skewness</label>';echo '<input type="text" name="code_patient6" id="code_patient6"  style="border: none; background-color: #FFC0CB; color: black; font-family:courier; text-align:left;  "   size="15" readonly="">';
+	echo '<label  id="lcode_patient7">kurtosis</label>';echo '<input type="text" name="code_patient7" id="code_patient7"  style="border: none; background-color: #FFC0CB; color: black; font-family:courier; text-align:left;  "   size="15" readonly="">';
+	echo '<label  id="lcode_patient8">quartiles</label>';echo '<input type="text" name="code_patient8" id="code_patient8"  style="border: none; background-color: #FFC0CB; color: black; font-family:courier; text-align:left;  "   size="15" readonly="">';
 	
 	
 	

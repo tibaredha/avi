@@ -334,9 +334,9 @@ class Kashi
         $skewSE = sqrt(6 / $n);
         
         if (abs($skew) > 2 * $skewSE) {
-            $result = true;
+            $result = 'Y';
         } else {
-            $result = false;
+            $result = 'N';
         }
         
         return $result;
@@ -387,9 +387,9 @@ class Kashi
         $kurtSE = sqrt(24 / $n);
         
         if (abs($kurt) > 2 * $kurtSE) {
-            $result = true;
+            $result = 'Y';
         } else {
-            $result = false;
+            $result = 'N';
         }
         
         return $result;

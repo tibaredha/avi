@@ -4,6 +4,9 @@ class Dashboard_Model extends Model {
 	public function __construct() {
 		parent::__construct();
 		// Session::init();
+		
+		Model::createTable();
+		
 	}
 	public function create($data) {
 
@@ -14,7 +17,9 @@ class Dashboard_Model extends Model {
 			'avicli' =>$data['avicli'],   
 			'avicycl' =>$data['avicycl'],   
 			'avibtm' =>$data['avibtm'],   
-			'avisem' =>$data['avisem'],   
+			'avisem' =>$data['avisem'],
+			'code_patient' =>$data['code_patient'],//MOYENNE 
+			'Mortalite' =>$data['Mortalite'], 
 			'avi0' =>$data['avi0'],   
 			'avi1' =>$data['avi1'],   
 			'avi2' =>$data['avi2'],   
@@ -146,7 +151,9 @@ class Dashboard_Model extends Model {
 			'avicli' =>$data['avicli'],   
 			'avicycl' =>$data['avicycl'],   
 			'avibtm' =>$data['avibtm'],   
-			'avisem' =>$data['avisem'],   
+			'avisem' =>$data['avisem'],
+			'code_patient' =>$data['code_patient'],//MOYENNE
+			'Mortalite' =>$data['Mortalite'], 
 			'avi0' =>$data['avi0'],   
 			'avi1' =>$data['avi1'],   
 			'avi2' =>$data['avi2'],   
