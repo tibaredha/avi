@@ -9,7 +9,6 @@ $app = new Bootstrap();
 //Par conséquent, aucune de ces informations ne peut être reproduite, modifiée, transmise, rediffusée, traduite, vendue, exploitée commercialement ou utilisée de quelque manière que ce soit sans l'accord préalable écrit de dr tiba. 
 //dr tiba ne pourra être tenue pour responsable des délais, erreurs, omissions, qui ne peuvent être exclus ni des conséquences des actions ou transactions effectuées sur la base de ces informations.
 
-
 //sent email 
 $mail = new PHPMailer;
 $mail->isSMTP();                                   // Set mailer to use SMTP
