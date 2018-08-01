@@ -272,18 +272,14 @@ $pdf->boxplotgv($x=260,$y=125,'',$data);
 // $d=$data[$contd - 1];
 // $e=$d-$c;
 
-// $pdf->SetXY(90,130-$b);  $pdf->cell(1,$b,'',1,0,'C',1,0);$pdf->SetXY(190,130-$b);  $pdf->cell(1,$b,'',1,0,'C',1,0);
+// $pdf->SetXY(90,130-$b);  $pdf->cell(1,$b,'',1,0,'C',1,0);$pdf->SetXY(215,130-$b);  $pdf->cell(1,$b,'',1,0,'C',1,0);
 // $pdf->SetXY(289,130-$b); $pdf->cell(1,$b,'',1,0,'C',1,0);
 
 //199
 
 
 $pdf->AddPage('L','A4');$pdf->SetDisplayMode('fullpage','single'); $pdf->SetFont('Arial','B',9);
-
-
-
 $avibtm=2;
-
 $query = "SELECT * from avi where avibtm = $avibtm   order by avisem asc "; //;
 $pdf->SetXY(05,55); 
 $resultat=mysql_query($query);
@@ -295,21 +291,11 @@ $aa[]=$row->code_patient;
 $aa1[]=$row->avisem;
 $aa2[]=$row->code_patient;
 }
-
-
 // $a1=array("red","green");
 // $a2=array("blue","yellow");
 // print_r(array_merge($a1,$a2));
 // $tiba=array();
 // $tiba=array_merge($aa1,$aa2);
-
-
-
-
-
-
-
-
 $pdf->barni($x=110,$y=120,$w=15,$aa,$aa1,$aa2,$titre="Evolution de la moyenne du poids par semaines ");
 $pdf->Output();
 ?>

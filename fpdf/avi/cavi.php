@@ -14,6 +14,14 @@ class cavi extends FPDI
 	 public $mspfr="Ministère de la santé de la population et de la réforme hospitalière";
 	 public $dspfr="Direction de la santé et de la population de la wilaya de Djelfa";
 	
+	
+	
+	
+	
+	
+	
+	
+	
 	function mysqlconnect()
 	{
 	$this->db_host;
@@ -2917,21 +2925,418 @@ class cavi extends FPDI
 	$this->SetTextColor(0,0,0);//text noire
 	$this->SetFont('Times', 'B', 11);
 	}
+	//**************************//
+    function datePlus($dateDo,$nbrJours)
+	{
+	$timeStamp = strtotime($dateDo); 
+	$timeStamp += 24 * 60 * 60 * $nbrJours;
+	$newDate = date("Y-m-d", $timeStamp);
+	return  $newDate;
+	}
+	
+	function calvac($datemep)
+    {	
+	
+	$this->SetXY(10,$this->GetY()+20);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,0)),1,0,'L',1,0);$this->cell(40,5,'NEO-VITAL',1,0,'C',1,0);
+	$this->SetXY(10,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,1)),1,0,'L',1,0);$this->cell(40,5,'NEO-VITAL',1,0,'C',1,0);
+	$this->SetXY(10,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,2)),1,0,'L',1,0);$this->cell(40,5,'NEO-VITAL',1,0,'C',1,0);
+	$this->SetXY(10,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,4)),1,0,'L',1,0);$this->cell(40,5,'SYVAQUINOL',1,0,'C',1,0);
+	$this->SetXY(10,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,5)),1,0,'L',1,0);$this->cell(40,5,'SYVAQUINOL',1,0,'C',1,0);
+	$this->SetXY(10,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,6)),1,0,'L',1,0);$this->SetFillColor(58 ,242 ,75);$this->cell(40,5,'Mas5CLONE30',1,0,'C',1,0); $this->SetFillColor(230);
+	$this->SetXY(10,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,7)),1,0,'L',1,0);$this->cell(40,5,'SYVAQUINOL',1,0,'C',1,0);
+	$this->SetXY(10,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,11)),1,0,'L',1,0);$this->SetFillColor(58 ,242 ,75);$this->cell(40,5,'IB4/91 ou IB88',1,0,'C',1,0);$this->SetFillColor(230);
+	$this->SetXY(10,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,13)),1,0,'L',1,0);$this->cell(40,5,'AD3E',1,0,'C',1,0);
+	$this->SetXY(10,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,17)),1,0,'L',1,0);$this->cell(40,5,'IBDL',1,0,'C',1,0);$this->SetFillColor(230);
+	$this->SetXY(10,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,19)),1,0,'L',1,0);$this->cell(40,5,'HIPRAMINE B',1,0,'C',1,0);
+	$this->SetXY(10,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,20)),1,0,'L',1,0);$this->cell(40,5,'HIPRAMINE B',1,0,'C',1,0);
+	$this->SetXY(10,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,25)),1,0,'L',1,0);$this->cell(40,5,'TYLAN PS',1,0,'C',1,0);
+	$this->SetXY(10,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,26)),1,0,'L',1,0);$this->SetFillColor(58 ,242 ,75);$this->cell(40,5,'AVINEW ou LASOTA',1,0,'C',1,0);$this->SetFillColor(230);
+	$this->SetXY(10,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,27)),1,0,'L',1,0);$this->cell(40,5,'TYLAN PS',1,0,'C',1,0);
+	$this->SetXY(10,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,30)),1,0,'L',1,0);$this->cell(40,5,'JOPROX',1,0,'C',1,0);
+	$this->SetXY(10,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,31)),1,0,'L',1,0);$this->cell(40,5,'JOPROX',1,0,'C',1,0);
+	$this->SetXY(10,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,32)),1,0,'L',1,0);$this->cell(40,5,'JOPROX',1,0,'C',1,0);
+	$this->SetXY(10,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,33)),1,0,'L',1,0);$this->SetFillColor(58 ,242 ,75);$this->cell(40,5,'IB88',1,0,'C',1,0);$this->SetFillColor(230);
+	$this->SetXY(10,$this->GetY()+5);  $this->cell(30,5,'',1,0,'L',1,0);$this->cell(40,5,'',1,0,'C',1,0);
+
+	$this->SetXY(112,$this->GetY()-95); $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,35)),1,0,'L',1,0);$this->cell(40,5,'OPROX',1,0,'C',1,0);
+	$this->SetXY(112,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,36)),1,0,'L',1,0);$this->cell(40,5,'OPROX',1,0,'C',1,0);
+	$this->SetXY(112,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,37)),1,0,'L',1,0);$this->cell(40,5,'VMO',1,0,'C',1,0);
+	$this->SetXY(112,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,38)),1,0,'L',1,0);$this->cell(40,5,'VMO',1,0,'C',1,0);
+	$this->SetXY(112,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,39)),1,0,'L',1,0);$this->SetFillColor(58 ,242 ,75);$this->cell(40,5,'Nobilis LTI',1,0,'C',1,0);$this->SetFillColor(230);
+	$this->SetXY(112,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,44)),1,0,'L',1,0);$this->cell(40,5,'VITABRION-L+ GALLUMINE',1,0,'C',1,0);$this->SetFillColor(230);
+	$this->SetXY(112,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,45)),1,0,'L',1,0);$this->cell(40,5,'AD3E',1,0,'C',1,0);
+	$this->SetXY(112,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,46)),1,0,'L',1,0);$this->cell(40,5,'AD3E',1,0,'C',1,0);
+	$this->SetXY(112,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,51)),1,0,'L',1,0);$this->SetFillColor(58 ,242 ,75);$this->cell(40,5,'Nemovac',1,0,'C',1,0);$this->SetFillColor(230);
+	$this->SetXY(112,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,52)),1,0,'L',1,0);$this->cell(40,5,'AD3E',1,0,'C',1,0);
+	$this->SetXY(112,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,53)),1,0,'L',1,0);$this->cell(40,5,'BAYCOX',1,0,'C',1,0);
+	$this->SetXY(112,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,54)),1,0,'L',1,0);$this->cell(40,5,'BAYCOX',1,0,'C',1,0);
+	$this->SetXY(112,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,58)),1,0,'L',1,0);$this->SetFillColor(58 ,242 ,75);$this->cell(40,5,'Gallimune 208+ Variole',1,0,'C',1,0);$this->SetFillColor(230);
+	$this->SetXY(112,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,59)),1,0,'L',1,0);$this->cell(40,5,'NEOXYVITAL',1,0,'C',1,0);
+	$this->SetXY(112,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,60)),1,0,'L',1,0);$this->cell(40,5,'NEOXYVITAL',1,0,'C',1,0);
+	$this->SetXY(112,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,61)),1,0,'L',1,0);$this->cell(40,5,'NEOXYVITAL',1,0,'C',1,0);
+	$this->SetXY(112,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,65)),1,0,'L',1,0);$this->SetFillColor(58 ,242 ,75);$this->cell(40,5,'AVINEW',1,0,'C',1,0);$this->SetFillColor(230);
+	$this->SetXY(112,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,66)),1,0,'L',1,0);$this->cell(40,5,'VMO',1,0,'C',1,0);
+	$this->SetXY(112,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,72)),1,0,'L',1,0);$this->SetFillColor(58 ,242 ,75);$this->cell(40,5,'Myelovax',1,0,'C',1,0);$this->SetFillColor(230);
+	$this->SetXY(112,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,73)),1,0,'L',1,0);$this->cell(40,5,'VMO',1,0,'C',1,0);
+
+	$this->SetXY(215,$this->GetY()-95); $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,79)),1,0,'L',1,0);$this->SetFillColor(58 ,242 ,75);$this->cell(40,5,'Nemovac',1,0,'C',1,0);$this->SetFillColor(230);
+	$this->SetXY(215,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,80)),1,0,'L',1,0);$this->cell(40,5,'AD3E',1,0,'C',1,0);
+	$this->SetXY(215,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,81)),1,0,'L',1,0);$this->cell(40,5,'BAYCOX',1,0,'C',1,0);
+	$this->SetXY(215,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,82)),1,0,'L',1,0);$this->cell(40,5,'BAYCOX',1,0,'C',1,0);
+	$this->SetXY(215,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,86)),1,0,'L',1,0);$this->SetFillColor(58 ,242 ,75);$this->cell(40,5,'IBQx',1,0,'C',1,0);$this->SetFillColor(230);
+	$this->SetXY(215,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,87)),1,0,'L',1,0);$this->cell(40,5,'VMO',1,0,'C',1,0);
+	$this->SetXY(215,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,94)),1,0,'L',1,0);$this->cell(40,5,'AD3E',1,0,'C',1,0);
+	$this->SetXY(215,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,103)),1,0,'L',1,0);$this->SetFillColor(58 ,242 ,75);$this->cell(40,5,'GALLUMINE 208 10',1,0,'C',1,0);$this->SetFillColor(230);
+	$this->SetXY(215,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,104)),1,0,'L',1,0);$this->cell(40,5,'NEOXYVITAL',1,0,'C',1,0);
+	$this->SetXY(215,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,105)),1,0,'L',1,0);$this->cell(40,5,'NEOXYVITAL',1,0,'C',1,0);
+	$this->SetXY(215,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,106)),1,0,'L',1,0);$this->cell(40,5,'NEOXYVITAL',1,0,'C',1,0);
+	$this->SetXY(215,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,114)),1,0,'L',1,0);$this->cell(40,5,'AD3E',1,0,'C',1,0);
+	$this->SetXY(215,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,115)),1,0,'L',1,0);$this->cell(40,5,'AD3E',1,0,'C',1,0);
+	$this->SetXY(215,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,120)),1,0,'L',1,0);$this->cell(40,5,'NEOTERRAMY',1,0,'C',1,0);
+	$this->SetXY(215,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,121)),1,0,'L',1,0);$this->SetFillColor(58 ,242 ,75);$this->cell(40,5,'GALLIMUNE 407 N',1,0,'C',1,0);$this->SetFillColor(230);
+	$this->SetXY(215,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,122)),1,0,'L',1,0);$this->cell(40,5,'NEOTERRAMY',1,0,'C',1,0);
+	$this->SetXY(215,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,124)),1,0,'L',1,0);$this->cell(40,5,'Panacur2,5%',1,0,'C',1,0);
+	$this->SetXY(215,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,125)),1,0,'L',1,0);$this->cell(40,5,'AD3E',1,0,'C',1,0);
+	$this->SetXY(215,$this->GetY()+5);  $this->cell(30,5,$this->dateUS2FR($this->datePlus($datemep,130)),1,0,'L',1,0);$this->cell(40,5,'VitE10%',1,0,'C',1,0);
+	$this->SetXY(215,$this->GetY()+5);  $this->cell(30,5,'',1,0,'L',1,0);$this->cell(40,5,'',1,0,'C',1,0);
+	 }
+
+
 	
 	
 	
 	
 	
+	//*********************//
+	function MDYtoJD($month, $day, $year)
+    {
+	if (! $month || ! $day || ! $year)
+		return 0;
+	$a = floor((14-$month)/12);
+	$y = floor($year+4800-$a);
+	$m = floor($month+12*$a-3);
+	$jd = $day+floor((153*$m+2)/5)+$y*365;
+	$jd += floor($y/4)-floor($y/100)+floor($y/400)-32045;
+	return $jd;
+    }
+	
+	function printMonth($date,$dateDo)
+{
+	$this->date = $date;
+	$this->JDtoYMD($date, $year, $month, $day);
+	$this->AddPage();
+	// compute size base on current settings
+	$width = $this->w - $this->lMargin - $this->rMargin;
+	$height = $this->h - $this->tMargin - $this->bMargin;
+	// print prev and next calendars
+	$this->setXY($this->lMargin,$this->tMargin);
+	$this->tinyCalendar($this->lastMonth($date), $this->tinySquareSize);
+	$this->setXY($this->lMargin+$width - $this->tinySquareSize * 7,$this->tMargin);
+	$this->tinyCalendar($this->nextMonth($date), $this->tinySquareSize);
+	// print header
+	$firstLine = $this->tinySquareSize * 8 + $this->tMargin;
+	$monthStr = strtoupper(gmdate ("F Y", jdtounix($date)));
+	$this->SetXY($this->lMargin,$this->tMargin);
+	$this->SetFont("Times", "B", $this->headerFontSize);
+	$this->Cell($width, $firstLine, $monthStr, 0,0, "C");
+	// compute number of weeks in month.
+	$wd=gmdate("w",jdtounix($date));
+	$start = $date - $wd;
+	$numDays = $this->nextMonth($date) - $start;
+	$numWeeks = 0;
+	while ($numDays > 0)
+		{
+		$numDays -= 7;
+		++$numWeeks;
+		}
+	// compute horizontal lines
+	$this->squareHeight = ($height - 6 - $firstLine) / $numWeeks;
+	$horizontalLines = array($firstLine,6);
+	for ($i = 0; $i < $numWeeks; ++$i)
+		{
+		$horizontalLines[$i + 2] = $this->squareHeight;
+		}
+	// compute vertical lines
+	$this->squareWidth = $width / 7;
+	$verticalLines = array($this->lMargin, $this->squareWidth, $this->squareWidth, $this->squareWidth, $this->squareWidth, $this->squareWidth, $this->squareWidth, $this->squareWidth);
+	
+	// print days of week
+	$x = 0;
+	$this->SetFont("Times", "B", 12);
+	for ($i = 1; $i <= 7; ++$i)
+		{
+		$x += $verticalLines[$i-1];
+		$this->SetXY($x,$firstLine);
+		$day = gmdate("l", jdtounix($this->MDYtoJD(2,$i,2009)));
+		$this->Cell($verticalLines[$i],6,$day,0,0,"C");
+		}
+	
+	// print numbers in boxes
+	$wd=gmdate("w",jdtounix($date));
+	$cur = $date - $wd;
+	$this->SetFont("Times", "B", 20);
+	$x = 0;
+	$y = $horizontalLines[0];
+	for ($k=0;$k<$numWeeks;$k++)
+		{
+		$y += $horizontalLines[$k+1];
+		for ($i=0;$i<7;$i++ )
+			{
+			$this->JDtoYMD($cur, $curYear, $curMonth, $curDay);
+			$x += $verticalLines[$i];
+			$this->squareWidth = $verticalLines[$i+1];
+			if ($curMonth == $month)
+				{
+				$this->setXY($x, $y);
+				$this->printHoliday($cur,$dateDo);
+				$this->setXY($x, $y);
+				$this->printDay($cur);
+				$this->SetFont("Times", "B", 20);
+				$this->SetXY($x,$y+1);
+				$this->Cell(5, 5, $curDay);
+				}
+			++$cur;
+			}
+		$x = 0;
+		}
+	
+	// print horizontal lines
+	$ly = 0;
+	$ry = 0;
+	foreach ($horizontalLines as $key => $value)
+		{
+		$ly += $value;
+		$ry += $value;
+		$this->Line($this->lMargin,$ly,$this->lMargin+$width,$ry);
+		}
+	// print vertical lines
+	$lx = 0;
+	$rx = 0;
+	foreach ($verticalLines as $key => $value)
+		{
+		$lx += $value;
+		$rx += $value;
+		$this->Line($lx,$firstLine,$rx,$firstLine + 6 + $this->squareHeight * $numWeeks);
+		}
+    }
+	
+	function JDtoYMD($date, &$year, &$month, &$day)
+    {
+	$string = JDToGregorian($date);
+	$month = strtok($string, " -/");
+	$day = strtok(" -/");
+	$year = strtok(" -/");
+   }
+	
+	function tinyCalendar($date, $square)
+{
+	$this->JDtoYMD($date, $year, $month, $day);
+	// print numbers in boxes
+	$wd=gmdate("w",jdtounix($date));
+	$cur = $date - $wd;
+	$this->SetFont("Helvetica", "B", 10);
+	$monthStr = gmdate ("F", jdtounix($date))." $year";
+	$this->JDtoYMD($date, $year, $month, $day);
+	// save local copy of coordinates for future reference
+	$x = $this->x;
+	$y = $this->y;
+	$this->Cell(7*$square, $square, $monthStr, 0, 0, "C");
+	$y+=$square;
+	$this->SetXY($x, $y);
+	$this->SetFontSize(8);
+	for ($i = 1; $i <= 7; ++$i)
+		{
+		$day = strtoupper(gmdate("l", jdtounix($this->MDYtoJD(2,$i,2009))));
+		$this->Cell($square, $square, $day[0], 0,0,"C");
+		}
+	$y+=$square;
+	$this->SetXY($x, $y);
+	for ($k=0;$k<6;$k++)
+		{
+		for ($i=0;$i<7;$i++ )
+			{
+			$this->JDtoYMD($cur++, $curYear, $curMonth, $curDay);
+			if ($curMonth != $month)
+				$curDay = " ";
+			$this->Cell($square, $square, $curDay, 0, 0, "R");
+			}
+		$y+=$square;
+		$this->SetXY($x, $y);
+		}
+}
 	
 	
+function lastMonth($date)
+{
+	$this->JDtoYMD($date, $year, $month, $day);
+	if (--$month == 0)
+		{
+		$month = 12;
+		$year--;
+		}
+	return GregorianToJD($month, $day, $year);
+}	
 	
+	protected $date;
+	protected $squareHeight;
+	protected $squareWidth;
+	protected $longestMonth="";
+	protected $tinySquareSize=4;
 	
+	function nextMonth($date)
+{
+	$this->JDtoYMD($date, $year, $month, $day);
+	if (++$month > 12)
+		{
+		$month = 1;
+		++$year;
+		}
+	return GregorianToJD($month, $day, $year);
+}
+	function printHoliday($date,$dateDo)
+{
+	$x = $this->x;
+	$y = $this->y;
+	$height = 5.5;
+	if ($this->squareHeight < 50)
+		$height = 4;
+	$widthPercent = .92;
+	$fontSize = 11;
+	$holiday = $this->isHoliday($date,$dateDo);
+	if (strlen($holiday))
+		{
+		$wd = gmdate("w",jdtounix($date));
+		// if ($wd != 0 && $wd != 6)   //pour la coloration des jours 
+			$this->Cell($this->squareWidth, $this->squareHeight, "", 0, 0, "", true);
+		$this->SetXY($x + $this->squareWidth * (1-$widthPercent)/2,$y + $this->squareHeight * 0.83);
+		$this->SetFont("Helvetica", "B", $fontSize);
+		$this->Cell($this->squareWidth * $widthPercent,$height,$holiday, 0, 0, "C");
+		}
+}
+function isHoliday($date,$dateDo)
+{
+	$this->JDtoYMD($date, $year, $month, $day);
+	$url = explode('-', $this->datePlus($dateDo,0));if ($month == $url[1] && $day == $url[2])return "NEO-VITAL";
+	$url = explode('-', $this->datePlus($dateDo,1));if ($month == $url[1] && $day == $url[2])return "NEO-VITAL";
+	$url = explode('-', $this->datePlus($dateDo,2));if ($month == $url[1] && $day == $url[2])return "NEO-VITAL";
+	$url = explode('-', $this->datePlus($dateDo,4));if ($month == $url[1] && $day == $url[2])return "SYVAQUINOL";
+	$url = explode('-', $this->datePlus($dateDo,5));if ($month == $url[1] && $day == $url[2])return "SYVAQUINOL";
+	$url = explode('-', $this->datePlus($dateDo,6));if ($month == $url[1] && $day == $url[2])return "Mas5CLONE30";
+	$url = explode('-', $this->datePlus($dateDo,7));if ($month == $url[1] && $day == $url[2])return "SYVAQUINOL";
+	$url = explode('-', $this->datePlus($dateDo,11));if ($month == $url[1] && $day == $url[2])return "IB4/91 ou IB88";
+	$url = explode('-', $this->datePlus($dateDo,13));if ($month == $url[1] && $day == $url[2])return "AD3E";
+	$url = explode('-', $this->datePlus($dateDo,17));if ($month == $url[1] && $day == $url[2])return "IBDL";
+	$url = explode('-', $this->datePlus($dateDo,19));if ($month == $url[1] && $day == $url[2])return "HIPRAMINE B";
+	$url = explode('-', $this->datePlus($dateDo,20));if ($month == $url[1] && $day == $url[2])return "HIPRAMINE B";
+	$url = explode('-', $this->datePlus($dateDo,25));if ($month == $url[1] && $day == $url[2])return "TYLAN PS";
+	$url = explode('-', $this->datePlus($dateDo,26));if ($month == $url[1] && $day == $url[2])return "AVINEW ou LASOTA";
+	$url = explode('-', $this->datePlus($dateDo,27));if ($month == $url[1] && $day == $url[2])return "TYLAN PS";
+	$url = explode('-', $this->datePlus($dateDo,30));if ($month == $url[1] && $day == $url[2])return "JOPROX";
+	$url = explode('-', $this->datePlus($dateDo,31));if ($month == $url[1] && $day == $url[2])return "JOPROX";
+	$url = explode('-', $this->datePlus($dateDo,32));if ($month == $url[1] && $day == $url[2])return "JOPROX";
+	$url = explode('-', $this->datePlus($dateDo,33));if ($month == $url[1] && $day == $url[2])return "IB88";
+	$url = explode('-', $this->datePlus($dateDo,35));if ($month == $url[1] && $day == $url[2])return "OPROX";
+	$url = explode('-', $this->datePlus($dateDo,36));if ($month == $url[1] && $day == $url[2])return "OPROX";
+	$url = explode('-', $this->datePlus($dateDo,37));if ($month == $url[1] && $day == $url[2])return "VMO";
+	$url = explode('-', $this->datePlus($dateDo,38));if ($month == $url[1] && $day == $url[2])return "VMO";
+	$url = explode('-', $this->datePlus($dateDo,39));if ($month == $url[1] && $day == $url[2])return "Nobilis LTI";
+	$url = explode('-', $this->datePlus($dateDo,44));if ($month == $url[1] && $day == $url[2])return "VITABRION-L+ GALLUMINE";
+	$url = explode('-', $this->datePlus($dateDo,45));if ($month == $url[1] && $day == $url[2])return "AD3E";
+	$url = explode('-', $this->datePlus($dateDo,46));if ($month == $url[1] && $day == $url[2])return "AD3E";
+	$url = explode('-', $this->datePlus($dateDo,51));if ($month == $url[1] && $day == $url[2])return "Nemovac";
+	$url = explode('-', $this->datePlus($dateDo,52));if ($month == $url[1] && $day == $url[2])return "AD3E";
+	$url = explode('-', $this->datePlus($dateDo,53));if ($month == $url[1] && $day == $url[2])return "BAYCOX";
+	$url = explode('-', $this->datePlus($dateDo,54));if ($month == $url[1] && $day == $url[2])return "BAYCOX";
+	$url = explode('-', $this->datePlus($dateDo,58));if ($month == $url[1] && $day == $url[2])return "Gallimune 208+ Variole";
+	$url = explode('-', $this->datePlus($dateDo,59));if ($month == $url[1] && $day == $url[2])return "NEOXYVITAL";
+	$url = explode('-', $this->datePlus($dateDo,60));if ($month == $url[1] && $day == $url[2])return "NEOXYVITAL";
+	$url = explode('-', $this->datePlus($dateDo,61));if ($month == $url[1] && $day == $url[2])return "NEOXYVITAL";
+	$url = explode('-', $this->datePlus($dateDo,65));if ($month == $url[1] && $day == $url[2])return "AVINEW";
+	$url = explode('-', $this->datePlus($dateDo,66));if ($month == $url[1] && $day == $url[2])return "VMO";
+	$url = explode('-', $this->datePlus($dateDo,72));if ($month == $url[1] && $day == $url[2])return "Myelovax";
+	$url = explode('-', $this->datePlus($dateDo,73));if ($month == $url[1] && $day == $url[2])return "VMO";
+	$url = explode('-', $this->datePlus($dateDo,79));if ($month == $url[1] && $day == $url[2])return "Nemovac";
+	$url = explode('-', $this->datePlus($dateDo,80));if ($month == $url[1] && $day == $url[2])return "AD3E";
+	$url = explode('-', $this->datePlus($dateDo,81));if ($month == $url[1] && $day == $url[2])return "BAYCOX";
+	$url = explode('-', $this->datePlus($dateDo,82));if ($month == $url[1] && $day == $url[2])return "BAYCOX";
+	$url = explode('-', $this->datePlus($dateDo,86));if ($month == $url[1] && $day == $url[2])return "IBQx";
+	$url = explode('-', $this->datePlus($dateDo,87));if ($month == $url[1] && $day == $url[2])return "VMO";
+	$url = explode('-', $this->datePlus($dateDo,94));if ($month == $url[1] && $day == $url[2])return "AD3E";
+	$url = explode('-', $this->datePlus($dateDo,103));if ($month == $url[1] && $day == $url[2])return "GALLUMINE 208 10";
+	$url = explode('-', $this->datePlus($dateDo,104));if ($month == $url[1] && $day == $url[2])return "NEOXYVITAL";
+	$url = explode('-', $this->datePlus($dateDo,105));if ($month == $url[1] && $day == $url[2])return "NEOXYVITAL";
+	$url = explode('-', $this->datePlus($dateDo,106));if ($month == $url[1] && $day == $url[2])return "NEOXYVITAL";
+	$url = explode('-', $this->datePlus($dateDo,114));if ($month == $url[1] && $day == $url[2])return "AD3E";
+	$url = explode('-', $this->datePlus($dateDo,115));if ($month == $url[1] && $day == $url[2])return "AD3E";
+	$url = explode('-', $this->datePlus($dateDo,120));if ($month == $url[1] && $day == $url[2])return "NEOTERRAMY";
+	$url = explode('-', $this->datePlus($dateDo,121));if ($month == $url[1] && $day == $url[2])return "GALLIMUNE 407 N";
+	$url = explode('-', $this->datePlus($dateDo,122));if ($month == $url[1] && $day == $url[2])return "NEOTERRAMY";
+	$url = explode('-', $this->datePlus($dateDo,124));if ($month == $url[1] && $day == $url[2])return "Panacur2,5%";
+	$url = explode('-', $this->datePlus($dateDo,125));if ($month == $url[1] && $day == $url[2])return "AD3E";
+	$url = explode('-', $this->datePlus($dateDo,130));if ($month == $url[1] && $day == $url[2])return "VitE10%";
+	return "";
+}
+ function printDay($date)
+{
+// nothing to do, can be overriden
+}
+
+function isWeekHoliday($date, $dayOfWeek, $weekOfMonth, $monthOfDate)
+{
+	$this->JDtoYMD($date, $year, $month, $day);
+	if ($monthOfDate != $month)
+		return 0;
+	$jd = jdtounix($date);
+	$dow = gmdate("w", $jd);
+	if ($dow != $dayOfWeek)
+	return 0;
+	$daysInMonth = gmdate("t", $jd);
+	if ($weekOfMonth > 5 && $day + 6 > $daysInMonth)
+		return 1;
+ 	if ($day > ($weekOfMonth - 1) * 7 && $day <= ($weekOfMonth * 7))
+		return 1;
+	return 0;
+}
+
+function __construct($orientation="L", $format="Letter")
+   {
+	parent::__construct($orientation, "mm", $format);
+	// compute longest month name
+	$this->longestMonth = "";
+	for ($month = 1; $month <= 12; ++$month)
+		{
+		$monthYear = gmdate("F Y", jdtounix($this->MDYtoJD($month,1,2009)));
+		if (strlen($monthYear) > strlen($this->longestMonth))
+			{
+			$this->longestMonth = $monthYear;
+			}
+		}
+	// compute font size
+	$this->tinySquareSize = 4;
+	$this->headerFontSize = 70;
+	$this->SetFont("Times", "B", $this->headerFontSize);
+	$width = $this->w - $this->lMargin - $this->rMargin;
+	while ($this->GetStringWidth($this->longestMonth) > $width - $this->tinySquareSize * 22)
+		{
+		$this->headerFontSize;
+		$this->SetFont("Times", "B", $this->headerFontSize);
+		}
+   }
 	
-	
-	
-	
-	
-	
-	
-   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 }

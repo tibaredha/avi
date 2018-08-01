@@ -24,9 +24,21 @@ class HTML  {
 	}
 	
 	
+	function datePlus($dateDo,$nbrJours)
+	{
+	$timeStamp = strtotime($dateDo); 
+	$timeStamp += 24 * 60 * 60 * $nbrJours;
+	$newDate = date("Y-m-d", $timeStamp);
+	return  $newDate;
+	}
 	
-	
-	
+	// $nbJours=314;
+
+   // for ($i=7;$i<=$nbJours;$i+=7)
+   // {
+
+   // $per ->label(250,200+$i*5,"Fin ".(($i/7)-1)." SA : ".$per->dateUS2FR($per->datePlus($_POST['DATE'],$i-7)));    
+   // }
 	
 	function mysqliconnect()
 	{

@@ -30,7 +30,7 @@ echo "<button id=\"Cleari\"  onclick=\"document.location='".URL.$data['cb2']."/"
 		{
 		ob_start();
 		echo '<div class="listl">';
-		echo'<table>';$colspan=14;
+		echo'<table>';$colspan=15;
 			echo'<tr bgcolor="#00CED1">';
 			echo'<th class="crtl">id</th>';
 			echo'<th class="crtldate">Date</th>';
@@ -40,6 +40,7 @@ echo "<button id=\"Cleari\"  onclick=\"document.location='".URL.$data['cb2']."/"
 			echo'<th class="crtl">Cycle</th>';
 			echo'<th class="crtl">Batiment</th>';
 			echo'<th class="crtl">Semaine</th>';
+			echo'<th class="crtl">cal</th>';
 			echo'<th class="crtl">Eva</th>';
 			echo'<th class="crtl">Update</th>';
 			echo'<th class="crtl">Delete</th>';
@@ -56,10 +57,10 @@ echo "<button id=\"Cleari\"  onclick=\"document.location='".URL.$data['cb2']."/"
 			echo '<td align="center"  >'.$value['avicycl'].'</td>';
 			echo '<td align="center"  >'.$value['avibtm'].'</td>';
 			echo '<td align="center"  >'.$value['avisem'].'</td>';
-			
-			echo '<td align="center" style="width:10px;" bgcolor="#32CD32" ><a target="_blank" title="eva"  href="'.URL.'fpdf/avi/avi.php?uc='.$value['id'].'" ><img src="'.URL.'public/images/b_props.png"   width="16" height="16" border="0" alt=""   /></a></td>';
-			echo '<td align="center" style="width:10px;" ><a target="_blank" title="editer"  href="'.URL.$ctrl.'/edit/'.$value['id'].'" ><img src="'.URL.'public/images/edit.png"   width="16" height="16" border="0" alt=""   /></a></td>';
-			echo '<td align="center" style="width:10px;" ><a class="delete" title="supprimer"  href="'.URL.$ctrl.'/delete/'.$value['id'].'" ><img src="'.URL.'public/images/delete.png"   width="16" height="16" border="0" alt=""   /></a></td>';
+			echo '<td align="center" style="width:10px;"  bgcolor="#FFFF00"><a target="_blank" title="cal"  href="'.URL.'fpdf/avi/cal.php?uc='.$value['id'].'" ><img src="'.URL.'public/images/b_props.png"   width="16" height="16" border="0" alt=""   /></a></td>';
+			echo '<td align="center" style="width:10px;" bgcolor="#0000FF"><a target="_blank" title="eva"  href="'.URL.'fpdf/avi/avi.php?uc='.$value['id'].'" ><img src="'.URL.'public/images/b_props.png"   width="16" height="16" border="0" alt=""   /></a></td>';
+			echo '<td align="center" style="width:10px;" bgcolor="#32CD32"><a target="_blank" title="editer"  href="'.URL.$ctrl.'/edit/'.$value['id'].'" ><img src="'.URL.'public/images/edit.png"   width="16" height="16" border="0" alt=""   /></a></td>';
+			echo '<td align="center" style="width:10px;" bgcolor="#FF0000" ><a class="delete" title="supprimer"  href="'.URL.$ctrl.'/delete/'.$value['id'].'" ><img src="'.URL.'public/images/delete.png"   width="16" height="16" border="0" alt=""   /></a></td>';
 			echo'</tr>';
 			}
 			$total_count=count($this->userListview1);
