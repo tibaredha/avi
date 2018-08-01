@@ -3025,20 +3025,26 @@ class cavi extends FPDI
 	$this->date = $date;
 	$this->JDtoYMD($date, $year, $month, $day);
 	$this->AddPage();
+	
 	// compute size base on current settings
 	$width = $this->w - $this->lMargin - $this->rMargin;
 	$height = $this->h - $this->tMargin - $this->bMargin;
+	
 	// print prev and next calendars
-	$this->setXY($this->lMargin,$this->tMargin);
-	$this->tinyCalendar($this->lastMonth($date), $this->tinySquareSize);
-	$this->setXY($this->lMargin+$width - $this->tinySquareSize * 7,$this->tMargin);
-	$this->tinyCalendar($this->nextMonth($date), $this->tinySquareSize);
+	$this->setXY($this->lMargin,$this->tMargin);                                   $this->tinyCalendar($this->lastMonth($date), $this->tinySquareSize);
+	$this->setXY($this->lMargin+$width - $this->tinySquareSize * 7,$this->tMargin);$this->tinyCalendar($this->nextMonth($date), $this->tinySquareSize);
+	
 	// print header
 	$firstLine = $this->tinySquareSize * 8 + $this->tMargin;
 	$monthStr = strtoupper(gmdate ("F Y", jdtounix($date)));
-	$this->SetXY($this->lMargin,$this->tMargin);
+	$this->SetXY($this->lMargin+29,$this->tMargin);
 	$this->SetFont("Times", "B", $this->headerFontSize);
-	$this->Cell($width, $firstLine, $monthStr, 0,0, "C");
+	$this->SetFillColor(245,245,245);
+	
+	$this->SetTextColor(255,0,0);//text rouge
+	$this->Cell($width-58, $firstLine-10, $monthStr, 1,0, "C",1,0);
+	$this->SetTextColor(0,0,0);//text noire
+	$this->SetFillColor(0,255,0);
 	// compute number of weeks in month.
 	$wd=gmdate("w",jdtounix($date));
 	$start = $date - $wd;
@@ -3129,7 +3135,7 @@ class cavi extends FPDI
    }
 	
 	function tinyCalendar($date, $square)
-{
+    {
 	$this->JDtoYMD($date, $year, $month, $day);
 	// print numbers in boxes
 	$wd=gmdate("w",jdtounix($date));
@@ -3140,7 +3146,8 @@ class cavi extends FPDI
 	// save local copy of coordinates for future reference
 	$x = $this->x;
 	$y = $this->y;
-	$this->Cell(7*$square, $square, $monthStr, 0, 0, "C");
+	$this->SetFillColor(0,255,0);
+	$this->Cell(7*$square, $square, $monthStr, 1, 0, "C",1,0);
 	$y+=$square;
 	$this->SetXY($x, $y);
 	$this->SetFontSize(8);
@@ -3163,7 +3170,7 @@ class cavi extends FPDI
 		$y+=$square;
 		$this->SetXY($x, $y);
 		}
-}
+     }
 	
 	
 function lastMonth($date)
@@ -3177,11 +3184,7 @@ function lastMonth($date)
 	return GregorianToJD($month, $day, $year);
 }	
 	
-	protected $date;
-	protected $squareHeight;
-	protected $squareWidth;
-	protected $longestMonth="";
-	protected $tinySquareSize=4;
+	
 	
 	function nextMonth($date)
 {
@@ -3297,8 +3300,15 @@ function isWeekHoliday($date, $dayOfWeek, $weekOfMonth, $monthOfDate)
 		return 1;
 	return 0;
 }
-
-function __construct($orientation="L", $format="Letter")
+   
+    protected $date;
+	protected $squareHeight;
+	protected $squareWidth;
+	protected $longestMonth="";
+	protected $tinySquareSize=4;
+   
+   
+   function __construct($orientation="L", $format="Letter")
    {
 	parent::__construct($orientation, "mm", $format);
 	// compute longest month name
