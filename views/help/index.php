@@ -14,19 +14,7 @@
   <li><?php echo '<a href="'.URL.'fpdf/doc/cobb6.pdf">Broiler Performance & Nutrition Supplement</a>';echo '&nbsp;';?></li>
   <li><?php echo '<a href="'.URL.'fpdf/doc/cobb7.pdf">cobb.pdf</a>';echo '&nbsp;';?></li>
   <li><?php echo '<a href="'.URL.'fpdf/doc/cobb8.pdf">cobb.pdf</a>';echo '&nbsp;';?></li>
-  <li><?php echo '<a href="'.URL.'fpdf/doc/cobb9.pdf">cobb.pdf</a>';echo '&nbsp;';?></li>
-  <li><?php echo '<a href="'.URL.'fpdf/doc/cobb10.pdf">cobb.pdf</a>';echo '&nbsp;';?></li>
-  <li><?php echo '<a href="'.URL.'fpdf/doc/cobb11.pdf">cobb.pdf</a>';echo '&nbsp;';?></li>
-  <li><?php echo '<a href="'.URL.'fpdf/doc/cobb12.pdf">cobb.pdf</a>';echo '&nbsp;';?></li>
-  <li><?php echo '<a href="'.URL.'fpdf/doc/cobb13.pdf">cobb.pdf</a>';echo '&nbsp;';?></li>
-  <li><?php echo '<a href="'.URL.'fpdf/doc/cobb14.pdf">cobb.pdf</a>';echo '&nbsp;';?></li>
-  <li><?php echo '<a href="'.URL.'fpdf/doc/cobb15.pdf">cobb.pdf</a>';echo '&nbsp;';?></li>
-  <li><?php echo '<a href="'.URL.'fpdf/doc/cobb16.pdf">cobb.pdf</a>';echo '&nbsp;';?></li>
-  <li><?php echo '<a href="'.URL.'fpdf/doc/cobb17.pdf">cobb.pdf</a>';echo '&nbsp;';?></li>
-  <li><?php echo '<a href="'.URL.'fpdf/doc/cobb18.pdf">cobb.pdf</a>';echo '&nbsp;';?></li>
-  <li><?php echo '<a href="'.URL.'fpdf/doc/cobb19.pdf">cobb.pdf</a>';echo '&nbsp;';?></li>
-  <li><?php echo '<a href="'.URL.'fpdf/doc/cobb10.pdf">cobb.pdf</a>';echo '&nbsp;';?></li>
-  <li><?php echo '<a href="'.URL.'fpdf/doc/cobb21.pdf">cobb.pdf</a>';echo '&nbsp;';?></li>
+  
   
 </ul>
 </div>	
