@@ -1,14 +1,13 @@
 <?php
 require('cavi.php');
-
 $pdf = new cavi();$pdf->AliasNbPages();
-$date=date("d-m-y");
+$pdf->AddPage('L','A4');$pdf->SetDisplayMode('fullpage','single'); $pdf->SetFont('Arial','B',9);
 $pdf->SetFillColor(230);//fond gris il faut ajouter au cell un autre parametre pour qui accepte la coloration
 $pdf->SetTextColor(0,0,0);//text noire
 $pdf->SetFont('Times', 'B', 10);
-$pdf->AddPage('L','A4');$pdf->SetDisplayMode('fullpage','single'); $pdf->SetFont('Arial','B',9);
 $pdf->SetXY(05,5); $pdf->cell(285,5,"REPUBLIQUE ALGERIENNE DEMOCRATIQUE ET POPULAIRE",0,0,'C',0,0);
 $pdf->SetXY(05,10); $pdf->cell(285,5,"Echantillon des poussins representative du lot  (poids a jeun en grammes).   ",0,0,'C',0,0);
+$date=date("d-m-y");
 
 //croissance par semaine 
 $tablec = array(
@@ -79,31 +78,14 @@ $tablec = array(
  );
 
 
+
+
 $id=$_GET['uc'];
 $pdf->mysqlconnect();
 $query = "SELECT * from avi where id = $id "; 
-// $pdf->SetXY(05,55); 
-// $resultat=mysql_query($query);
-// $totalmbr1=mysql_num_rows($resultat);
-// while($row=mysql_fetch_object($resultat))
-// {
-// $pdf->cell(25,5,$row->id,1,0,'l',0);  $pdf->setxy(5,$pdf->gety()+5); 
-// $pdf->cell(25,5,$row->avi0,1,0,'C',0);$pdf->setxy(5,$pdf->gety()+5); 
-// $pdf->cell(25,5,$row->avi1,1,0,'C',0);$pdf->setxy(5,$pdf->gety()+5); 
-// $pdf->cell(25,5,$row->avi2,1,0,'C',0);$pdf->setxy(5,$pdf->gety()+5); 
-// $pdf->cell(25,5,$row->avi3,1,0,'C',0);$pdf->setxy(5,$pdf->gety()+5); 
-// $pdf->cell(25,5,$row->avi4,1,0,'C',0);$pdf->setxy(5,$pdf->gety()+5); 
-// $pdf->cell(25,5,$row->avi5,1,0,'C',0);$pdf->setxy(5,$pdf->gety()+5); 
-// $pdf->setxy(5,$pdf->gety()+5); 
-// }
-
-
-
-
 $query1 = mysql_query($query);   
 $rs = mysql_fetch_assoc($query1);
 mysql_free_result($query1);
-
 
 
 $pdf->setxy(5,$pdf->gety()+10);$pdf->cell(25,5,'Date',1,0,'L',1,0);  $pdf->cell(25,5,$rs['date'],1,0,'C',0);  $pdf->cell(25,5,'Wilaya',1,0,'L',1,0);$pdf->cell(25,5,$rs['WILAYAD'],1,0,'C',0);$pdf->cell(25,5,'Commune',1,0,'L',1,0);$pdf->cell(25,5,$rs['COMMUNED'],1,0,'C',0);
@@ -297,5 +279,183 @@ $aa2[]=$row->code_patient;
 // $tiba=array();
 // $tiba=array_merge($aa1,$aa2);
 $pdf->barni($x=110,$y=120,$w=15,$aa,$aa1,$aa2,$titre=" Evolution de la moyenne du poids : ".$totalmbr1." semaines du  batiment : ".$avibtm);
+
+$pdf->AddPage('L','A4');$pdf->SetDisplayMode('fullpage','single'); $pdf->SetFont('Arial','B',9);
+// define position
+$y = 30; 
+$w = 280;
+$h = 80;
+$x = 15;
+
+
+
+
+	
+// define title	
+$repTitle = "Evolution de la moyenne du poids";
+$arrData = array();
+// define  data
+$arrData[] = array(
+	"title" => "*******",
+	"color" => array(255,22,0),
+	"data" => array(
+		array("key"   => 1,"value" => $tablec[1]),
+		array("key"   => 2,"value" => $tablec[2]),
+		array("key"   => 3,"value" => $tablec[3]),
+		array("key"   => 4,"value" => $tablec[4]),
+		array("key"   => 5,"value" => $tablec[5]),
+		array("key"   => 6,"value" => $tablec[6]),
+		array("key"   => 7,"value" => $tablec[7]),
+		array("key"   => 8,"value" => $tablec[8]),
+		array("key"   => 9,"value" => $tablec[9]),
+		array("key"   => 10,"value" => $tablec[10]),
+	
+	    array("key"   => 11,"value" => $tablec[11]),
+		array("key"   => 12,"value" => $tablec[12]),
+		array("key"   => 13,"value" => $tablec[13]),
+		array("key"   => 14,"value" => $tablec[14]),
+		array("key"   => 15,"value" => $tablec[15]),
+		array("key"   => 16,"value" => $tablec[16]),
+		array("key"   => 17,"value" => $tablec[17]),
+		array("key"   => 18,"value" => $tablec[18]),
+		array("key"   => 19,"value" => $tablec[19]),
+		array("key"   => 20,"value" => $tablec[20]),
+		
+		array("key"   => 21,"value" => $tablec[21]),
+		array("key"   => 22,"value" => $tablec[22]),
+		array("key"   => 23,"value" => $tablec[23]),
+		array("key"   => 24,"value" => $tablec[24]),
+		array("key"   => 25,"value" => $tablec[25]),
+		array("key"   => 26,"value" => $tablec[26]),
+		array("key"   => 27,"value" => $tablec[27]),
+		array("key"   => 28,"value" => $tablec[28]),
+		array("key"   => 29,"value" => $tablec[29]),
+		array("key"   => 30,"value" => $tablec[30]),
+		
+		array("key"   => 31,"value" => $tablec[31]),
+		array("key"   => 32,"value" => $tablec[32]),
+		array("key"   => 33,"value" => $tablec[33]),
+		array("key"   => 34,"value" => $tablec[34]),
+		array("key"   => 35,"value" => $tablec[35]),
+		array("key"   => 36,"value" => $tablec[36]),
+		array("key"   => 37,"value" => $tablec[37]),
+		array("key"   => 38,"value" => $tablec[38]),
+		array("key"   => 39,"value" => $tablec[39]),
+		array("key"   => 40,"value" => $tablec[40]),
+		
+		array("key"   => 41,"value" => $tablec[41]),
+		array("key"   => 42,"value" => $tablec[42]),
+		array("key"   => 43,"value" => $tablec[43]),
+		array("key"   => 44,"value" => $tablec[44]),
+		array("key"   => 45,"value" => $tablec[45]),
+		array("key"   => 46,"value" => $tablec[46]),
+		array("key"   => 47,"value" => $tablec[47]),
+		array("key"   => 48,"value" => $tablec[48]),
+		array("key"   => 49,"value" => $tablec[49]),
+		array("key"   => 50,"value" => $tablec[50]),
+		
+		array("key"   => 51,"value" => $tablec[51]),
+		array("key"   => 52,"value" => $tablec[52]),
+		array("key"   => 53,"value" => $tablec[53]),
+		array("key"   => 54,"value" => $tablec[54]),
+		array("key"   => 55,"value" => $tablec[55]),
+		array("key"   => 56,"value" => $tablec[56]),
+		array("key"   => 57,"value" => $tablec[57]),
+		array("key"   => 58,"value" => $tablec[58]),
+		array("key"   => 59,"value" => $tablec[59]),
+		array("key"   => 60,"value" => $tablec[60]),
+		array("key"   => 61,"value" => $tablec[61]),
+		array("key"   => 62,"value" => $tablec[62]),
+		array("key"   => 63,"value" => $tablec[63]),
+		array("key"   => 64,"value" => $tablec[64]),
+	
+	)
+);
+
+
+
+$arrData[] = array(
+	"title" => "+",
+	"color" => array(0,225,0),
+	"data"  => array(
+		array("key"   => 1,"value" => $aa2[0]),
+		
+		// array("key"   => 2,"value" => $aa2[1]),
+		// array("key"   => 3,"value" => $aa2[2]),
+		// array("key"   => 4,"value" => $tablec[4]),
+		// array("key"   => 5,"value" => $tablec[5]),
+		// array("key"   => 6,"value" => $tablec[6]),
+		// array("key"   => 7,"value" => $tablec[7]),
+		// array("key"   => 8,"value" => $tablec[8]),
+		// array("key"   => 9,"value" => $tablec[9]),
+		// array("key"   => 10,"value" => $tablec[10]),
+	
+	    // array("key"   => 11,"value" => $tablec[11]),
+		// array("key"   => 12,"value" => $tablec[12]),
+		// array("key"   => 13,"value" => $tablec[13]),
+		// array("key"   => 14,"value" => $tablec[14]),
+		// array("key"   => 15,"value" => $tablec[15]),
+		// array("key"   => 16,"value" => $tablec[16]),
+		// array("key"   => 17,"value" => $tablec[17]),
+		// array("key"   => 18,"value" => $tablec[18]),
+		// array("key"   => 19,"value" => $tablec[19]),
+		// array("key"   => 20,"value" => $tablec[20]),
+		
+		// array("key"   => 21,"value" => $tablec[21]),
+		// array("key"   => 22,"value" => $tablec[22]),
+		// array("key"   => 23,"value" => $tablec[23]),
+		// array("key"   => 24,"value" => $tablec[24]),
+		// array("key"   => 25,"value" => $tablec[25]),
+		// array("key"   => 26,"value" => $tablec[26]),
+		// array("key"   => 27,"value" => $tablec[27]),
+		// array("key"   => 28,"value" => $tablec[28]),
+		// array("key"   => 29,"value" => $tablec[29]),
+		// array("key"   => 30,"value" => $tablec[30]),
+		
+		// array("key"   => 31,"value" => $tablec[31]),
+		// array("key"   => 32,"value" => $tablec[32]),
+		// array("key"   => 33,"value" => $tablec[33]),
+		// array("key"   => 34,"value" => $tablec[34]),
+		// array("key"   => 35,"value" => $tablec[35]),
+		// array("key"   => 36,"value" => $tablec[36]),
+		// array("key"   => 37,"value" => $tablec[37]),
+		// array("key"   => 38,"value" => $tablec[38]),
+		// array("key"   => 39,"value" => $tablec[39]),
+		// array("key"   => 40,"value" => $tablec[40]),
+		
+		// array("key"   => 41,"value" => $tablec[41]),
+		// array("key"   => 42,"value" => $tablec[42]),
+		// array("key"   => 43,"value" => $tablec[43]),
+		// array("key"   => 44,"value" => $tablec[44]),
+		// array("key"   => 45,"value" => $tablec[45]),
+		// array("key"   => 46,"value" => $tablec[46]),
+		// array("key"   => 47,"value" => $tablec[47]),
+		// array("key"   => 48,"value" => $tablec[48]),
+		// array("key"   => 49,"value" => $tablec[49]),
+		// array("key"   => 50,"value" => $tablec[50]),
+		
+		// array("key"   => 51,"value" => $tablec[51]),
+		// array("key"   => 52,"value" => $tablec[52]),
+		// array("key"   => 53,"value" => $tablec[53]),
+		// array("key"   => 54,"value" => $tablec[54]),
+		// array("key"   => 55,"value" => $tablec[55]),
+		// array("key"   => 56,"value" => $tablec[56]),
+		// array("key"   => 57,"value" => $tablec[57]),
+		// array("key"   => 58,"value" => $tablec[58]),
+		// array("key"   => 59,"value" => $tablec[59]),
+		// array("key"   => 60,"value" => $tablec[60]),
+		// array("key"   => 61,"value" => $tablec[61]),
+		// array("key"   => 62,"value" => $tablec[62]),
+		// array("key"   => 63,"value" => $tablec[63]),
+		// array("key"   => 64,"value" => $tablec[64]),
+	
+	)
+);
+
+
+
+//pour plusieur courbe il sufit de renseigne un autre $arrData[]  avec d'autres valeurs 
+$pdf->LineChart($x,$y,$w,$h,$repTitle,$arrData);
+
 $pdf->Output();
 ?>

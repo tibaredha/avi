@@ -1,18 +1,19 @@
 <div class="sheader1r"><p id="llogin"><?php html::NAV();?></p></div>
-<div class="sheader2r">***********************</div>
+<div class="sheader2r">Nouveau Echantillon </div>
 <div class="contentsig">
 <form  action="<?php echo URL."dashboard/create/";  ?>"  method="POST"> 
 <?php
 $data = array(
-"Date"     => date('Y-m-d') ,
+"Date"     => date('d-m-Y') ,
 "WILAYA1"  => '17000' ,
 "WILAYA2"  => 'Djelfa',
 "COMMUNE1" => HTML::nbrtostring('structure','id',Session::get('structure'),'numcom') ,
 "COMMUNE2" => HTML::nbrtostring('structure','id',Session::get('structure'),'com'),
-"avicli"   => '0',
-"avicycl"  => '0',
-"avibtm"   => '0',
-"avisem"   => '0',
+"avicli1"  => '1',
+"avicli2"  => 'xxxxx',
+"avicycl"  => '1',
+"avibtm"   => '1',
+"avisem"   => '1',
 "Mortalite" => '0',
 "avi0" => "0",
 "avi1" => "0",
@@ -116,6 +117,12 @@ $data = array(
 "avi99" => "0"
 );
 HTML::tabsavi($data);
+
+	
+
+
+
+
 ?>
 </form> 			
 </div>

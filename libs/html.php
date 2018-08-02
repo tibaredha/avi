@@ -968,7 +968,20 @@ class HTML  {
 	// echo '<a href="'.URL.'libs/deces.xls">Enregistrer Sous xls</a></br>';
 	echo '<a href="'.URL.'libs/deces.xlsx">Enregistrer Sous xlsx</a></br>';	
 	}
-
+     
+	function client($name,$id,$class,$tb_name,$value,$selected) 
+	{
+	$this->mysqlconnect();
+	echo "<select  id=\"".$id."\" size=1 class=\"".$class."\" name=\"".$name."\" onblur=\"genererCodeP()\"   >"."\n";
+	echo"<option  value=\"".$value."\"  selected=\"selected\">".$selected."</option>"."\n";
+	mysql_query("SET NAMES 'UTF8' ");
+	$result = mysql_query("SELECT * FROM $tb_name " );//order by WILAYAS
+	while($data =  mysql_fetch_array($result))
+	{
+	echo '<option value="'.$data[0].'">'.$data[2].'</option>';
+	}
+	echo '</select>'."\n"; 
+	} 
 
 
     function tabsavi($data) 
@@ -976,13 +989,12 @@ class HTML  {
 	echo '<label  id="avil0bn1">Date</label>';    echo '<input  id="avid1"  type="txt"  name="Date"  value="'.$data['Date'].'" autofocus/>'; 
 	echo '<label  id="avil0bn2">Wilaya</label>';  HTML::WILAYA('WILAYAD','avib0n2c','WILAYAD','wil',$data['WILAYA1'],$data['WILAYA2']) ;  
 	echo '<label  id="avil0bn3">Commune</label>'; HTML::COMMUNE('COMMUNED','avib0n3c','COMMUNED',$data['COMMUNE1'],$data['COMMUNE2']);
-	echo '<label  id="avil0bn4">Client</label>';  echo '<input  id="avicli"  type="txt"  name="avicli"  value="'.$data['avicli'].'"/>';
-	echo '<label  id="avil0bn5">Cycle</label>';   echo '<input  id="avicycl" type="txt"  name="avicycl" value="'.$data['avicycl'].'"/>';
+	echo '<a id="avil0bn4" title="Ajout client"  href="'.URL.'dashboard/client/">Client <img src="'.URL.'public/images/add.PNG" width="12" height="12" border="0" alt=""   /></a>';HTML::client("avicli","avicli","","client",$data['avicli1'],$data['avicli2']) ;
 	echo '<label  id="avil0bn6">Batiment</label>';echo '<input  id="avibtm"  type="txt"  name="avibtm"  value="'.$data['avibtm'].'"/>';
+	echo '<label  id="avil0bn5">Cycle</label>';   echo '<input  id="avicycl" type="txt"  name="avicycl" value="'.$data['avicycl'].'"/>';
 	echo '<label  id="avil0bn7">Semaine</label>'; echo '<input  id="avisem"  type="txt"  name="avisem"  value="'.$data['avisem'].'"/>';
 	echo '<label  id="Mortalitel">Mortalite</label>'; echo '<input  id="Mortalitei"  type="txt"  name="Mortalite"  value="'.$data['Mortalite'].'"/>';
 	
-	// echo '<label style="display: none;" id="show_codeP">';
     echo '<label  id="lcode_patient">Moyenne</label>';  echo '<input type="text" name="code_patient"  id="code_patient"   style="border: none; background-color: #FFC0CB; color: black; font-family:courier; text-align:left;  "   size="15" readonly="">';
     echo '<label  id="lcode_patient1">mode</label>';    echo '<input type="text" name="code_patient1" id="code_patient1"  style="border: none; background-color: #FFC0CB; color: black; font-family:courier; text-align:left;  "   size="15" readonly="">';
 	echo '<label  id="lcode_patient2">median</label>';  echo '<input type="text" name="code_patient2" id="code_patient2"  style="border: none; background-color: #FFC0CB; color: black; font-family:courier; text-align:left;  "   size="15" readonly="">';
@@ -993,30 +1005,6 @@ class HTML  {
 	echo '<label  id="lcode_patient7">kurtosis</label>';echo '<input type="text" name="code_patient7" id="code_patient7"  style="border: none; background-color: #FFC0CB; color: black; font-family:courier; text-align:left;  "   size="15" readonly="">';
 	echo '<label  id="lcode_patient8">quartiles</label>';echo '<input type="text" name="code_patient8" id="code_patient8"  style="border: none; background-color: #FFC0CB; color: black; font-family:courier; text-align:left;  "   size="15" readonly="">';
 	
-	
-	
-	// echo '</label>';
-	
-	
-	// echo '<label  id="l0bn4">1-Naisances Par Sexe Enregistrées Dans La Commune</label>';
-	// echo '<label  id="l0bn5">Masculin</label>';echo '<input  id="b0n5c" type="txt"   name="nm1" value="'.$data['nm1'].'" placeholder="00"/>';echo '<input  id="b0n5" type="txt"  name="nf1" value="'.$data['nf1'].'" placeholder="00"/>';
-	// echo '<label  id="l0bn6">Feminin</label>'; echo '<input  id="b0n6c" type="txt"   name="nm2" value="'.$data['nm2'].'" placeholder="00"/>';echo '<input  id="b0n6" type="txt"  name="nf2" value="'.$data['nf2'].'" placeholder="00"/>';
-	// echo '<label  id="l0bn7">Survenues Au cours Du Mois</label>';
-	// echo '<label  id="l0bn8">Enregistrées Par Jugement</label>';
-	
-	// echo '<label  id="l0bn9">2-Mort Nées Enregistrés Dans La Commune Selon Le Sexe</label>';
-	// echo '<label  id="l0bn10">Total Des Mort Nées Enregistrés</label>';echo '<input  id="b0n10c" type="txt"    name="mnm1" value="'.$data['mnm1'].'" placeholder="00"/>';echo '<input  id="b0n10" type="txt"  name="mnf1" value="'.$data['mnf1'].'" placeholder="00"/>';
-	
-	// echo '<label  id="l0bn11">3-Mariages Enregistrées Dans La Commune</label>';
-	// echo '<label  id="l0bn12">Mariages Enregistrés Au Cours Du Moi</label>';              echo '<input  id="b0n12" type="txt"  name="m1" value="'.$data['m1'].'" placeholder="00"/>';
-	// echo '<label  id="l0bn13">Mariages Enregistrés Par Jugement Au Cours Du Mois</label>';echo '<input  id="b0n13" type="txt"  name="m2" value="'.$data['m2'].'" placeholder="00"/>';
-	
-	// echo '<label  id="l0bn14">4-Deces Enregistrés Par Jugement Dans La Commune</label>';
-	// echo '<label  id="l0bn15">Masculin</label>';
-	// echo '<label  id="l0bn16">Feminin</label>';
-	// echo '<label  id="l0bn17">Survenues Au cours Du Mois</label>';
-	// echo '<input  id="b0n15c" type="txt"    name="djm1" value="'.$data['djm1'].'" placeholder="00"/>';echo '<input  id="b0n15" type="txt"  name="djf1" value="'.$data['djf1'].'" placeholder="00"/>';
-	// echo '<label  id="lbn0">Décès</label>'; echo '<label  id="bn0c">Masculin</label>';                                                        echo '<label  id="bn0">Feminin</label>'; 
 	echo '<input  id="avibn0" type="txt"   name="avi0"  value="'.$data['avi0'].'"  placeholder=""  onblur="genererCodeP1()"/>';
 	echo '<input  id="avibn1" type="txt"   name="avi1"  value="'.$data['avi1'].'"  placeholder=""  onblur="genererCodeP1()"/>';
 	echo '<input  id="avibn2" type="txt"   name="avi2"  value="'.$data['avi2'].'"  placeholder=""  onblur="genererCodeP1()"/>';

@@ -50,10 +50,10 @@ echo "<button id=\"Cleari\"  onclick=\"document.location='".URL.$data['cb2']."/"
 			$bgcolor_donate ='#EDF7FF';
 			echo "<tr bgcolor=\"".$bgcolor_donate."\"  onmouseover=\"this.style.backgroundColor='#9FF781';\"   onmouseout=\"this.style.backgroundColor='".$bgcolor_donate."';\"  >" ;
 			echo '<td align="center"  >'.$value['id'].'</td>';
-			echo '<td align="center"  >'.$value['date'].'</td>';// 
+			echo '<td align="center"  >'.HTML::dateUS2FR($value['date']).'</td>';// 
 			echo '<td align="left"  >'.html::nbrtostring('wil','IDWIL',$value['WILAYAD'],'WILAYAS').'</td>';
 			echo '<td align="left"  >'.html::nbrtostring('com','IDCOM',$value['COMMUNED'],'COMMUNE').'</td>';
-			echo '<td align="center"  >'.$value['avicli'].'</td>';
+			echo '<td align="center"  >'.html::nbrtostring('client','idclient',$value['avicli'],'nomavi').'</td>';
 			echo '<td align="center"  >'.$value['avicycl'].'</td>';
 			echo '<td align="center"  >'.$value['avibtm'].'</td>';
 			echo '<td align="center"  >'.$value['avisem'].'</td>';

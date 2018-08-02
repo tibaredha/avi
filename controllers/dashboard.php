@@ -166,11 +166,11 @@ class Dashboard extends Controller {
 	header('location: ' . URL .$this->controleur.'/search/0/10?o=id&q='.$last_id);
 	}
 
-	// function Evaluation() {
-	    // $this->view->title = 'Evaluation';
-		// $this->view->msg = 'Evaluation';
-		// $this->view->render($this->controleur.'/Evaluation');
-	// }
+	function Evaluation() {
+	    $this->view->title = 'Evaluation';
+		$this->view->msg = 'Evaluation';
+		$this->view->render($this->controleur.'/Evaluation');
+	}
 	
 	
 	public function delete($id)
@@ -313,6 +313,31 @@ class Dashboard extends Controller {
 		header('location: ' . URL .  'login');
 		exit;
 	}
+	
+	function client() {
+	    $this->view->title = 'nouveau client';
+		$this->view->msg = 'nouveau client';
+		$this->view->render($this->controleur.'/client');
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 }

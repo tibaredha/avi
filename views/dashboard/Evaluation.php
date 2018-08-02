@@ -1,21 +1,22 @@
-<div class="sheader1l"><p id="evaluation"><?php echo "Gérer le Bordereau Numerique Mensuel";?></p></div><div class="sheader1r"><p id="evaluation"><?php html::NAV();?></p></div>
-<div class="sheader2l"><?php echo $this->msg; echo " Bordereau Numerique Mensuel : ";?></div><div class="sheader2r">***</div>
+<div class="sheader1l"><p id="evaluation"><?php echo "Gérer Echantillon des poussins representative du lot (poids a jeun en grammes)";?></p></div><div class="sheader1r"><p id="evaluation"><?php html::NAV();?></p></div>
+<div class="sheader2l"><?php echo $this->msg; echo " Echantillon : ";?></div><div class="sheader2r">***</div>
 <div class="contentl">
 <?php 
             echo "<hr>";
 	
-	echo '<form ALIGN="center" action="'.URL.'fpdf/deces/bnm.php" method="POST">';
-			echo " <input id=\"typea\"  type=\"text\" name=\"annee\"  value=\"".date('Y')."\"  required />";
+	echo '<form ALIGN="center" action="'.URL.'fpdf/avi/evaavi.php" method="POST">';
+			echo " <input id=\"typea1\"  type=\"text\" name=\"annee\"  value=\"".date('d-m-Y')."\"  required />";
+			echo " <input id=\"typea1\"  type=\"text\" name=\"annee1\"  value=\"".date('d-m-Y')."\"  required />";
 			echo "<p>";;echo "</p>";
 				echo "<hr>";
 			echo "<p>";
 			echo "<select id=\"type1\" name=\"BNM\">";
-			echo '<option value="0">état</option>';
-			echo '<option value="1">Naissance</option>';
-			echo '<option value="2">Mariage</option>';
-			echo '<option value="3">Deces</option>';
-			echo '<option value="4">Bnm</option>';
-			echo '<option value="5">Rapport</option>';
+			echo '<option value="0">***</option>';
+			// echo '<option value="1">Naissance</option>';
+			// echo '<option value="2">Mariage</option>';
+			// echo '<option value="3">Deces</option>';
+			// echo '<option value="4">Bnm</option>';
+			// echo '<option value="5">Rapport</option>';
 			echo '';
 			echo "</select>";
 			echo "</p> ";

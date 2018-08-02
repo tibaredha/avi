@@ -8,10 +8,29 @@ class Dashboard_Model extends Model {
 		Model::createTable();
 		
 	}
+	function dateUS2FR($date)//2013-01-01
+    {
+	$J      = substr($date,8,2);
+    $M      = substr($date,5,2);
+    $A      = substr($date,0,4);
+	$dateUS2FR =  $J."-".$M."-".$A ;
+    return $dateUS2FR;//01-01-2013
+    }
+	function dateFR2US($date)//01/01/2013
+	{
+	$J      = substr($date,0,2);
+    $M      = substr($date,3,2);
+    $A      = substr($date,6,4);
+	$dateFR2US =  $A."-".$M."-".$J ;
+    return $dateFR2US;//2013-01-01
+	}
+	
+	
+	
 	public function create($data) {
 
 			$this->db->insert('avi', array(		
-			'Date' =>$data['Date'],
+			'Date' =>$this->dateFR2US($data['Date']),
 			'WILAYAD' =>$data['WILAYAD'],
 			'COMMUNED' =>$data['COMMUNED'],   
 			'avicli' =>$data['avicli'],   
@@ -145,7 +164,7 @@ class Dashboard_Model extends Model {
 	 
 	public function editSave($data) {
 		$postData = array(
-            'Date' =>$data['Date'],
+            'Date' =>$this->dateFR2US($data['Date']),
 			'WILAYAD' =>$data['WILAYAD'],
 			'COMMUNED' =>$data['COMMUNED'],   
 			'avicli' =>$data['avicli'],   

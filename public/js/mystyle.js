@@ -86,6 +86,32 @@ $(document).ready(function()
 
 		});
 });
+
+$(document).ready(function()
+{
+		$(".COMMUNED").change(function()
+		{
+			var id=$(this).val();
+			var dataString = 'id='+ id;
+
+			$.ajax
+			({
+				type: "POST",
+				url: "/mvc//public/js/AJAXET.PHP",
+				data: dataString,
+				cache: false,
+				success: function(html)
+						{
+						$(".ETASS").html(html);
+						} 
+			});
+
+		});
+});
+
+
+
+
 $(document).ready(function()
 {
 		$(".WILAYAN").change(function()
@@ -545,6 +571,51 @@ function kurtosis(arr) {
   return this.stanMoment(arr, 4) - 3;
 };
 
+//***************************************************//
+// wilaya commune client  
+$(document).ready(function()
+{
+		$(".countryss").change(function()
+		{
+			var id=$(this).val();
+			var dataString = 'id='+ id;
 
+			$.ajax
+			({
+				type: "POST",                        // Le type de ma requete
+				url: "/mvc//public/js/AJAXSS.PHP",             // L'url vers laquelle la requete sera envoyee
+				data: dataString,                    // Les donnees que l'on souhaite envoyer au serveur au format varaible ,JSON
+				cache: false,
+				success: function(html)              // La reponse du serveur est contenu dans data  text xml json JSON (JavaScript Object Notation) 
+						{
+						$(".COMMUNESS").html(html);        // On peut faire ce qu'on veut avec ici
+						} 
+					
+			});
+
+		});
+});
+
+$(document).ready(function()
+{
+		$(".COMMUNESS").change(function()
+		{
+			var id=$(this).val();
+			var dataString = 'id='+ id;
+
+			$.ajax
+			({
+				type: "POST",
+				url: "/mvc//public/js/AJAXET.PHP",
+				data: dataString,
+				cache: false,
+				success: function(html)
+						{
+						$(".ETASS").html(html);
+						} 
+			});
+
+		});
+});
 
 
