@@ -261,8 +261,8 @@ $pdf->SetXY(5,$pdf->GetY()+5);  $pdf->cell(20,5,'Variance ',1,0,'L',1,0);$pdf->c
 $pdf->SetXY(5,$pdf->GetY()+5);  $pdf->cell(20,5,'Ecartype ',1,0,'L',1,0);$pdf->cell(20,5,'',1,0,'C',0,0);
 $pdf->SetXY(5,$pdf->GetY()+5);  $pdf->cell(20,5,'IC95 m ',1,0,'L',1,0);  $pdf->cell(20,5,'',1,0,'C',0,0);
 
-
-$pdf->bar($x=110,$y=120,$w=15,$datab,$datar,$datarcc,$titre="Repartition du poids ");
+$avibtm=$rs['avibtm'];
+$pdf->bar($x=110,$y=120,$w=15,$datab,$datar,$datarcc,$titre="Repartition du poids du  batiment : ".$avibtm);
 $pdf->boxplotgv($x=260,$y=125,'',$data);
 
 // $pdf->SetFillColor(255, 0, 0);
@@ -279,8 +279,8 @@ $pdf->boxplotgv($x=260,$y=125,'',$data);
 
 
 $pdf->AddPage('L','A4');$pdf->SetDisplayMode('fullpage','single'); $pdf->SetFont('Arial','B',9);
-$avibtm=2;
-$query = "SELECT * from avi where avibtm = $avibtm   order by avisem asc "; //;
+
+$query = "SELECT * from avi where avibtm = $avibtm  order by avisem asc "; 
 $pdf->SetXY(05,55); 
 $resultat=mysql_query($query);
 $totalmbr1=mysql_num_rows($resultat);
@@ -296,6 +296,6 @@ $aa2[]=$row->code_patient;
 // print_r(array_merge($a1,$a2));
 // $tiba=array();
 // $tiba=array_merge($aa1,$aa2);
-$pdf->barni($x=110,$y=120,$w=15,$aa,$aa1,$aa2,$titre="Evolution de la moyenne du poids par semaines ");
+$pdf->barni($x=110,$y=120,$w=15,$aa,$aa1,$aa2,$titre=" Evolution de la moyenne du poids : ".$totalmbr1." semaines du  batiment : ".$avibtm);
 $pdf->Output();
 ?>

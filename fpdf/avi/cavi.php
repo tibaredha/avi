@@ -2909,7 +2909,7 @@ class cavi extends FPDI
 	for ($i = 0; $i <= count($aa)-1; $i++) 
 	{
 	$xx=round(($aa[$i]*100)/$total,2);
-	$this->cell($w,-$xx*2,$aa[$i],1,0,'C',1,0); 
+	$this->cell($w,-$xx*1.15,$aa[$i],1,0,'C',1,0); 
 	}      
 	$this->SetXY($x-20,$y+12);    
 	for ($i = 0; $i <= count($aa1)-1; $i++) 
