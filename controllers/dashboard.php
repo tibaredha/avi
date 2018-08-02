@@ -320,24 +320,17 @@ class Dashboard extends Controller {
 		$this->view->render($this->controleur.'/client');
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	function createclient() 
+	{
+	$data = array();
+	$data['dateins']      = $_POST['dateins'];
+	$data['nomavi']       = $_POST['nomavi'];
+	$data['prenomavi']    = $_POST['prenomavi'];
+	$data['filsde']       = $_POST['filsde'];
+	// echo '<pre>';print_r ($data);echo '<pre>';
+	$last_id=$this->model->createclient($data);
+	header('location: ' . URL .$this->controleur.'/nouveau/');
+	}
+		
 	
 }

@@ -278,6 +278,17 @@ class Dashboard_Model extends Model {
 	    // echo '<pre>';print_r ($postData);echo '<pre>';
     } 
 
+    public function createclient($data) {
 
-	
+			$this->db->insert('client', array(		
+			'dateins' =>$this->dateFR2US($data['dateins']),
+			'nomavi' =>$data['nomavi'],
+			'prenomavi' =>$data['prenomavi'],   
+			'filsde' =>$data['filsde'] 
+			));		
+		  
+            //echo '<pre>';print_r ($data);echo '<pre>';
+           return $last_id = $this->db->lastInsertId();
+				
+    }
 }
