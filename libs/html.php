@@ -463,7 +463,19 @@ class HTML  {
     echo '</select>'."\n"; 
 	}
 	
-	
+	function produit($name,$id,$class,$tb_name,$value,$selected) 
+	{
+	$this->mysqlconnect();
+	echo "<select  id=\"".$id."\" size=1 class=\"".$class."\" name=\"".$name."\" onblur=\"genererCodeP()\"   >"."\n";
+	echo"<option  value=\"".$value."\"  selected=\"selected\">".$selected."</option>"."\n";
+	mysql_query("SET NAMES 'UTF8' ");
+	$result = mysql_query("SELECT * FROM $tb_name order by produit" );
+	while($data =  mysql_fetch_array($result))
+	{
+	echo '<option value="'.$data[0].'">'.$data[2].'</option>';
+	}
+	echo '</select>'."\n"; 
+	}
 	
 	function nbrtostring($tb_name,$colonename,$colonevalue,$resultatstring) 
 	{
@@ -989,7 +1001,7 @@ class HTML  {
 	echo '<label  id="avil0bn1">Date</label>';    echo '<input  id="avid1"  type="txt"  name="Date"  value="'.$data['Date'].'" autofocus/>'; 
 	echo '<label  id="avil0bn2">Wilaya</label>';  HTML::WILAYA('WILAYAD','avib0n2c','WILAYAD','wil',$data['WILAYA1'],$data['WILAYA2']) ;  
 	echo '<label  id="avil0bn3">Commune</label>'; HTML::COMMUNE('COMMUNED','avib0n3c','COMMUNED',$data['COMMUNE1'],$data['COMMUNE2']);
-	echo '<a id="avil0bn4" title="Ajout client"  href="'.URL.'dashboard/client/">Client <img src="'.URL.'public/images/add.PNG" width="12" height="12" border="0" alt=""   /></a>';HTML::client("avicli","avicli","","client",$data['avicli1'],$data['avicli2']) ;
+	echo '<label id="avil0bn4">Client</label>';   HTML::client("avicli","avicli","","avic",$data['avicli1'],$data['avicli2']) ;
 	echo '<label  id="avil0bn6">Batiment</label>';echo '<input  id="avibtm"  type="txt"  name="avibtm"  value="'.$data['avibtm'].'"/>';
 	echo '<label  id="avil0bn5">Cycle</label>';   echo '<input  id="avicycl" type="txt"  name="avicycl" value="'.$data['avicycl'].'"/>';
 	echo '<label  id="avil0bn7">Semaine</label>'; echo '<input  id="avisem"  type="txt"  name="avisem"  value="'.$data['avisem'].'"/>';

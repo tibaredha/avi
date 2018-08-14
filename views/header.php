@@ -65,10 +65,12 @@ $temps = getmicrotime();
 		{
 		echo '<a href="'.URL.'naissance">Accueil <img src="'.URL.'public/images/b_home.png" width="16" height="16" border="0" alt=""/></a>';echo '&nbsp;';
 		}	
+		echo '<a href="'.URL.'Aviculteur">Aviculteur <img src="'.URL.'public/images/help.jpg" width="16" height="16" border="0" alt=""/></a>';echo '&nbsp;';
+		echo '<a href="'.URL.'Produit">Produit <img src="'.URL.'public/images/help.jpg" width="16" height="16" border="0" alt=""/></a>';echo '&nbsp;';
+		echo '<a href="'.URL.'Calendrier">Calendrier <img src="'.URL.'public/images/help.jpg" width="16" height="16" border="0" alt=""/></a>';echo '&nbsp;';
 		echo '<a href="'.URL.'users/user/">Compte <img src="'.URL.'public/images/user.jpg" width="16" height="16" border="0" alt=""/></a>';echo '&nbsp;';
 		echo '<a href="'.URL.'help">Help <img src="'.URL.'public/images/help.jpg" width="16" height="16" border="0" alt=""/></a>';echo '&nbsp;';
 		echo '<a href="'.URL.'dashboard/logout">Logout <img src="'.URL.'public/images/s_loggoff.png" width="16" height="16" border="0" alt=""/></a>';echo '&nbsp;';   
-	
 	}
 	?>				
     </div>	

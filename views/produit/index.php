@@ -1,8 +1,8 @@
-<div class="sheader1l"><p id="dashboard"><?php echo "Gérer Echantillon des poussins representative du lot  (poids a jeun en grammes)";?></p></div><div class="sheader1r"><p id="dashboard"><?php html::NAV();?></p></div>
+<div class="sheader1l"><p id="dashboard"><?php echo "Gérer les produits pharmaceutiques ";?></p></div><div class="sheader1r"><p id="dashboard"><?php html::NAV();?></p></div>
 <div class="sheader2l">
 
 <?php
-$ctrl='dashboard';
+$ctrl='produit';
 $mdl='search';
 $data = array(
 "c"   => $ctrl,
@@ -32,16 +32,12 @@ echo "<button id=\"Cleari\"  onclick=\"document.location='".URL.$data['cb2']."/"
 		echo '<div class="listl">';
 		echo'<table>';$colspan=15;
 			echo'<tr bgcolor="#00CED1">';
-			echo'<th class="crtl">id</th>';
-			echo'<th class="crtldate">Date</th>';
-			echo'<th class="crtldate">Wilaya</th>';
-			echo'<th class="crtl">Commune</th>';
-			echo'<th class="crtl">Client</th>';
-			echo'<th class="crtl">Cycle</th>';
-			echo'<th class="crtl">Batiment</th>';
-			echo'<th class="crtl">Semaine</th>';
-			echo'<th class="crtl">cal</th>';
-			echo'<th class="crtl">Eva</th>';
+            echo'<th class="crtl">id</th>';
+			echo'<th class="crtl">produit</th>';
+			echo'<th class="crtl">dci</th>';
+			echo'<th class="crtl">type</th>';
+			
+			
 			echo'<th class="crtl">Update</th>';
 			echo'<th class="crtl">Delete</th>';
 			echo'</tr>';
@@ -49,16 +45,10 @@ echo "<button id=\"Cleari\"  onclick=\"document.location='".URL.$data['cb2']."/"
 			{ 
 			$bgcolor_donate ='#EDF7FF';
 			echo "<tr bgcolor=\"".$bgcolor_donate."\"  onmouseover=\"this.style.backgroundColor='#9FF781';\"   onmouseout=\"this.style.backgroundColor='".$bgcolor_donate."';\"  >" ;
-			echo '<td align="center"  >'.$value['id'].'</td>';
-			echo '<td align="center"  >'.HTML::dateUS2FR($value['date']).'</td>';// 
-			echo '<td align="left"  >'.html::nbrtostring('wil','IDWIL',$value['WILAYAD'],'WILAYAS').'</td>';
-			echo '<td align="left"  >'.html::nbrtostring('com','IDCOM',$value['COMMUNED'],'COMMUNE').'</td>';
-			echo '<td align="center"  >'.html::nbrtostring('avic','id',$value['avicli'],'nomavi').'</td>';
-			echo '<td align="center"  >'.$value['avicycl'].'</td>';
-			echo '<td align="center"  >'.$value['avibtm'].'</td>';
-			echo '<td align="center"  >'.$value['avisem'].'</td>';
-			echo '<td align="center" style="width:10px;"  bgcolor="#FFFF00"><a target="_blank" title="cal"  href="'.URL.'fpdf/avi/cal.php?uc='.date('Y-m-d').'" ><img src="'.URL.'public/images/b_props.png"   width="16" height="16" border="0" alt=""   /></a></td>';
-			echo '<td align="center" style="width:10px;" bgcolor="#0000FF"><a target="_blank" title="eva"  href="'.URL.'fpdf/avi/avi.php?uc='.$value['id'].'" ><img src="'.URL.'public/images/b_props.png"   width="16" height="16" border="0" alt=""   /></a></td>';
+			echo '<td align="center" >'.$value['id'].'</td>';
+			echo '<td align="left">'.$value['produit'].'</td>';
+			echo '<td align="left">'.$value['dci'].'</td>';
+			echo '<td align="center">'.$value['type'].'</td>';
 			echo '<td align="center" style="width:10px;" bgcolor="#32CD32"><a target="_blank" title="editer"  href="'.URL.$ctrl.'/edit/'.$value['id'].'" ><img src="'.URL.'public/images/edit.png"   width="16" height="16" border="0" alt=""   /></a></td>';
 			echo '<td align="center" style="width:10px;" bgcolor="#FF0000" ><a class="delete" title="supprimer"  href="'.URL.$ctrl.'/delete/'.$value['id'].'" ><img src="'.URL.'public/images/delete.png"   width="16" height="16" border="0" alt=""   /></a></td>';
 			echo'</tr>';
@@ -95,7 +85,7 @@ echo "<button id=\"Cleari\"  onclick=\"document.location='".URL.$data['cb2']."/"
 		{
 		echo '<div class="contentl">';
 		// HTML::multigraphe(30,340,'Naissance Par annee et sexe  Arret Au : ','avi','date','SEX','M','F','='.Session::get('structure')) ;
-		HTML::graphemois(30,340,'Echantillons des poussins par mois Arret Au : ','','avi','date','',date('Y'),'','='.Session::get('structure')); 
+		HTML::graphemois(30,340,'Produits Pharmaceutiques  par mois Arret Au : ','','produit','date','',date('Y'),'','='.Session::get('structure')); 
 		echo "</div>";
 		echo'<div class="content"><img id="image" src="'.URL.'public/images/dashbord.jpg" ></div>';
 		echo'<div class="contentr"><img id="image" src="'.URL.'public/images/'.logod.'"></div>';
