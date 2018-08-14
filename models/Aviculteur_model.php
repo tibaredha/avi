@@ -30,10 +30,13 @@ class Aviculteur_Model extends Model {
 	public function create($data) {
 
 			$this->db->insert('avic', array(		
-			'date' =>$data['date'],
-			'produit' =>$data['produit'],
-			'dci' =>$data['dci'],   
-			'type' =>$data['type'] 
+			'dateins'   =>$data['dateins'],
+			'nomavi'    =>$data['nomavi'],
+			'prenomavi' =>$data['prenomavi'],   
+			'filsde'    =>$data['filsde'], 
+			'WILAYAR'   =>$data['WILAYAR'],  
+			'COMMUNER'  =>$data['COMMUNER'],  
+			'ADRESSE'   =>$data['ADRESSE']  
 			));		
 		  
             //echo '<pre>';print_r ($data);echo '<pre>';
@@ -59,10 +62,13 @@ class Aviculteur_Model extends Model {
 	 
 	public function editSave($data) {
 		$postData = array(
-           'date' =>$data['date'],
-		   'produit' =>$data['produit'],
-			'dci'    =>$data['dci'],   
-			'type'   =>$data['type']    
+           'dateins'   =>$data['dateins'],
+			'nomavi'    =>$data['nomavi'],
+			'prenomavi' =>$data['prenomavi'],   
+			'filsde'    =>$data['filsde'], 
+			'WILAYAR'   =>$data['WILAYAR'],  
+			'COMMUNER'  =>$data['COMMUNER'],  
+			'ADRESSE'   =>$data['ADRESSE']    
         );
         $this->db->update('avic', $postData, "id =" . $data['id'] . "");
 	    // echo '<pre>';print_r ($postData);echo '<pre>';

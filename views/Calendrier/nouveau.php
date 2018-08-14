@@ -1,5 +1,5 @@
 <div class="sheader1l"><p id="lhelp"><?php echo "";echo $this->msg; echo "";?></p></div><div class="sheader1r"><p id="lhelp"><?php html::NAV();?></p></div>
-<div class="sheader2l">Nouveau produit pharmaceutique </div><div class="sheader2r">***</div>
+<div class="sheader2l">Nouveau produit pharmaceutique dans  le Calendrier   </div><div class="sheader2r">***</div>
 <div class="contentl">
 <form  action="<?php echo URL."Calendrier/create/";  ?>"  method="POST"> 
  <div class="form-style-10">

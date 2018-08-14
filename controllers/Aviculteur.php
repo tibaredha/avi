@@ -47,12 +47,14 @@ class Aviculteur extends Controller {
 	function create() 
 	{
 	$data = array();
-	
-	$data['date']         = $_POST['date'];
-	$data['produit']      = $_POST['produit'];
-	$data['dci']          = $_POST['dci'];
-	$data['type']         = $_POST['type'];
-	//echo '<pre>';print_r ($data);echo '<pre>';
+	$data['dateins']     = $_POST['dateins'];
+	$data['nomavi']      = $_POST['nomavi'];
+	$data['prenomavi']   = $_POST['prenomavi'];
+	$data['filsde']      = $_POST['filsde'];
+	$data['WILAYAR']      = $_POST['WILAYAR'];
+	$data['COMMUNER']     = $_POST['COMMUNER'];
+	$data['ADRESSE']      = $_POST['ADRESSE'];
+	// echo '<pre>';print_r ($data);echo '<pre>';
 	$last_id=$this->model->create($data);
 	header('location: ' . URL .$this->controleur.'/search/0/10?o=id&q='.$last_id);
 	}
@@ -73,8 +75,8 @@ class Aviculteur extends Controller {
 	
 	public function edit($id) 
 	{
-        $this->view->title = 'Edit Produit';
-		$this->view->msg = 'Edit Produit';
+        $this->view->title = 'Edit Aviculteur';
+		$this->view->msg = 'Edit Aviculteur';
 		$this->view->user = $this->model->userSingleList($id);
 		$this->view->render($this->controleur.'/edit');
 	}
@@ -82,10 +84,13 @@ class Aviculteur extends Controller {
 	public function editSave($id)
 	{
 	$data = array();
-	$data['date']         = $_POST['date'];
-	$data['produit']    = $_POST['produit'];
-	$data['dci']        = $_POST['dci'];
-	$data['type']       = $_POST['type'];
+	$data['dateins']     = $_POST['dateins'];
+	$data['nomavi']      = $_POST['nomavi'];
+	$data['prenomavi']   = $_POST['prenomavi'];
+	$data['filsde']      = $_POST['filsde'];
+	$data['WILAYAR']      = $_POST['WILAYAR'];
+	$data['COMMUNER']     = $_POST['COMMUNER'];
+	$data['ADRESSE']      = $_POST['ADRESSE'];
 	$data['id']         = $id;
 		
 		// echo '<pre>';print_r ($data);echo '<pre>';

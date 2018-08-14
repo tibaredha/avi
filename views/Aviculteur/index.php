@@ -40,6 +40,7 @@ echo "<button id=\"Cleari\"  onclick=\"document.location='".URL.$data['cb2']."/"
 			 echo'<th class="crtl">Wilaya</th>';
 			 echo'<th class="crtl">Commune</th>';
 			 echo'<th class="crtl">Adresse</th>';
+			  echo'<th class="crtl">Agr san</th>';
 			echo'<th class="crtl">Update</th>';
 			echo'<th class="crtl">Delete</th>';
 			echo'</tr>';
@@ -55,6 +56,7 @@ echo "<button id=\"Cleari\"  onclick=\"document.location='".URL.$data['cb2']."/"
 			echo '<td align="left">'.View::nbrtostring('wil','IDWIL',$value['WILAYAR'],'WILAYAS').'</td>';
 			echo '<td align="left">'.View::nbrtostring('com','IDCOM',$value['COMMUNER'],'COMMUNE').'</td>';
 			echo '<td align="left">'.$value['ADRESSE'].'</td>';
+			echo '<td align="center" style="width:10px;" bgcolor="#32CD32"><a target="_blank" title="agrement sanitaire"  href="'.URL.$ctrl.'/agrsani/'.$value['id'].'" ><img src="'.URL.'public/images/edit.png"   width="16" height="16" border="0" alt=""   /></a></td>';
 			echo '<td align="center" style="width:10px;" bgcolor="#32CD32"><a target="_blank" title="editer"  href="'.URL.$ctrl.'/edit/'.$value['id'].'" ><img src="'.URL.'public/images/edit.png"   width="16" height="16" border="0" alt=""   /></a></td>';
 			echo '<td align="center" style="width:10px;" bgcolor="#FF0000" ><a class="delete" title="supprimer"  href="'.URL.$ctrl.'/delete/'.$value['id'].'" ><img src="'.URL.'public/images/delete.png"   width="16" height="16" border="0" alt=""   /></a></td>';
 			echo'</tr>';

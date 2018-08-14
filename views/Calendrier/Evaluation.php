@@ -1,12 +1,15 @@
-<div class="sheader1l"><p id="evaluation"><?php echo "Gérer Echantillon des poussins representative du lot (poids a jeun en grammes)";?></p></div><div class="sheader1r"><p id="evaluation"><?php html::NAV();?></p></div>
-<div class="sheader2l"><?php echo $this->msg; echo " Echantillon : ";?></div><div class="sheader2r">***</div>
+<div class="sheader1l"><p id="evaluation"><?php echo "Gérer le Calendrier des produits pharmaceutiques";?></p></div><div class="sheader1r"><p id="evaluation"><?php html::NAV();?></p></div>
+<div class="sheader2l"><?php echo $this->msg; echo " Calendrier : ";?></div><div class="sheader2r">***</div>
 <div class="contentl">
 <?php 
             echo "<hr>";
 	
-	echo '<form ALIGN="center" action="'.URL.'fpdf/avi/evaavi.php" method="POST">';
-			echo " <input id=\"typea1\"  type=\"text\" name=\"annee\"  value=\"".date('d-m-Y')."\"  required />";
-			echo " <input id=\"typea1\"  type=\"text\" name=\"annee1\"  value=\"".date('d-m-Y')."\"  required />";
+	echo '<form ALIGN="center" action="'.URL.'fpdf/avi/cal.php" method="POST">';
+			
+		
+			
+			echo " <input id=\"typea1\"  type=\"text\" name=\"uc\"  value=\"".date('Y-m-d')."\"  required />";
+			// echo " <input id=\"typea1\"  type=\"text\" name=\"annee1\"  value=\"".date('d-m-Y')."\"  required />";
 			echo "<p>";;echo "</p>";
 				echo "<hr>";
 			echo "<p>";
