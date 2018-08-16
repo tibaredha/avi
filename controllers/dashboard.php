@@ -22,6 +22,20 @@ class Dashboard extends Controller {
 		$this->view->render($this->controleur.'/index');
 	}
 	
+	function image() {
+	    $this->view->title = 'image';
+		$this->view->msg = 'image';
+		$this->view->render($this->controleur.'/image');
+	}
+	
+	function fimage($id) {
+	    $this->view->title = 'fimage';
+		$this->view->msg = 'fimage';
+		$this->view->id = $id;
+		
+		$this->view->render($this->controleur.'/fimage');
+	}
+	
 
 	function nouveau() {
 	    $this->view->title = 'nouveau';
