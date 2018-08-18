@@ -112,8 +112,11 @@ $blobObj = new BobDemo();
 
 $blobObj->insertBlob('images/demographie.jpg',"image/jpg");
 $a = $blobObj->selectBlob(2);
-header("Content-Type:" . $a['mime']);
-echo $a['data'];
+//header("Content-Type:" . $a['mime']);
+//echo $a['data'];
+//ou 
+echo '<img src="data:image/jpeg;base64,'.base64_encode( $a['data'] ).'"/>';
+
 // test insert pdf
 // $blobObj->insertBlob('pdf/php-mysql-blob.pdf',"application/pdf");
 // $a = $blobObj->selectBlob(2);
