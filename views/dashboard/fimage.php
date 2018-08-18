@@ -42,8 +42,17 @@ if ( isset($this->id) )
 	} 
 	else 
 	{
-	header ("Content-type: " . $col[1]);
-    echo $col[2];
+	// header ("Content-type: " . $col[1]);
+    // echo $col[2];
+	// $fichier=$col[5];
+	// header("Content-type: image/jpeg"); // Mise en place d'un en-tête MIME  de type jpeg.
+	// $image = stripslashes($fichier); // "Nettoyage" des slashes précédemment ajoutés.
+	// $image = imagecreatefromstring($image); // Conversion de la chaîne binaire en ressource image GD.
+	// imagejpeg($image); // Affichage de l'image encodée en JPEG.
+	
+  
+	
+	
 	}
 
 } 
