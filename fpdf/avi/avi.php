@@ -8,7 +8,6 @@ $pdf->SetFont('Times', 'B', 10);
 $pdf->SetXY(05,5); $pdf->cell(285,5,"REPUBLIQUE ALGERIENNE DEMOCRATIQUE ET POPULAIRE",0,0,'C',0,0);
 $pdf->SetXY(05,10); $pdf->cell(285,5,"Echantillon des poussins representative du lot  (poids a jeun en grammes).   ",0,0,'C',0,0);
 $date=date("d-m-y");
-
 //croissance par semaine 
 $tablec = array(
  1 => 150,
@@ -76,18 +75,12 @@ $tablec = array(
  63 => 4045,
  64 => 4055
  );
-
-
-
-
 $id=$_GET['uc'];
 $pdf->mysqlconnect();
 $query = "SELECT * from avi where id = $id "; 
 $query1 = mysql_query($query);   
 $rs = mysql_fetch_assoc($query1);
 mysql_free_result($query1);
-
-
 $pdf->setxy(5,$pdf->gety()+10);$pdf->cell(25,5,'Date',1,0,'L',1,0);  $pdf->cell(25,5,$rs['date'],1,0,'C',0);  $pdf->cell(25,5,'Wilaya',1,0,'L',1,0);$pdf->cell(25,5,$rs['WILAYAD'],1,0,'C',0);$pdf->cell(25,5,'Commune',1,0,'L',1,0);$pdf->cell(25,5,$rs['COMMUNED'],1,0,'C',0);
 $pdf->setxy(5,$pdf->gety()+5); $pdf->cell(25,5,'Client',1,0,'L',1,0);$pdf->cell(25,5,$rs['avicli'],1,0,'C',0);$pdf->cell(25,5,'Cycle',1,0,'L',1,0);$pdf->cell(25,5,$rs['avicycl'],1,0,'C',0); $pdf->cell(25,5,'Batiment',1,0,'L',1,0);  $pdf->cell(25,5,$rs['avibtm'],1,0,'C',0);$pdf->cell(25,5,'Semaine',1,0,'L',1,0);$pdf->cell(25,5,$rs['avisem'],1,0,'C',0);
 $pdf->setxy(5,$pdf->gety()+10); $pdf->cell(25,5,$rs['avi0'],1,0,'C',0);$pdf->cell(25,5,$rs['avi20'],1,0,'C',0);$pdf->cell(25,5,$rs['avi40'],1,0,'C',0);$pdf->cell(25,5,$rs['avi60'],1,0,'C',0);$pdf->cell(25,5,$rs['avi80'],1,0,'C',0);
@@ -121,9 +114,6 @@ $data = array(   $rs['avi0'],$rs['avi1'],$rs['avi2'],$rs['avi3'],$rs['avi4'],$rs
 				,$rs['avi71'],$rs['avi72'],$rs['avi73'],$rs['avi74'],$rs['avi75'],$rs['avi76'],$rs['avi77'],$rs['avi78'],$rs['avi79'],$rs['avi80']
 				,$rs['avi81'],$rs['avi82'],$rs['avi83'],$rs['avi84'],$rs['avi85'],$rs['avi86'],$rs['avi87'],$rs['avi88'],$rs['avi89'],$rs['avi90']
 				,$rs['avi91'],$rs['avi92'],$rs['avi93'],$rs['avi94'],$rs['avi95'],$rs['avi96'],$rs['avi97'],$rs['avi98'],$rs['avi99']);
-
-
-
 sort($data);
 $pdf->setxy(150,$pdf->gety()-95); $pdf->cell(25,5,$data[0],1,0,'C',0);$pdf->cell(25,5,$data[20],1,0,'C',0);$pdf->cell(25,5,$data[40],1,0,'C',0);$pdf->cell(25,5,$data[60],1,0,'C',0);$pdf->cell(25,5,$data[80],1,0,'C',0);
 $pdf->setxy(150,$pdf->gety()+5); $pdf->cell(25,5,$data[1],1,0,'C',0);$pdf->cell(25,5,$data[21],1,0,'C',0);$pdf->cell(25,5,$data[41],1,0,'C',0);$pdf->cell(25,5,$data[61],1,0,'C',0);$pdf->cell(25,5,$data[81],1,0,'C',0);
@@ -146,30 +136,15 @@ $pdf->setxy(150,$pdf->gety()+5); $pdf->cell(25,5,$data[17],1,0,'C',0);$pdf->cell
 $pdf->setxy(150,$pdf->gety()+5); $pdf->cell(25,5,$data[18],1,0,'C',0);$pdf->cell(25,5,$data[38],1,0,'C',0);$pdf->cell(25,5,$data[58],1,0,'C',0);$pdf->cell(25,5,$data[78],1,0,'C',0);$pdf->cell(25,5,$data[98],1,0,'C',0);
 $pdf->setxy(150,$pdf->gety()+5); $pdf->cell(25,5,$data[19],1,0,'C',0);$pdf->cell(25,5,$data[39],1,0,'C',0);$pdf->cell(25,5,$data[59],1,0,'C',0);$pdf->cell(25,5,$data[79],1,0,'C',0);$pdf->cell(25,5,$data[99],1,0,'C',0);
 
-
-
 $contd=count ($data);
 $pdf->setxy(5,$pdf->gety()+10); $pdf->cell(25,5,'count : ',1,0,'l',1,0); $pdf->cell(25,5,$contd,1,0,'C',0);  $pdf->cell(25,5,'sum: ',1,0,'l',1,0); $pdf->cell(25,5,array_sum ($data),1,0,'C',0);
 $pdf->setxy(5,$pdf->gety()+5); $pdf->cell(25,5,'min : ',1,0,'l',1,0); $pdf->cell(25,5,$data[0],1,0,'C',0);  $pdf->cell(25,5,'max : ',1,0,'l',1,0); $pdf->cell(25,5,$data[$contd - 1],1,0,'C',0); $pdf->cell(25,5,'etendu : ',1,0,'l',1,0); $pdf->cell(25,5,$data[$contd - 1]-$data[0],1,0,'C',0);
-
-
-
-
 $m=round($pdf->mean($data,$type="arithmetic"));$m10=($m*10)/100;
 $pdf->setxy(5,$pdf->gety()+5); $pdf->cell(25,5,'moyenne : ',1,0,'l',1,0); $pdf->cell(25,5,round($pdf->mean($data,$type="arithmetic"),2),1,0,'C',0,0);  $pdf->cell(25,5,'moyenne - 10%',1,0,'l',1,0);$pdf->cell(25,5,round($pdf->mean($data,$type="arithmetic")-$m10,2),1,0,'C',0);$pdf->cell(25,5,'moyenne + 10%',1,0,'l',1,0);                    $pdf->cell(25,5,round($pdf->mean($data,$type="arithmetic")+$m10,2),1,0,'C',0,0);  
-
 $pdf->setxy(5,$pdf->gety()+5);  $pdf->cell(25,5,'q1 : ',1,0,'l',1,0);        $pdf->cell(25,5,$data[round($contd / 4)],1,0,'C',0,0);                           $pdf->cell(25,5,'median : ',1,0,'l',1,0);  $pdf->cell(25,5,$pdf->median($data),1,0,'C',0,0);                            $pdf->cell(25,5,'q3 : ',1,0,'l',1,0);        $pdf->cell(25,5,$data[round($contd * 3 / 4)],1,0,'C',0);    
 $pdf->SetXY(5,$pdf->GetY()+5);  $pdf->cell(25,5,'var (n-1)',1,0,'L',1,0);    $pdf->cell(25,5,round($pdf->variance($data),2),1,0,'C',0,0);                     $pdf->cell(25,5,'std (n-1)',1,0,'L',1,0);  $pdf->cell(25,5,round($pdf->sd($data),2),1,0,'C',0,0);
 $pdf->SetXY(5,$pdf->GetY()+5);  $pdf->cell(25,5,'skew',1,0,'L',1,0);         $pdf->cell(25,5,round($pdf->skew($data),2),1,0,'C',0,0);$pdf->cell(25,5,$pdf->isSkew($data),1,0,'C',0,0);                          $pdf->cell(25,5,'kurt',1,0,'L',1,0);                $pdf->cell(25,5,round($pdf->kurt($data),2),1,0,'C',0,0);$pdf->cell(25,5,$pdf->iskurt($data),1,0,'C',0,0);
-
-
-
 $pdf->SetXY(5,$pdf->GetY()+5);  $pdf->cell(25,5,'cv',1,0,'L',1,0);           $pdf->cell(25,5,round($pdf->cv($data),2),1,0,'C',0,0);
-                           
-
-
-		
-
 $sup = round($pdf->mean($data,$type="arithmetic")+$m10,2);
 $inf = round($pdf->mean($data,$type="arithmetic")-$m10,2);				
 function filterArraysup($value){
@@ -190,38 +165,24 @@ $continf=count ($filteredArrayinf);
 // foreach($filteredArrayinf as $k => $v){
 // $pdf->SetXY(5,$pdf->GetY()+5);    $pdf->cell(20,5,"$v",1,0,'C',1,0);	
 // }
-
 // $pdf->SetXY(5,$pdf->GetY()+10);    $pdf->cell(20,5,$continf,1,0,'C',1,0);
 // $pdf->SetXY(5,$pdf->GetY()+10);    $pdf->cell(20,5,$contsup,1,0,'C',1,0);$pdf->SetXY(5,$pdf->GetY()+10);
 $pdf->cell(25,5,'Homgeneite',1,0,'L',1,0); $pdf->cell(25,5,(100-($contsup+$continf)).'%',1,0,'C',0,0);
-
-
-
 $pdf->setxy(5,$pdf->gety()+5);  $pdf->cell(25,5,'Moyenne The ',1,0,'L',1,0); $pdf->cell(25,5,$tablec[$rs['avisem']],1,0,'C',0,0);  $pdf->cell(25,5,'Z= ',1,0,'L',1,0); $pdf->cell(25,5,round((round($pdf->mean($data,$type="arithmetic"),2)-$tablec[$rs['avisem']])/(round($pdf->sd($data),2)/10),2),1,0,'C',0,0); 
 $pdf->setxy(5,$pdf->gety()+5);  $pdf->cell(25,5,'IC95 M - ',1,0,'l',1,0);      $pdf->cell(25,5,round($pdf->mean($data,$type="arithmetic")-(1.96*round($pdf->sd($data),2))/10,2),1,0,'C',0); $pdf->cell(25,5,'moyenne : ',1,0,'l',1,0); $pdf->cell(25,5,round($pdf->mean($data,$type="arithmetic"),2),1,0,'C',0,0);$pdf->cell(25,5,'IC95 M +',1,0,'l',1,0); $pdf->cell(25,5,round($pdf->mean($data,$type="arithmetic")+(1.96*round($pdf->sd($data),2))/10,2),1,0,'C',0,0);  
 
 
-
-
-
-
 $pdf->AddPage('L','A4');$pdf->SetDisplayMode('fullpage','single'); $pdf->SetFont('Arial','B',9);
-$pdf->SetXY(5,$pdf->GetY()+2);  $pdf->cell(20,10,'Classe',1,0,'C',1,0);$pdf->cell(20,10,'Centre',1,0,'C',1,0);$pdf->cell(20,10,'Effectif',1,0,'C',1,0); $pdf->cell(20,10,'Sum',1,0,'C',1,0);
-
-
+$pdf->SetXY(5,$pdf->GetY()+2);  $pdf->cell(20,10,'Classe',1,0,'C',1,0);          $pdf->cell(20,10,'Centre',1,0,'C',1,0);    $pdf->cell(20,10,'Effectif',1,0,'C',1,0);  $pdf->cell(20,10,'Sum',1,0,'C',1,0);
 $bare=10;
-$datar=$pdf->histr($data, $bare);
-$datarcc=$pdf->histrcc($data, $bare);
-$datab=$pdf->histb($data, $bare);   
-$sum = 0;
+                                $datar=$pdf->histr($data, $bare);                $datarcc=$pdf->histrcc($data, $bare);      $datab=$pdf->histb($data, $bare);          $sum = 0;
 for ($i = 0; $i < $bare; $i++) 
 {
-$nf=$datarcc[$i]*$datab[$i];
-$pdf->SetXY(5,$pdf->GetY()+10); $pdf->cell(20,10,"[".$datar[$i]."[",1,0,'C',1,0);$pdf->cell(20,10,$datarcc[$i],1,0,'C',0,0);$pdf->cell(20,10,$datab[$i],1,0,'C',0,0); $pdf->cell(20,10,$nf,1,0,'C',0,0);         
-$sum+=$nf;
+$nf=$datarcc[$i]*$datab[$i];$sum+=$nf;
+$pdf->SetXY(5,$pdf->GetY()+10); $pdf->cell(20,10,"[".$datar[$i]."[",1,0,'C',1,0);$pdf->cell(20,10,$datarcc[$i],1,0,'C',0,0);$pdf->cell(20,10,$datab[$i],1,0,'C',0,0);  $pdf->cell(20,10,$nf,1,0,'C',0,0);         
 }
 $m10=(($sum/100)*10)/100;
-$pdf->SetXY(5,$pdf->GetY()+10);  $pdf->cell(20,5,'Classe',1,0,'C',1,0);     $pdf->cell(20,5,'Centre',1,0,'C',1,0);$pdf->cell(20,5,'100',1,0,'C',1,0); $pdf->cell(20,5,$sum,1,0,'C',1,0);
+$pdf->SetXY(5,$pdf->GetY()+10);  $pdf->cell(20,5,'Classe',1,0,'C',1,0);           $pdf->cell(20,5,'Centre',1,0,'C',1,0);    $pdf->cell(20,5,'100',1,0,'C',1,0);        $pdf->cell(20,5,$sum,1,0,'C',1,0);
 
 
 
